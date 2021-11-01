@@ -53,6 +53,8 @@ error.
 by running `rake cucumber`.  We've provided a couple of scenarios that will fail,
 which you can use as a starting point, in `features/movies_by_director.feature`.
 
+# Start server
+`rails server -b 0.0.0.0`
 
 ## reference
 - http://www.cs.columbia.edu/~junfeng/21fa-w4995/assignments.html#hw-setup
