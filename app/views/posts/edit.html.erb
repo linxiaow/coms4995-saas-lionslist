@@ -1,0 +1,12 @@
+<h2>Edit Existing Post</h2>
+<%= form_tag post_path(@post), :method => :put do %>
+  <%= label :post, :title, 'Title', :class => 'col-form-label' %>
+  <%= text_field :post, 'title', :class => 'form-control' %>
+  <%= label :post, :category, 'Category', :class => 'col-form-label'  %>
+  <%= select :post, :category, ['furniture','sublease'], {}, {:class => 'form-control col-1'} %>
+  <%= label :post, :content, 'content', :class => 'col-form-label' %>
+  <%= text_field :post, 'content', :class => 'form-control' %>
+  <br/>
+  <%= submit_tag 'Update Post Info', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', posts_path, :class => 'btn btn-secondary' %>
+<% end %>

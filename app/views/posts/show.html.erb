@@ -1,0 +1,32 @@
+<!--  app/views/posts/show.html.erb -->
+<h2>Title: <em><%= @post.title %></em></h2>
+
+<ul id="details">
+  <li>
+    Category:
+    <%= @post.category %>
+  </li>
+  <li>
+    Created on:
+    <%= @post.created_at %>
+  </li>
+  <li>
+    Last Updated:
+    <%= @post.updated_at %>
+  </li>
+  <li>
+    Author:
+    <%= @post.author %>
+  </li>
+</ul>
+
+<h3>Content:</h3>
+<p id="content">
+  <%= @post.content %>
+</p>
+
+<div class="row">
+  <%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-primary col-2' %>
+  <%= link_to 'Delete', post_path(@post), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %>
+  <%= link_to 'Back to post list', posts_path, :class => 'btn btn-primary col-2' %>
+</div>
