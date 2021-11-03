@@ -4012,3 +4012,455 @@ Processing by PostsController#create as HTML
   Parameters: {"Post"=>{"title"=>"Post Title #3", "author"=>"Author #3", "category"=>"furniture", "content"=>"I posted some other other things."}}
 Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Processing by PostsController#create as HTML
+  Parameters: {"Post"=>{"title"=>"Post Title #1", "author"=>"Author #1", "category"=>"furniture", "content"=>"I posted something."}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Post Title #2"], ["author", "Author #2"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:23:54.566172"], ["updated_at", "2021-11-03 21:23:54.566172"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"content"=>"content changed to some other things."}, "id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["content", "content changed to some other things."], ["updated_at", "2021-11-03 21:23:54.583352"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts/1
+Completed 302 Found in 15ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PostsController#create as HTML
+  Parameters: {"Post"=>{"title"=>"Post Title #3", "author"=>"Author #3", "category"=>"furniture", "content"=>"I posted some other other things."}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #1", "author"=>"Author #1", "category"=>"furniture", "content"=>"I posted something."}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Post Title #1"], ["content", "I posted something."], ["author", "Author #1"], ["category", "furniture"], ["created_at", "2021-11-03 21:26:46.029561"], ["updated_at", "2021-11-03 21:26:46.029561"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 25ms (ActiveRecord: 2.2ms)
+  [1m[35m (1.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #2"], ["author", "Author #2"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:26:46.041587"], ["updated_at", "2021-11-03 21:26:46.041587"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"content"=>"content changed to some other things."}, "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "content changed to some other things."], ["updated_at", "2021-11-03 21:26:46.056693"], ["id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts/1
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by PostsController#create as HTML
+  Parameters: {"Post"=>{"title"=>"Post Title #3", "author"=>"Author #3", "category"=>"furniture", "content"=>"I posted some other other things."}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #1", "author"=>"Author #1", "category"=>"furniture", "content"=>"I posted something."}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Post Title #1"], ["content", "I posted something."], ["author", "Author #1"], ["category", "furniture"], ["created_at", "2021-11-03 21:33:44.147985"], ["updated_at", "2021-11-03 21:33:44.147985"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 33ms (ActiveRecord: 1.9ms)
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #2"], ["author", "Author #2"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:33:44.159153"], ["updated_at", "2021-11-03 21:33:44.159153"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"content"=>"content changed to some other things."}, "id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "content changed to some other things."], ["updated_at", "2021-11-03 21:33:44.180897"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts/1
+Completed 302 Found in 19ms (ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #3", "author"=>"Author #3", "category"=>"furniture", "content"=>"I posted some other other things."}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #3"], ["content", "I posted some other other things."], ["author", "Author #3"], ["category", "furniture"], ["created_at", "2021-11-03 21:33:44.199904"], ["updated_at", "2021-11-03 21:33:44.199904"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1[0m  [["title", "Post Title #3"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #1", "author"=>"Author #1", "category"=>"furniture", "content"=>"I posted something."}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Post Title #1"], ["content", "I posted something."], ["author", "Author #1"], ["category", "furniture"], ["created_at", "2021-11-03 21:34:27.137757"], ["updated_at", "2021-11-03 21:34:27.137757"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 22ms (ActiveRecord: 2.1ms)
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "Post Title #1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #2"], ["author", "Author #2"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:34:27.162805"], ["updated_at", "2021-11-03 21:34:27.162805"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"content"=>"content changed to some other things."}, "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "content changed to some other things."], ["updated_at", "2021-11-03 21:34:27.169250"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #3", "author"=>"Author #3", "category"=>"furniture", "content"=>"I posted some other other things."}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #3"], ["content", "I posted some other other things."], ["author", "Author #3"], ["category", "furniture"], ["created_at", "2021-11-03 21:34:27.178675"], ["updated_at", "2021-11-03 21:34:27.178675"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1[0m  [["title", "Post Title #3"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #1", "author"=>"Author #1", "category"=>"furniture", "content"=>"I posted something."}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Post Title #1"], ["content", "I posted something."], ["author", "Author #1"], ["category", "furniture"], ["created_at", "2021-11-03 21:35:48.305609"], ["updated_at", "2021-11-03 21:35:48.305609"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 34ms (ActiveRecord: 3.2ms)
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "Post Title #1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #2"], ["author", "Author #2"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:35:48.354366"], ["updated_at", "2021-11-03 21:35:48.354366"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"content"=>"content changed to some other things."}, "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "content changed to some other things."], ["updated_at", "2021-11-03 21:35:48.365270"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts/1
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #3", "author"=>"Author #3", "category"=>"furniture", "content"=>"I posted some other other things."}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #3"], ["content", "I posted some other other things."], ["author", "Author #3"], ["category", "furniture"], ["created_at", "2021-11-03 21:35:48.378042"], ["updated_at", "2021-11-03 21:35:48.378042"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1[0m  [["title", "Post Title #3"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #1", "author"=>"Author #1", "category"=>"furniture", "content"=>"I posted something."}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Post Title #1"], ["content", "I posted something."], ["author", "Author #1"], ["category", "furniture"], ["created_at", "2021-11-03 21:36:06.969662"], ["updated_at", "2021-11-03 21:36:06.969662"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 17ms (ActiveRecord: 1.6ms)
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "Post Title #1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #2"], ["author", "Author #2"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:36:06.989118"], ["updated_at", "2021-11-03 21:36:06.989118"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"content"=>"content changed to some other things."}, "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "content changed to some other things."], ["updated_at", "2021-11-03 21:36:06.995671"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #3", "author"=>"Author #3", "category"=>"furniture", "content"=>"I posted some other other things."}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #3"], ["content", "I posted some other other things."], ["author", "Author #3"], ["category", "furniture"], ["created_at", "2021-11-03 21:36:07.004650"], ["updated_at", "2021-11-03 21:36:07.004650"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1[0m  [["title", "Post Title #3"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #1", "author"=>"Author #1", "category"=>"furniture", "content"=>"I posted something."}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Post Title #1"], ["content", "I posted something."], ["author", "Author #1"], ["category", "furniture"], ["created_at", "2021-11-03 21:37:32.595045"], ["updated_at", "2021-11-03 21:37:32.595045"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 18ms (ActiveRecord: 1.9ms)
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "Post Title #1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #2"], ["author", "Author #2"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:37:32.616337"], ["updated_at", "2021-11-03 21:37:32.616337"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"content"=>"content changed to some other things."}, "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "content changed to some other things."], ["updated_at", "2021-11-03 21:37:32.622460"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #1", "author"=>"Author #1", "category"=>"furniture", "content"=>"I posted something."}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Post Title #1"], ["content", "I posted something."], ["author", "Author #1"], ["category", "furniture"], ["created_at", "2021-11-03 21:38:49.910212"], ["updated_at", "2021-11-03 21:38:49.910212"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 19ms (ActiveRecord: 2.1ms)
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "Post Title #1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #2"], ["author", "Author #2"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:38:49.933022"], ["updated_at", "2021-11-03 21:38:49.933022"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"content"=>"content changed to some other things."}, "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "content changed to some other things."], ["updated_at", "2021-11-03 21:38:49.939293"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #1", "author"=>"Author #1", "category"=>"furniture", "content"=>"I posted something."}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Post Title #1"], ["content", "I posted something."], ["author", "Author #1"], ["category", "furniture"], ["created_at", "2021-11-03 21:39:39.940390"], ["updated_at", "2021-11-03 21:39:39.940390"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 23ms (ActiveRecord: 2.2ms)
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "Post Title #1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #2"], ["author", "Author #2"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:39:39.962916"], ["updated_at", "2021-11-03 21:39:39.962916"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"content"=>"content changed to some other things."}, "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "content changed to some other things."], ["updated_at", "2021-11-03 21:39:39.969323"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #1", "author"=>"Author #1", "category"=>"furniture", "content"=>"I posted something."}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Post Title #1"], ["content", "I posted something."], ["author", "Author #1"], ["category", "furniture"], ["created_at", "2021-11-03 21:42:02.493619"], ["updated_at", "2021-11-03 21:42:02.493619"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 21ms (ActiveRecord: 2.0ms)
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "Post Title #1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #2"], ["author", "Author #2"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:42:02.517743"], ["updated_at", "2021-11-03 21:42:02.517743"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"content"=>"content changed to some other things."}, "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "content changed to some other things."], ["updated_at", "2021-11-03 21:42:02.524681"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #3", "author"=>"Author #3", "category"=>"furniture", "content"=>"I posted some other other things."}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #3"], ["content", "I posted some other other things."], ["author", "Author #3"], ["category", "furniture"], ["created_at", "2021-11-03 21:42:02.534450"], ["updated_at", "2021-11-03 21:42:02.534450"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1[0m  [["title", "Post Title #3"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #1", "author"=>"Author #1", "category"=>"furniture", "content"=>"I posted something."}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Post Title #1"], ["content", "I posted something."], ["author", "Author #1"], ["category", "furniture"], ["created_at", "2021-11-03 21:43:49.716073"], ["updated_at", "2021-11-03 21:43:49.716073"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 20ms (ActiveRecord: 2.2ms)
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "Post Title #1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #2"], ["author", "Author #2"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:43:49.739308"], ["updated_at", "2021-11-03 21:43:49.739308"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"content"=>"content changed to some other things."}, "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "content changed to some other things."], ["updated_at", "2021-11-03 21:43:49.746149"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts/1
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #3"], ["author", "Author #3"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:43:49.753580"], ["updated_at", "2021-11-03 21:43:49.753580"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"Post Title #1", "author"=>"Author #1", "category"=>"furniture", "content"=>"I posted something."}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Post Title #1"], ["content", "I posted something."], ["author", "Author #1"], ["category", "furniture"], ["created_at", "2021-11-03 21:44:10.580774"], ["updated_at", "2021-11-03 21:44:10.580774"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/posts
+Completed 302 Found in 21ms (ActiveRecord: 2.2ms)
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "Post Title #1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #2"], ["author", "Author #2"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:44:10.603041"], ["updated_at", "2021-11-03 21:44:10.603041"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#update as HTML
+  Parameters: {"post"=>{"content"=>"content changed to some other things."}, "id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "content changed to some other things."], ["updated_at", "2021-11-03 21:44:10.610215"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts/1
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "author", "category", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Post Title #3"], ["author", "Author #3"], ["category", "furniture"], ["content", "I posted some other things."], ["created_at", "2021-11-03 21:44:10.617493"], ["updated_at", "2021-11-03 21:44:10.617493"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
