@@ -37,7 +37,7 @@ RSpec.describe PostsController, type: :controller do
   describe "creates" do
     it "post with valid parameters" do
       get :create, {:Post => {:title => "Post Title #1", :author => "Author #1",
-                    :category => "furniture", :date => "2021-11-03", :content => "I posted something."}}
+                    :category => "furniture", :content => "I posted something."}}
       expect(response).to redirect_to posts_path
       expect(flash[:notice]).to match(/Post Title #1 was successfully created./)
       Post.find_by(:title => "Post Title #1").destroy
@@ -47,7 +47,7 @@ RSpec.describe PostsController, type: :controller do
   describe "updates" do
     it "movie's valid attributes" do
       post = Post.create(:title => "Post Title #2", :author => "Author #2",
-                    :category => "furniture", :date => "2021-11-03", :content => "I posted some other things.")
+                    :category => "furniture", :content => "I posted some other things.")
       get :update, {:id => post.id, :post =>
         {:content => "content changed to some other things."}
       }
@@ -60,7 +60,7 @@ RSpec.describe PostsController, type: :controller do
   describe "destroys" do
     it "movies with valid parameters" do
       get :create, {:Post => {:title => "Post Title #3", :author => "Author #3",
-                    :category => "furniture", :date => "2021-11-03", :content => "I posted some other other things."}}
+                    :category => "furniture", :content => "I posted some other other things."}}
 #       expect(response).to redirect_to posts_path
 #       expect(flash[:notice]).to match(/Toucan Play This Game was successfully created./)
       Post.find_by(:title => "Post Title #3").destroy
