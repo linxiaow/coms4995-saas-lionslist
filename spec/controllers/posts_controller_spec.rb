@@ -37,4 +37,43 @@ RSpec.describe PostsController, type: :controller do
     end
   end
 
+  describe 'edit' do
+    post = FactoryGirl.create(:post)
+    before do
+      get :edit, id: post.id
+    end
+
+    it 'finds the post' do
+      expect(assigns(:post)).to eql(post)
+    end
+
+    it 'renders the edit template' do
+      expect(response).to render_template('edit')
+    end
+  end
+
+  describe 'index' do
+    movie = FactoryGirl.create(:post)
+
+    it 'renders the index template' do
+      get :index
+      expect(response).to render_template('index')
+    end
+  end
+  
+  describe 'show' do
+    post = FactoryGirl.create(:post)
+    before(:each) do
+      get :show, id: post.id
+    end
+
+    it 'finds the post' do
+      expect(assigns(:post)).to eql(post)
+    end
+
+    it 'renders the show template' do
+      expect(response).to render_template('show')
+    end
+  end
+
 end
