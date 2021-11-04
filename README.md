@@ -54,16 +54,16 @@ https://aqueous-plains-80871.herokuapp.com/posts
 # How to run user story
 User story resides in [features](features/) folder
 
-- Double check that Cucumber is correctly set up 
-by running `rake cucumber`.  We've provided a couple of scenarios that will fail,
-which you can use as a starting point, in `features/movies_by_director.feature`.
+```sh
+rake cucumber
+```
 
 # How to run rspec
 User story resides in [spec](spec/) folder
 
-- Double check that RSpec is correctly set up 
-by running `rake spec`.  (Note--*not* `rake rspec` as you might think. Sorry.)
-Although there are no RSpec tests yet, the task should run without error.  
+```sh
+rake spec
+```
 
 
 # reference
