@@ -3,15 +3,17 @@ COMS4995 Software As a Service project to design a platform to share information
 
 # Run
 
+## Run locally
+First, we need to install ruby environment
 
-## check ruby version
+### check ruby version
 ```sh
 # check your ruby version
 # if it is not >= 2.6.6, < 2.7.0, please go to install ruby version sesion
 ruby -v
 ```
 
-## install ruby version to use bundle
+### install ruby version to use bundle
 ```sh
 # list the available Ruby versions.
 rbenv install -l
@@ -30,33 +32,41 @@ ruby -v
 if ruby global does not work, check the following link
 - https://stackoverflow.com/questions/24736204/rbenv-cant-change-global-ruby-version/24736330
 
-## Install Gem
+### Install Gem
 Run `bundle install --without production` to make sure all gems are properly installed. NOTE: If Bundler complains that the wrong Ruby version is installed, verify that `rvm` is installed (for example, `rvm --version`) and say `rvm list` to see which Ruby versions are available and rvm useversion to make a particular version active. If no versions satisfying the Gemfile dependency are installed, you can say `rvm install` version to install a new version, then `rvm use` version to use it. Then you can try `bundle install` again.
 
-# Create the initial database schema:
-
+### Create the initial database schema:
 
 ```shell
 bundle exec rake db:migrate
 bundle exec rake db:test:prepare
 ```
 
-# You can optionally add some seed data in `db/seeds.rb` and run `rake
-db:seed` to add it.
+- You can optionally add some seed data in `db/seeds.rb` and run `rake db:seed` to add it.
 
-# Double check that RSpec is correctly set up 
-by running `rake spec`.  (Note--*not* `rake rspec` as you might think. Sorry.)
-Although there are no RSpec tests yet, the task should run without
-error.  
+## Start server
+`rails server -b 0.0.0.0`
 
-# Double check that Cucumber is correctly set up 
+## Use in Horeku
+https://aqueous-plains-80871.herokuapp.com/posts
+
+
+# How to run user story
+User story resides in [features](features/) folder
+
+- Double check that Cucumber is correctly set up 
 by running `rake cucumber`.  We've provided a couple of scenarios that will fail,
 which you can use as a starting point, in `features/movies_by_director.feature`.
 
-# Start server
-`rails server -b 0.0.0.0`
+# How to run rspec
+User story resides in [spec](spec/) folder
 
-## reference
+- Double check that RSpec is correctly set up 
+by running `rake spec`.  (Note--*not* `rake rspec` as you might think. Sorry.)
+Although there are no RSpec tests yet, the task should run without error.  
+
+
+# reference
 - http://www.cs.columbia.edu/~junfeng/21fa-w4995/assignments.html#hw-setup
 
 # Contributors ✨
