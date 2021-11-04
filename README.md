@@ -52,14 +52,14 @@ https://aqueous-plains-80871.herokuapp.com/posts
 
 
 # How to run user story
-User story resides in [features](features/) folder
+User story resides in [features](https://github.com/linxiaow/coms4995-saas-lionslist/tree/main/features) folder
 
 ```sh
 rake cucumber
 ```
 
 # How to run rspec
-User story resides in [spec](spec/) folder
+User story resides in [spec](https://github.com/linxiaow/coms4995-saas-lionslist/tree/main/spec) folder
 
 ```sh
 rake spec
