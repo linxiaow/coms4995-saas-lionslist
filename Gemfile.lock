@@ -112,7 +112,7 @@ GEM
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
-    pg (1.2.3)
+    pg (0.21.0)
     public_suffix (4.0.6)
     racc (1.6.0)
     rack (1.6.13)
@@ -223,4 +223,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
