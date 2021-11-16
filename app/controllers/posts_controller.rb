@@ -4,6 +4,7 @@ class PostsController < ApplicationController
     id = params[:id] # retrieve movie ID from URI route
     @post = Post.find(id) # look up movie by unique ID
     # will render app/views/movies/show.<extension> by default
+    @current_user_id = session[:user_id]
   end
 
   def index
@@ -17,6 +18,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create!(post_params)
+    @post.author_id = session[:user_id]
+    @post.save
     flash[:notice] = "#{@post.title} was successfully created."
     redirect_to posts_path
   end
