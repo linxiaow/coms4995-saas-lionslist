@@ -1,6 +1,11 @@
-
-<% flash.each do |type, msg| %>
-  <div class="alert alert-info">
-    <%= msg %>
-  </div>
+<% unless logged_in?%>
+    <% flash.each do |type, msg| %>
+	  <div class="alert alert-info">
+	    <%= msg %>
+	  </div>
+    <% end %>
+    <br><br>
+  	<%= button_to "Log In with Google", '/auth/google_oauth2' %>
+	<br>
+	<%= link_to "Back to homepage", '/posts'%>
 <% end %>

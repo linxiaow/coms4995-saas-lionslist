@@ -13,7 +13,7 @@ module ApplicationHelper
     def require_login
       unless logged_in?
         flash[:error] = "You must be logged in to access this section"
-        redirect_to '/users/error' # halts request cycle
+        redirect_to error_path # halts request cycle
       end
     end
   end
