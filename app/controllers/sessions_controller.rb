@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 	    puts request.env['omniauth.auth']
 	    if user.valid?
 	    	session[:user_id] = user.id
-	    	redirect_to user_path(user)
+	    	redirect_to profile_path
     	else
     		redirect_to error_path
 		end

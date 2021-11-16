@@ -6,7 +6,7 @@ Rottenpotatoes::Application.routes.draw do
   root :to => redirect('/posts')
   get '/auth/:provider/callback' => 'sessions#omniauth'
   get 'auth/failure', to: redirect('/')
-  get '/users/:id', to: 'users#show', as: 'user'
+  get '/profile', to: 'users#show', as: 'profile'
   get '/error', to: 'users#error', as: 'error'
   delete '/logout', to: 'sessions#destroy'
 end
