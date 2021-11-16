@@ -2244,3 +2244,83 @@ Processing by PostsController#index as HTML
   Rendered posts/index.html.erb within layouts/application (7.9ms)
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-11-16 15:15:59 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (25.6ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 659ms (Views: 572.2ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/auth/google_oauth2" for 127.0.0.1 at 2021-11-16 15:16:02 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=77528517aff351b71421d6684a12901084c30e366a43be68&code=4/0AX4XfWjDANOtcMT1ofs_PoDnH2wfoIbBa_L_wCmiBFy3PKSc_wnKU9FUL_7OkbB69WyONw&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=columbia.edu&prompt=none" for 127.0.0.1 at 2021-11-16 15:16:07 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"77528517aff351b71421d6684a12901084c30e366a43be68", "code"=>"4/0AX4XfWjDANOtcMT1ofs_PoDnH2wfoIbBa_L_wCmiBFy3PKSc_wnKU9FUL_7OkbB69WyONw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"columbia.edu", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", "102457936701847489756"], ["provider", "google_oauth2"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-16 15:16:07 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-11-16 15:16:07 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-11-16 15:18:06 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (24.5ms)
+  Rendered layouts/_flash.erb (1.0ms)
+Completed 200 OK in 547ms (Views: 501.9ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/auth/google_oauth2" for 127.0.0.1 at 2021-11-16 15:18:11 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=91e51ea38bd147bf2c8e2345aca23131a960ca54eac9d1b6&code=4/0AX4XfWhL2Nr3Oeyt4CaNvoq_t9rZEM7a1ASvVddDJJSEFpx82PaVRIdxCOb0SHrml_RRuw&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=columbia.edu&prompt=none" for 127.0.0.1 at 2021-11-16 15:18:14 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"91e51ea38bd147bf2c8e2345aca23131a960ca54eac9d1b6", "code"=>"4/0AX4XfWhL2Nr3Oeyt4CaNvoq_t9rZEM7a1ASvVddDJJSEFpx82PaVRIdxCOb0SHrml_RRuw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"columbia.edu", "prompt"=>"none", "provider"=>"google_oauth2"}
+Completed   in 22662ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-16 15:18:49 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-11-16 15:18:50 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (4.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (39.5ms)
+  Rendered layouts/_flash.erb (0.9ms)
+Completed 200 OK in 676ms (Views: 601.5ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/auth/google_oauth2" for 127.0.0.1 at 2021-11-16 15:18:54 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=fd1bbce50d179d114d73d83d510bfabfca96201c588e4032&code=4/0AX4XfWh364SMU-pRNm7MD60dbP12Q50Cs3QR3UxGPkarxFITuRjr35cB7fVB6JhsGpVujw&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=columbia.edu&prompt=none" for 127.0.0.1 at 2021-11-16 15:19:57 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"fd1bbce50d179d114d73d83d510bfabfca96201c588e4032", "code"=>"4/0AX4XfWh364SMU-pRNm7MD60dbP12Q50Cs3QR3UxGPkarxFITuRjr35cB7fVB6JhsGpVujw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"columbia.edu", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? AND "users"."provider" = ? LIMIT 1  [["uid", "102457936701847489756"], ["provider", "google_oauth2"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-16 15:19:58 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-11-16 15:19:58 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.4ms)
