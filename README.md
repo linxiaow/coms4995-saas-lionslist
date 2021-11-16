@@ -47,6 +47,10 @@ bundle exec rake db:test:prepare
 ## Start server
 `rails server -b 0.0.0.0`
 
+## Google OAuth
+Refer to [user manual](manual/google-oauth/README.md)
+
+
 ## Use in Horeku
 https://aqueous-plains-80871.herokuapp.com/posts
 

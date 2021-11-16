@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-
+  skip_before_action :require_login
+  
   def show
     id = params[:id] # retrieve movie ID from URI route
     @post = Post.find(id) # look up movie by unique ID
