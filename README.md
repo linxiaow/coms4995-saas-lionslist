@@ -46,6 +46,7 @@ bundle exec rake db:test:prepare
 
 ## Start server
 `rails server -b 0.0.0.0`
+`rails server -b localhost`
 
 ## Use in Horeku
 https://aqueous-plains-80871.herokuapp.com/posts
@@ -64,7 +65,8 @@ User story resides in [spec](https://github.com/linxiaow/coms4995-saas-lionslist
 ```sh
 rake spec
 ```
-
+# Google OAuth
+[Developer Manual](./manual/google-oauth/README.md)
 # Github link
 https://github.com/linxiaow/coms4995-saas-lionslist
 
