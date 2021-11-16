@@ -1,8 +1,16 @@
 <!--  This file is app/views/posts/index.html.erb -->
 <h2>All Posts</h2> <%= @current_user_id %>
-<%= button_to "Log In with Google", '/auth/google_oauth2' %>
+<% unless logged_in?%>
+  <br><br>
+  <%= button_to "Log In with Google", '/auth/google_oauth2' %>
 <br>
-<%= link_to "Log out", '/logout', method: :delete %>
+<% end %>
+
+<% unless !logged_in?%>
+  <br><br>
+  <%= link_to "Log out", '/logout', method: :delete %>
+<% end %>
+
 
 <%#  Part 2: Start here... %>
 
