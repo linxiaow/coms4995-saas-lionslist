@@ -1,21 +1,24 @@
-<!--  This file is app/views/posts/index.html.erb -->
-<h2>All Posts</h2> <%= @current_user_id %>
-<% unless logged_in?%>
-  <br><br>
-  <%= button_to "Log In with Google", '/auth/google_oauth2' %>
+<h1><%=@user.username%>'s Profile</h1>
+
+Name: <%= @user.username %>
 <br>
-<% end %>
+Email: <%= @user.email %>
+<br>
+Phone Number: <%= @user.phone %>
+<br>
+Address: <%= @user.address %>
+<br>
+Self Introduction: <%= @user.description %>
 
-<% unless !logged_in?%>
-  <br>
-  <%= link_to "Profile", '/profile' %>
-  <br>
-  <%= link_to "Log out", '/logout', method: :delete %>
-<% end %>
+<br><br>
+<%= link_to "Back to homepage", '/posts'%>
+<br>
+<%= link_to "Update your profile", edit_profile_path %>
+<br>
+<%= link_to "Log out", '/logout', method: :delete %>
+<br><br>
 
-
-<%#  Part 2: Start here... %>
-
+<h3>Your Posts</h3>
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
@@ -54,4 +57,3 @@
     <% end %>
   </tbody>
 </table>
-<%= link_to "Add new post", new_post_path, :class => 'btn btn-primary' %>

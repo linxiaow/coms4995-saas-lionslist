@@ -12,6 +12,11 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails', '3.7.2'
   gem 'ZenTest', '4.11.2'
+  gem 'omniauth'
+  gem 'dotenv-rails'
+  gem 'omniauth-google-oauth2'
+  gem 'omniauth-rails_csrf_protection'
+  gem 'pry'
 end
 
 group :test do
