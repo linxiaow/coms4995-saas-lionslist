@@ -29,7 +29,7 @@ rails server -b localhost
 
 Go to login
 ```
-http://localhost:3000/login
+http://localhost:3000/
 ```
 
 Choose `login with google`
