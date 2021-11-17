@@ -1,6 +1,9 @@
 # OAuth
 Note this consent, so it may only be used in Columbia organization if I register with my columbia email for the google develper console
 
+![consent](../../images/consent.png)
+
+
 # Steps
 ## Reinstall gem because more dependencies were added
 

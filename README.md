@@ -46,6 +46,7 @@ bundle exec rake db:test:prepare
 
 ## Start server
 `rails server -b 0.0.0.0`
+`rails server -b localhost`
 
 ## Google OAuth
 Refer to [user manual](manual/google-oauth/README.md)
@@ -68,7 +69,8 @@ User story resides in [spec](https://github.com/linxiaow/coms4995-saas-lionslist
 ```sh
 rake spec
 ```
-
+# Google OAuth
+[Developer Manual](./manual/google-oauth/README.md)
 # Github link
 https://github.com/linxiaow/coms4995-saas-lionslist
 

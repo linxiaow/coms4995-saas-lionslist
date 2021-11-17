@@ -29,6 +29,12 @@ group :production do
   gem 'pg'
 end
 
+# gem for google oauth
+gem 'omniauth'
+gem 'dotenv-rails'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection', '~> 0.1'
+
 # Gems used only for assets and not required
 # in production environments by default.
 
