@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  skip_before_action :require_login
+  skip_before_action :require_login, except: [:create, :new]
   
   def show
     id = params[:id] # retrieve movie ID from URI route
