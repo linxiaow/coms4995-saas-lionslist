@@ -29,6 +29,9 @@ ActiveRecord::Schema.define(version: 20211117002747) do
     t.string "password"
     t.string "uid"
     t.string "provider"
+    t.string "phone"
+    t.string "address"
+    t.string "description"
   end
 
 end

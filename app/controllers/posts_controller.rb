@@ -1,11 +1,12 @@
 class PostsController < ApplicationController
-  skip_before_action :require_login, except: [:create, :new]
+  skip_before_action :require_login, except: [:create, :new, :edit, :update, :destroy]
   
   def show
     id = params[:id] # retrieve movie ID from URI route
     @post = Post.find(id) # look up movie by unique ID
     # will render app/views/movies/show.<extension> by default
     @current_user_id = session[:user_id]
+    @userid = @post.author_id
   end
 
   def index
@@ -18,8 +19,10 @@ class PostsController < ApplicationController
   end
 
   def create
+    @user = User.find(session[:user_id])
     @post = Post.create!(post_params)
     @post.author_id = session[:user_id]
+    @post.author = @user.username
     @post.save
     flash[:notice] = "#{@post.title} was successfully created."
     redirect_to posts_path
@@ -59,6 +62,6 @@ class PostsController < ApplicationController
   # Making "internal" methods private is not required, but is a common practice.
   # This helps make clear which methods respond to requests, and which ones do not.
   def post_params
-    params.require(:post).permit(:title, :content, :author, :category)
+    params.require(:post).permit(:title, :author, :content, :category)
   end
 end

@@ -16,7 +16,7 @@
   </li>
   <li>
     Author:
-    <%= @post.author %>
+    <%= link_to "#{@post.author}", other_profile_path(@userid) %>
   </li>
 </ul>
 
