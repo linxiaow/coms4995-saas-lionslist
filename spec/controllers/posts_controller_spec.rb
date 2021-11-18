@@ -37,29 +37,30 @@ RSpec.describe SessionsController, type: :request do
     end
   end
 
-  # describe 'edit' do
-  #   post = FactoryGirl.create(:post)
-  #   before do
-  #     get :edit, id: post.id
-  #   end
+  describe "destroys" do
+    it "deletes a post" do
+      login_with_oauth
+      get "/auth/google_oauth2/callback"
+      request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
 
-  #   it 'finds the post' do
-  #     expect(assigns(:post)).to eql(post)
-  #   end
+      post = Post.create(:title => "Post Title #3", :author => "Author #3",
+                    :category => "furniture", :content => "I posted some other things.")
+      post.author_id = 1
+      post.save
+      delete "/posts/#{post.id}"
+      expect(response).to redirect_to posts_path
+      expect(flash[:notice]).to match(/'Post Title #3' deleted./)
+    end
+  end
 
-  #   it 'renders the edit template' do
-  #     expect(response).to render_template('edit')
-  #   end
-  # end
 
-  # describe 'index' do
-  #   movie = FactoryGirl.create(:post)
+  describe 'index' do
 
-  #   it 'renders the index template' do
-  #     get :index
-  #     expect(response).to render_template('index')
-  #   end
-  # end
+    it 'renders the index template' do
+      get '/posts'
+      expect(response).to render_template('index')
+    end
+  end
   
   describe 'show' do
     before(:each) do

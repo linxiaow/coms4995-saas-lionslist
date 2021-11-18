@@ -15,4 +15,5 @@ Rottenpotatoes::Application.routes.draw do
   get '/edit/profile', to: 'users#edit', as: 'edit_profile'
   get '/error', to: 'users#error', as: 'error'
   delete '/logout', to: 'sessions#destroy'
+  delete '/posts/:id' => 'posts#destroy'
 end
