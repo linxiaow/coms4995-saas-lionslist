@@ -7,14 +7,22 @@ Feature: edit and delete existing posts
 Background: posts in database
 
   Given the following posts exist:
-  | title | category  | author  | content       |
-  | post1 | furniture | author1 | test content1 |
-  | post2 | furniture | author1 | test content2 |
-  | post3 | sublease  | author2 | test content3 |
-  | post4 | sublease  | author3 | test content4 |
+  | title | category  | author  | author_id | content       |
+  | post1 | furniture | Example User | 4       | test content1 |
+  | post2 | furniture | Example User | 4         | test content2 |
+  | post3 | sublease  | author2 | 2         | test content3 |
+  | post4 | sublease  | author3 | 3         | test content4 |
+
+  Given the following users exist:
+  | username | email             | password        | id |
+  | author1  | author1@gmail.com | MyDummyPassword | 1  |
+  | author2  | author2@gmail.com | MyDummyPassword | 2  |
+  | author3  | author3@gmail.com | MyDummyPassword | 3  |
+  | Example User | hz2712@columbia.edu | MyDummyPassword | 4|
 
 Scenario: edit a post on Lionlist
-  Given I am on the details page for "post1"
+  Given I am logged in with provider "google_oauth2"
+  And I am on the details page for "post1"
   And   I follow "Edit"
   Then  I should be on the edit page for "post1"
   When  I fill in "Title" with "edited_post"
@@ -25,8 +33,13 @@ Scenario: edit a post on Lionlist
   And   I should not see "post1"
 
 Scenario: delete a post on Lionlist
-  Given I am on the details page for "post2"
+  Given I am logged in with provider "google_oauth2"
+  And I am on the details page for "post2"
   And   I follow "Delete"
   Then  I should be on the Lionlist home page
   And   I should see "Post 'post2' deleted."
   And   I should not see "More about post2"
+
+Scenario: forcefully enter edit page without login
+  Given I am on the edit page for "post1"
+  Then I should be on the error page

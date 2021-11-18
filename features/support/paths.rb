@@ -24,6 +24,9 @@ module NavigationHelpers
     when /^the edit page for "(.*)"$/
       post = Post.find_by title: $1
       edit_post_path(post.id)
+
+    when /^the profile page for "(.*)"$/
+      other_profile_path($1)
      
     when /^the details page for "(.*)"$/
       post = Post.find_by title: $1

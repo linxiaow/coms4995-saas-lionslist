@@ -59,3 +59,17 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+OmniAuth.config.test_mode = true
+Capybara.default_host = 'http://example.com'
+
+OmniAuth.config.add_mock(:google_oauth2, {
+:uid => '12',
+:provider => 'google_oauth2',
+:info => {
+  :username => 'Example User',
+  :email => 'hz2712@columbia.edu',
+  :password => 'MyDummyPassword',
+  :uid => '12',
+  :provider => 'google_oauth2'
+  }
+})
