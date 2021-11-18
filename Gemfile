@@ -26,6 +26,11 @@ group :test do
 end
 group :production do
   gem 'pg'
+  gem 'omniauth'
+  gem 'dotenv-rails'
+  gem 'omniauth-google-oauth2'
+  gem 'omniauth-rails_csrf_protection'
+  gem 'pry'
 end
 
 # Gems used only for assets and not required

@@ -45,14 +45,14 @@ bundle exec rake db:test:prepare
 - You can optionally add some seed data in `db/seeds.rb` and run `rake db:seed` to add it.
 
 ## Start server
-`rails server -b 0.0.0.0`
+`rails server -b localhost`
 
 ## Google OAuth
 Refer to [user manual](manual/google-oauth/README.md)
 
 
 ## Use in Horeku
-https://aqueous-plains-80871.herokuapp.com/posts
+https://shielded-castle-82811.herokuapp.com/
 
 
 # How to run user story
