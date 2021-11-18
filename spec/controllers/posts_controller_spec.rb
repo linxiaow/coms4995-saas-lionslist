@@ -37,56 +37,56 @@ RSpec.describe SessionsController, type: :request do
     end
   end
 
-  describe "destroys" do
-    it "movies with valid parameters" do
-      post = Post.create(:title => "Post Title #3", :author => "Author #3",
-                    :category => "furniture", :content => "I posted some other things.")
-      get :destroy, {:id => post.id}
-#       expect(response).to redirect_to posts_path
-#       expect(flash[:notice]).to match(/Toucan Play This Game was successfully created./)
-      # Post.find_by(:title => "Post Title #3").destroy
-      expect(response).to redirect_to posts_path
-      expect(flash[:notice]).to match(/Post 'Post Title #3' deleted./)
-    end
-  end
+  # describe 'edit' do
+  #   post = FactoryGirl.create(:post)
+  #   before do
+  #     get :edit, id: post.id
+  #   end
 
-  describe 'edit' do
-    post = FactoryGirl.create(:post)
-    before do
-      get :edit, id: post.id
-    end
+  #   it 'finds the post' do
+  #     expect(assigns(:post)).to eql(post)
+  #   end
 
-    it 'finds the post' do
-      expect(assigns(:post)).to eql(post)
-    end
+  #   it 'renders the edit template' do
+  #     expect(response).to render_template('edit')
+  #   end
+  # end
 
-    it 'renders the edit template' do
-      expect(response).to render_template('edit')
-    end
-  end
+  # describe 'index' do
+  #   movie = FactoryGirl.create(:post)
 
-  describe 'index' do
-    movie = FactoryGirl.create(:post)
-
-    it 'renders the index template' do
-      get :index
-      expect(response).to render_template('index')
-    end
-  end
+  #   it 'renders the index template' do
+  #     get :index
+  #     expect(response).to render_template('index')
+  #   end
+  # end
   
   describe 'show' do
-    post = FactoryGirl.create(:post)
     before(:each) do
-      get :show, id: post.id
+      login_with_oauth
+      get "/auth/google_oauth2/callback"
+      request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
     end
-
-    it 'finds the post' do
-      expect(assigns(:post)).to eql(post)
-    end
-
-    it 'renders the show template' do
+    it 'shows the post' do
+      post = Post.create(:title => "Post Title #2",
+        :category => "furniture", :content => "I posted some other things.")
+      post "/posts/new", {:post => {:title => "Post Title #2",
+          :category => "furniture", :content => "I posted something."}}
+      get "/posts/#{post.id}"
       expect(response).to render_template('show')
+      expect(page.body).to match(/Post Title #2/)
+      expect(page.body).to match(/furniture/)
+      expect(page.body).to match(/I posted some other things./)
+      post.destroy
     end
+
+    # it 'finds the post' do
+    #   expect(assigns(:post)).to eql(post)
+    # end
+
+    # it 'renders the show template' do
+    #   expect(response).to render_template('show')
+    # end
   end
 
 end

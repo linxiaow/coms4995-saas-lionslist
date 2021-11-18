@@ -6,6 +6,7 @@ Rottenpotatoes::Application.routes.draw do
   root :to => redirect('/posts')
   post 'posts/new' => 'posts#create'
   post 'posts/:id/edit' => 'posts#update'
+  get 'posts/:id' => 'posts#show'
   get '/auth/:provider/callback' => 'sessions#omniauth'
   get 'auth/failure', to: redirect('/')
   get '/profile', to: 'users#show', as: 'profile'
