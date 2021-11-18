@@ -2,7 +2,7 @@
 <h2>All Posts</h2> <%= @current_user_id %>
 <% unless logged_in?%>
   <br><br>
-  <%= button_to "Log In with Google", '/auth/google_oauth2' %>
+  <%= link_to "Log In with Google", '/auth/google_oauth2', method: :get %>
 <br>
 <% end %>
 

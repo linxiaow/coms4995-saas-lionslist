@@ -7,21 +7,40 @@ Feature: add new posts
 Background: posts in database
 
   Given the following posts exist:
-  | title | category  | author  | content       |
-  | post1 | furniture | author1 | test content1 |
-  | post2 | furniture | author1 | test content2 |
-  | post3 | sublease  | author2 | test content3 |
-  | post4 | sublease  | author3 | test content4 |
+  | title | category  | author  | author_id | content       |
+  | post1 | furniture | author1 | 1         | test content1 |
+  | post2 | furniture | author1 | 1         | test content2 |
+  | post3 | sublease  | author2 | 2         | test content3 |
+  | post4 | sublease  | author3 | 3         | test content4 |
+
+  Given the following users exist:
+  | username | email             | password        | id |
+  | author1  | author1@gmail.com | MyDummyPassword | 1  |
+  | author2  | author2@gmail.com | MyDummyPassword | 2  |
+  | author3  | author3@gmail.com | MyDummyPassword | 3  |
+
+Scenario: user not logged in
+  Given I am on the Lionlist home page
+  Then I should see "Log In with Google"
+  And I should not see "Prifile"
+  And I should not see "Log out"
+
+Scenario: user logged in
+  Given I am logged in with provider "google_oauth2"
+  Then I should be on the Lionlist home page
+  And I should see "Profile"
+  And I should see "Log out"
+  And I should not see "Log In with Google"
 
 Scenario: create a post on Lionlist
-  Given I am on the Lionlist home page
+  Given I am logged in with provider "google_oauth2"
+  And I am on the Lionlist home page
   And  I follow "Add new post"
   Then I should be on the new post page
   When I fill in "Title" with "test_post"
   And I select "sublease" from "Category"
-  And I fill in "Author" with "test_author"
   And I fill in "Content" with "test_content"
   And I press "Save Changes"
   Then I should be on the Lionlist home page
   And I should see "test_post was successfully created."
-  And I should see "test_author"
+  And I should see "Example User"
