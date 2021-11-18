@@ -4,6 +4,8 @@ Rottenpotatoes::Application.routes.draw do
   # map '/' to be a redirect to '/movies'
   # Routes for Google authentication
   root :to => redirect('/posts')
+  post 'posts/new' => 'posts#create'
+  post 'posts/:id/edit' => 'posts#update'
   get '/auth/:provider/callback' => 'sessions#omniauth'
   get 'auth/failure', to: redirect('/')
   get '/profile', to: 'users#show', as: 'profile'
