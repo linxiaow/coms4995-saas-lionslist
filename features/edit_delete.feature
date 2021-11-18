@@ -39,3 +39,7 @@ Scenario: delete a post on Lionlist
   Then  I should be on the Lionlist home page
   And   I should see "Post 'post2' deleted."
   And   I should not see "More about post2"
+
+Scenario: forcefully enter edit page without login
+  Given I am on the edit page for "post1"
+  Then I should be on the error page

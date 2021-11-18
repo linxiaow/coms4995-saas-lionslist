@@ -48,3 +48,24 @@ Scenario: navigate to profile page from details page
   And   I should see "Back to homepage"
   And   I should see "Log out"
   And   I should not see "Update your profile"
+
+Scenario: update user profile on profile page
+  Given I am logged in with provider "google_oauth2"
+  And I am on the Lionlist home page
+  When  I follow "Profile"
+  Then  I should be on the profile page
+  When  I follow "Update your profile"
+  Then  I should be on the edit profile page
+  When  I fill in "Phone Number" with "313123"
+  And   I fill in "Address" with "3000 Broadway"
+  And   I fill in "Self Introduction" with "Hi nice to meet you"
+  And   I press "Update Personal Profile"
+  Then  I should be on the profile page
+  And   I should see "Example User's personal profile was successfully updated."
+  And   I should see "Phone Number: 313123"
+  And   I should see "Address: 3000 Broadway"
+  And   I should see "Self Introduction: Hi nice to meet you"
+
+Scenario: forcefully enter profile page without login
+  Given I am on the profile page
+  Then I should be on the error page

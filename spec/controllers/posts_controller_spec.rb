@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe PostsController, type: :controller do  
   describe "creates" do
     it "post with valid parameters" do
-      login_with_oauth
       get :create, {:post => {:title => "Post Title #1", :author => "Author #1",
                     :category => "furniture", :content => "I posted something."}}
       expect(response).to redirect_to posts_path

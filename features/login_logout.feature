@@ -1,8 +1,8 @@
 Feature: add new posts
 
   As a Lionlist user
-  So that I can look for buyers/tenents for my furniture/sublease
-  I want to post listings about furniture or sublease on Lionlist
+  So that I can access components that require login
+  I want to log in and log out with my Columbia email
 
 Background: posts in database
 
@@ -19,20 +19,25 @@ Background: posts in database
   | author2  | author2@gmail.com | MyDummyPassword | 2  |
   | author3  | author3@gmail.com | MyDummyPassword | 3  |
 
-Scenario: create a post on Lionlist
+Scenario: homepage when user not logged in
+  Given I am on the Lionlist home page
+  Then I should see "Log In with Google"
+  And I should not see "Prifile"
+  And I should not see "Log out"
+
+Scenario: homepage when user logged in
+  Given I am logged in with provider "google_oauth2"
+  Then I should be on the Lionlist home page
+  And I should see "Profile"
+  And I should see "Log out"
+  And I should not see "Log In with Google"
+
+Scenario: homepage after logout
   Given I am logged in with provider "google_oauth2"
   And I am on the Lionlist home page
-  And  I follow "Add new post"
-  Then I should be on the new post page
-  When I fill in "Title" with "test_post"
-  And I select "sublease" from "Category"
-  And I fill in "Content" with "test_content"
-  And I press "Save Changes"
+  And I follow "Log out"
   Then I should be on the Lionlist home page
-  And I should see "test_post was successfully created."
-  And I should see "Example User"
-
-Scenario: create a post without login
-  Given I am on the new post page
-  Then I should be on the error page
-  And I should see "You must be logged in to access this section"
+  And I should see "You have logged out!"
+  Then I should see "Log In with Google"
+  And I should not see "Prifile"
+  And I should not see "Log out"
