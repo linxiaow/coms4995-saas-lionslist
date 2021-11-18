@@ -14307,3 +14307,1516 @@ Processing by PostsController#index as HTML
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.2ms)
   [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:08:50.231735"], ["updated_at", "2021-11-18 03:08:50.231735"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:08:50.235806"], ["updated_at", "2021-11-18 03:08:50.235806"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:08:50.238457"], ["updated_at", "2021-11-18 03:08:50.238457"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:08:50.241108"], ["updated_at", "2021-11-18 03:08:50.241108"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:50 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_flash.erb (1.0ms)
+Completed 200 OK in 496ms (Views: 495.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:08:50.829203"], ["updated_at", "2021-11-18 03:08:50.829203"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:08:50.832340"], ["updated_at", "2021-11-18 03:08:50.832340"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:08:50.835025"], ["updated_at", "2021-11-18 03:08:50.835025"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:08:50.837672"], ["updated_at", "2021-11-18 03:08:50.837672"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:08:50 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "username", "password") VALUES (?, ?, ?)  [["email", "hz2712@columbia.edu"], ["username", "Example User"], ["password", "13f280bb91f6625d02154b8adcafbdd2"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://example.com/
+Completed 302 Found in 14ms (ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:08:50 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:50 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:08:50.929658"], ["updated_at", "2021-11-18 03:08:50.929658"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:08:50.933636"], ["updated_at", "2021-11-18 03:08:50.933636"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:08:50.936639"], ["updated_at", "2021-11-18 03:08:50.936639"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:08:50.940802"], ["updated_at", "2021-11-18 03:08:50.940802"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:08:50 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("email", "username", "password") VALUES (?, ?, ?)  [["email", "hz2712@columbia.edu"], ["username", "Example User"], ["password", "0aa7de1dae8251c6fbf2f5ef130ccfd0"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:08:50 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:50 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:50 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+Started GET "/posts/new" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (34.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"test_post", "category"=>"sublease", "content"=>"test_content"}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "test_post"], ["content", "test_content"], ["category", "sublease"], ["created_at", "2021-11-18 03:08:51.205242"], ["updated_at", "2021-11-18 03:08:51.205242"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "author_id" = ?, "author" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["author_id", "4"], ["author", "Example User"], ["updated_at", "2021-11-18 03:08:51.208731"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://example.com/posts
+Completed 302 Found in 14ms (ActiveRecord: 0.9ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (1.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post1"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content1"], ["created_at", "2021-11-18 03:08:51.247307"], ["updated_at", "2021-11-18 03:08:51.247307"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post2"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content2"], ["created_at", "2021-11-18 03:08:51.250932"], ["updated_at", "2021-11-18 03:08:51.250932"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:08:51.254698"], ["updated_at", "2021-11-18 03:08:51.254698"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:08:51.259993"], ["updated_at", "2021-11-18 03:08:51.259993"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "Example User"], ["email", "hz2712@columbia.edu"], ["password", "MyDummyPassword"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+Redirected to http://example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.3ms)
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post1"]]
+Started GET "/posts/4" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.2ms)
+Started GET "/posts/4/edit" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1[0m  [["title", "post1"]]
+Started PUT "/posts/4" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"edited_post", "category"=>"furniture", "content"=>"test content1"}, "commit"=>"Update Post Info", "id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "edited_post"], ["updated_at", "2021-11-18 03:08:51.368972"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://example.com/posts/4
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms)
+Started GET "/posts/4" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1[0m  [["title", "edited_post"]]
+  [1m[35m (1.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post1"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content1"], ["created_at", "2021-11-18 03:08:51.409427"], ["updated_at", "2021-11-18 03:08:51.409427"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post2"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content2"], ["created_at", "2021-11-18 03:08:51.414315"], ["updated_at", "2021-11-18 03:08:51.414315"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:08:51.417584"], ["updated_at", "2021-11-18 03:08:51.417584"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:08:51.420332"], ["updated_at", "2021-11-18 03:08:51.420332"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "Example User"], ["email", "hz2712@columbia.edu"], ["password", "MyDummyPassword"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+Redirected to http://example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post2"]]
+Started GET "/posts/5" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+Started DELETE "/posts/5" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://example.com/posts
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (2.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content1"], ["created_at", "2021-11-18 03:08:51.570867"], ["updated_at", "2021-11-18 03:08:51.570867"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content2"], ["created_at", "2021-11-18 03:08:51.576070"], ["updated_at", "2021-11-18 03:08:51.576070"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:08:51.582812"], ["updated_at", "2021-11-18 03:08:51.582812"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:08:51.585916"], ["updated_at", "2021-11-18 03:08:51.585916"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "Example User"], ["email", "hz2712@columbia.edu"], ["password", "MyDummyPassword"], ["id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "hz2712@columbia.edu"]]
+Redirected to http://example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+Started GET "/profile" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "4"]]
+  Rendered users/show.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post1"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content1"], ["created_at", "2021-11-18 03:08:51.713352"], ["updated_at", "2021-11-18 03:08:51.713352"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post2"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content2"], ["created_at", "2021-11-18 03:08:51.717403"], ["updated_at", "2021-11-18 03:08:51.717403"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:08:51.721691"], ["updated_at", "2021-11-18 03:08:51.721691"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:08:51.727690"], ["updated_at", "2021-11-18 03:08:51.727690"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "Example User"], ["email", "hz2712@columbia.edu"], ["password", "MyDummyPassword"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+Redirected to http://example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.4ms)
+Started GET "/posts/4" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post3"]]
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:08:51.867751"], ["updated_at", "2021-11-18 03:08:51.867751"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:08:51.872841"], ["updated_at", "2021-11-18 03:08:51.872841"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:08:51.877142"], ["updated_at", "2021-11-18 03:08:51.877142"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:08:51.880815"], ["updated_at", "2021-11-18 03:08:51.880815"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:08:51.963773"], ["updated_at", "2021-11-18 03:08:51.963773"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:08:51.968439"], ["updated_at", "2021-11-18 03:08:51.968439"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:08:51.973752"], ["updated_at", "2021-11-18 03:08:51.973752"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:08:51.977185"], ["updated_at", "2021-11-18 03:08:51.977185"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:51 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+Started GET "/posts/4" for 127.0.0.1 at 2021-11-17 22:08:52 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.1ms)
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post1"]]
+  [1m[36m (2.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:08:52.050055"], ["updated_at", "2021-11-18 03:08:52.050055"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:08:52.056343"], ["updated_at", "2021-11-18 03:08:52.056343"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:08:52.062003"], ["updated_at", "2021-11-18 03:08:52.062003"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:08:52.065750"], ["updated_at", "2021-11-18 03:08:52.065750"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post1"]]
+Started GET "/posts/4" for 127.0.0.1 at 2021-11-17 22:08:52 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:08:52 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:10:23.013110"], ["updated_at", "2021-11-18 03:10:23.013110"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:10:23.017996"], ["updated_at", "2021-11-18 03:10:23.017996"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:10:23.020648"], ["updated_at", "2021-11-18 03:10:23.020648"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:10:23.023309"], ["updated_at", "2021-11-18 03:10:23.023309"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:23 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_flash.erb (0.8ms)
+Completed 200 OK in 581ms (Views: 580.3ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:10:23.693713"], ["updated_at", "2021-11-18 03:10:23.693713"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:10:23.696799"], ["updated_at", "2021-11-18 03:10:23.696799"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:10:23.699324"], ["updated_at", "2021-11-18 03:10:23.699324"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:10:23.702078"], ["updated_at", "2021-11-18 03:10:23.702078"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:10:23 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("email", "username", "password") VALUES (?, ?, ?)  [["email", "hz2712@columbia.edu"], ["username", "Example User"], ["password", "e1a9f1b8535c671ad5ffc9a4ddd34258"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://example.com/
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:10:23 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:23 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:10:23.796907"], ["updated_at", "2021-11-18 03:10:23.796907"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:10:23.804279"], ["updated_at", "2021-11-18 03:10:23.804279"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:10:23.807351"], ["updated_at", "2021-11-18 03:10:23.807351"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:10:23.810231"], ["updated_at", "2021-11-18 03:10:23.810231"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:10:23 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("email", "username", "password") VALUES (?, ?, ?)  [["email", "hz2712@columbia.edu"], ["username", "Example User"], ["password", "f10bd8b55d981bec3cec0b2c2632b6f0"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:10:23 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:23 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:23 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+Started GET "/posts/new" for 127.0.0.1 at 2021-11-17 22:10:23 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (20.9ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2021-11-17 22:10:23 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"test_post", "category"=>"sublease", "content"=>"test_content"}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "test_post"], ["content", "test_content"], ["category", "sublease"], ["created_at", "2021-11-18 03:10:23.923153"], ["updated_at", "2021-11-18 03:10:23.923153"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "posts" SET "author_id" = ?, "author" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["author_id", "4"], ["author", "Example User"], ["updated_at", "2021-11-18 03:10:23.925739"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://example.com/posts
+Completed 302 Found in 16ms (ActiveRecord: 1.2ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:23 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post1"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content1"], ["created_at", "2021-11-18 03:10:23.960416"], ["updated_at", "2021-11-18 03:10:23.960416"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post2"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content2"], ["created_at", "2021-11-18 03:10:23.963844"], ["updated_at", "2021-11-18 03:10:23.963844"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:10:23.968681"], ["updated_at", "2021-11-18 03:10:23.968681"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:10:23.975334"], ["updated_at", "2021-11-18 03:10:23.975334"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "Example User"], ["email", "hz2712@columbia.edu"], ["password", "MyDummyPassword"], ["id", 4]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+Redirected to http://example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post1"]]
+Started GET "/posts/4" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 0.3ms)
+Started GET "/posts/4/edit" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.1ms)
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1[0m  [["title", "post1"]]
+Started PUT "/posts/4" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"edited_post", "category"=>"furniture", "content"=>"test content1"}, "commit"=>"Update Post Info", "id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "edited_post"], ["updated_at", "2021-11-18 03:10:24.223792"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://example.com/posts/4
+Completed 302 Found in 16ms (ActiveRecord: 1.0ms)
+Started GET "/posts/4" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.1ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1[0m  [["title", "edited_post"]]
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post1"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content1"], ["created_at", "2021-11-18 03:10:24.276990"], ["updated_at", "2021-11-18 03:10:24.276990"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post2"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content2"], ["created_at", "2021-11-18 03:10:24.280198"], ["updated_at", "2021-11-18 03:10:24.280198"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:10:24.285556"], ["updated_at", "2021-11-18 03:10:24.285556"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:10:24.289519"], ["updated_at", "2021-11-18 03:10:24.289519"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "Example User"], ["email", "hz2712@columbia.edu"], ["password", "MyDummyPassword"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+Redirected to http://example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post2"]]
+Started GET "/posts/5" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+Started DELETE "/posts/5" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://example.com/posts
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.6ms)
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content1"], ["created_at", "2021-11-18 03:10:24.455978"], ["updated_at", "2021-11-18 03:10:24.455978"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content2"], ["created_at", "2021-11-18 03:10:24.461200"], ["updated_at", "2021-11-18 03:10:24.461200"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:10:24.465864"], ["updated_at", "2021-11-18 03:10:24.465864"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:10:24.472205"], ["updated_at", "2021-11-18 03:10:24.472205"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "Example User"], ["email", "hz2712@columbia.edu"], ["password", "MyDummyPassword"], ["id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "hz2712@columbia.edu"]]
+Redirected to http://example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms)
+Started GET "/profile" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "4"]]
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (2.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post1"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content1"], ["created_at", "2021-11-18 03:10:24.653654"], ["updated_at", "2021-11-18 03:10:24.653654"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post2"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content2"], ["created_at", "2021-11-18 03:10:24.659576"], ["updated_at", "2021-11-18 03:10:24.659576"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:10:24.664223"], ["updated_at", "2021-11-18 03:10:24.664223"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:10:24.668451"], ["updated_at", "2021-11-18 03:10:24.668451"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "Example User"], ["email", "hz2712@columbia.edu"], ["password", "MyDummyPassword"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+Redirected to http://example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (34.4ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+Started GET "/posts/6" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms)
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post3"]]
+Started GET "/profile/2" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by UsersController#show_other as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "2"]]
+  Rendered users/show_other.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.5ms)
+  [1m[36m (1.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:10:24.855191"], ["updated_at", "2021-11-18 03:10:24.855191"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:10:24.861425"], ["updated_at", "2021-11-18 03:10:24.861425"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:10:24.864645"], ["updated_at", "2021-11-18 03:10:24.864645"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:10:24.868286"], ["updated_at", "2021-11-18 03:10:24.868286"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:10:24.951440"], ["updated_at", "2021-11-18 03:10:24.951440"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:10:24.961481"], ["updated_at", "2021-11-18 03:10:24.961481"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:10:24.964504"], ["updated_at", "2021-11-18 03:10:24.964504"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:10:24.969019"], ["updated_at", "2021-11-18 03:10:24.969019"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:24 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.7ms)
+Started GET "/posts/4" for 127.0.0.1 at 2021-11-17 22:10:25 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post1"]]
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:10:25.056553"], ["updated_at", "2021-11-18 03:10:25.056553"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:10:25.062510"], ["updated_at", "2021-11-18 03:10:25.062510"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:10:25.066651"], ["updated_at", "2021-11-18 03:10:25.066651"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:10:25.070701"], ["updated_at", "2021-11-18 03:10:25.070701"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post1"]]
+Started GET "/posts/4" for 127.0.0.1 at 2021-11-17 22:10:25 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:10:25 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:13:07.189116"], ["updated_at", "2021-11-18 03:13:07.189116"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:13:07.193523"], ["updated_at", "2021-11-18 03:13:07.193523"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:13:07.196340"], ["updated_at", "2021-11-18 03:13:07.196340"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:13:07.199882"], ["updated_at", "2021-11-18 03:13:07.199882"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:07 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (20.3ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 628ms (Views: 627.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:13:07.927248"], ["updated_at", "2021-11-18 03:13:07.927248"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:13:07.931508"], ["updated_at", "2021-11-18 03:13:07.931508"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:13:07.934642"], ["updated_at", "2021-11-18 03:13:07.934642"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:13:07.938926"], ["updated_at", "2021-11-18 03:13:07.938926"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:13:07 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "username", "password") VALUES (?, ?, ?)  [["email", "hz2712@columbia.edu"], ["username", "Example User"], ["password", "fe7401444d7a21d9ffb8217d0731b0c5"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://example.com/
+Completed 302 Found in 17ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:13:07 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:07 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:13:08.039354"], ["updated_at", "2021-11-18 03:13:08.039354"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:13:08.043398"], ["updated_at", "2021-11-18 03:13:08.043398"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:13:08.046892"], ["updated_at", "2021-11-18 03:13:08.046892"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:13:08.050198"], ["updated_at", "2021-11-18 03:13:08.050198"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("email", "username", "password") VALUES (?, ?, ?)  [["email", "hz2712@columbia.edu"], ["username", "Example User"], ["password", "552aba6a1225d89560e31a8ea362d3c1"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://example.com/
+Completed 302 Found in 19ms (ActiveRecord: 1.6ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+Started GET "/posts/new" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (19.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+Started POST "/posts" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"test_post", "category"=>"sublease", "content"=>"test_content"}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "test_post"], ["content", "test_content"], ["category", "sublease"], ["created_at", "2021-11-18 03:13:08.184908"], ["updated_at", "2021-11-18 03:13:08.184908"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "posts" SET "author_id" = ?, "author" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["author_id", "4"], ["author", "Example User"], ["updated_at", "2021-11-18 03:13:08.188325"], ["id", 8]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://example.com/posts
+Completed 302 Found in 13ms (ActiveRecord: 0.8ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post1"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content1"], ["created_at", "2021-11-18 03:13:08.244968"], ["updated_at", "2021-11-18 03:13:08.244968"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post2"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content2"], ["created_at", "2021-11-18 03:13:08.250845"], ["updated_at", "2021-11-18 03:13:08.250845"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:13:08.257168"], ["updated_at", "2021-11-18 03:13:08.257168"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:13:08.268835"], ["updated_at", "2021-11-18 03:13:08.268835"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "Example User"], ["email", "hz2712@columbia.edu"], ["password", "MyDummyPassword"], ["id", 4]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+Redirected to http://example.com/
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (51.5ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 64ms (Views: 62.7ms | ActiveRecord: 0.3ms)
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post1"]]
+Started GET "/posts/4" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (20.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 62ms (Views: 57.6ms | ActiveRecord: 0.2ms)
+Started GET "/posts/4/edit" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.1ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1[0m  [["title", "post1"]]
+Started PUT "/posts/4" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "post"=>{"title"=>"edited_post", "category"=>"furniture", "content"=>"test content1"}, "commit"=>"Update Post Info", "id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "edited_post"], ["updated_at", "2021-11-18 03:13:08.561196"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://example.com/posts/4
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+Started GET "/posts/4" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1[0m  [["title", "edited_post"]]
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post1"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content1"], ["created_at", "2021-11-18 03:13:08.591879"], ["updated_at", "2021-11-18 03:13:08.591879"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post2"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content2"], ["created_at", "2021-11-18 03:13:08.595282"], ["updated_at", "2021-11-18 03:13:08.595282"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:13:08.599855"], ["updated_at", "2021-11-18 03:13:08.599855"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:13:08.605356"], ["updated_at", "2021-11-18 03:13:08.605356"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "Example User"], ["email", "hz2712@columbia.edu"], ["password", "MyDummyPassword"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+Redirected to http://example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post2"]]
+Started GET "/posts/5" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms)
+Started DELETE "/posts/5" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://example.com/posts
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content1"], ["created_at", "2021-11-18 03:13:08.785177"], ["updated_at", "2021-11-18 03:13:08.785177"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content2"], ["created_at", "2021-11-18 03:13:08.788385"], ["updated_at", "2021-11-18 03:13:08.788385"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:13:08.794249"], ["updated_at", "2021-11-18 03:13:08.794249"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:13:08.799553"], ["updated_at", "2021-11-18 03:13:08.799553"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "Example User"], ["email", "hz2712@columbia.edu"], ["password", "MyDummyPassword"], ["id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "hz2712@columbia.edu"]]
+Redirected to http://example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (26.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 1.0ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+Started GET "/profile" for 127.0.0.1 at 2021-11-17 22:13:08 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "4"]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post1"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content1"], ["created_at", "2021-11-18 03:13:09.023179"], ["updated_at", "2021-11-18 03:13:09.023179"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post2"], ["category", "furniture"], ["author", "Example User"], ["author_id", "4"], ["content", "test content2"], ["created_at", "2021-11-18 03:13:09.026569"], ["updated_at", "2021-11-18 03:13:09.026569"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:13:09.031979"], ["updated_at", "2021-11-18 03:13:09.031979"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:13:09.035286"], ["updated_at", "2021-11-18 03:13:09.035286"]]
+  [1m[36m (0.6ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "Example User"], ["email", "hz2712@columbia.edu"], ["password", "MyDummyPassword"], ["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/auth/google_oauth2/callback" for 127.0.0.1 at 2021-11-17 22:13:09 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+Redirected to http://example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2021-11-17 22:13:09 -0500
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:09 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:09 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+Started GET "/posts/6" for 127.0.0.1 at 2021-11-17 22:13:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post3"]]
+Started GET "/profile/2" for 127.0.0.1 at 2021-11-17 22:13:09 -0500
+Processing by UsersController#show_other as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "2"]]
+  Rendered users/show_other.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:13:09.153553"], ["updated_at", "2021-11-18 03:13:09.153553"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:13:09.158454"], ["updated_at", "2021-11-18 03:13:09.158454"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:13:09.161101"], ["updated_at", "2021-11-18 03:13:09.161101"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:13:09.163581"], ["updated_at", "2021-11-18 03:13:09.163581"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:09 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:13:09.226228"], ["updated_at", "2021-11-18 03:13:09.226228"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:13:09.230188"], ["updated_at", "2021-11-18 03:13:09.230188"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:13:09.236775"], ["updated_at", "2021-11-18 03:13:09.236775"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:13:09.240695"], ["updated_at", "2021-11-18 03:13:09.240695"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:09 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+Started GET "/posts/4" for 127.0.0.1 at 2021-11-17 22:13:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms)
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post1"]]
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post1"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content1"], ["created_at", "2021-11-18 03:13:09.291512"], ["updated_at", "2021-11-18 03:13:09.291512"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post2"], ["category", "furniture"], ["author", "author1"], ["author_id", "1"], ["content", "test content2"], ["created_at", "2021-11-18 03:13:09.295106"], ["updated_at", "2021-11-18 03:13:09.295106"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "post3"], ["category", "sublease"], ["author", "author2"], ["author_id", "2"], ["content", "test content3"], ["created_at", "2021-11-18 03:13:09.300524"], ["updated_at", "2021-11-18 03:13:09.300524"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "category", "author", "author_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "post4"], ["category", "sublease"], ["author", "author3"], ["author_id", "3"], ["content", "test content4"], ["created_at", "2021-11-18 03:13:09.306124"], ["updated_at", "2021-11-18 03:13:09.306124"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author1"], ["email", "author1@gmail.com"], ["password", "MyDummyPassword"], ["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)[0m  [["username", "author2"], ["email", "author2@gmail.com"], ["password", "MyDummyPassword"], ["id", 2]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("username", "email", "password", "id") VALUES (?, ?, ?, ?)  [["username", "author3"], ["email", "author3@gmail.com"], ["password", "MyDummyPassword"], ["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."title" = ? LIMIT 1  [["title", "post1"]]
+Started GET "/posts/4" for 127.0.0.1 at 2021-11-17 22:13:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+Started GET "/posts" for 127.0.0.1 at 2021-11-17 22:13:09 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (1.8ms)[0m  [1mrollback transaction[0m

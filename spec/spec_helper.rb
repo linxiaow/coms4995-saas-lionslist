@@ -89,4 +89,21 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+  config.include IntegrationSpecHelper, :type => :request
 end
+
+
+Capybara.default_host = 'http://example.org'
+
+OmniAuth.config.test_mode = true
+OmniAuth.config.add_mock(:google_oauth2, {
+  :uid => '4',
+  :provider => 'google_oauth2',
+  :info => {
+    :username => 'Example User',
+    :email => 'hz2712@columbia.edu',
+    :password => 'MyDummyPassword',
+    :uid => '4',
+    :provider => 'google_oauth2'
+    }
+})
