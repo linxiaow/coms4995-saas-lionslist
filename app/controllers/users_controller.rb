@@ -2,13 +2,17 @@ class UsersController < ApplicationController
     skip_before_action :require_login, except: [:show, :show_other, :edit, :update]
     def show
         @user = User.find(session[:user_id])
+        @current_user_id = @user.id
         @posts = Post.search_author(session[:user_id])
+        render "show"
     end
 
     def show_other
         other_id = params[:id]
         @user = User.find(other_id)
+        @current_user_id = session[:user_id]
         @posts = Post.search_author(other_id)
+        render "show"
     end
 
     def edit
