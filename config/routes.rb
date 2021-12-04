@@ -14,6 +14,7 @@ Rottenpotatoes::Application.routes.draw do
   put '/profile', to: 'users#update', as: 'update_profile'
   get '/edit/profile', to: 'users#edit', as: 'edit_profile'
   get '/error', to: 'users#error', as: 'error'
+  get '/logout', to: 'sessions#destroy'
   delete '/logout', to: 'sessions#destroy'
   delete '/posts/:id' => 'posts#destroy'
   post 'post/:id' => 'comments#create', as: 'add_comment'

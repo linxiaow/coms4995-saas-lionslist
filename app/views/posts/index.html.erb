@@ -1,29 +1,29 @@
 <!--  This file is app/views/posts/index.html.erb -->
-<h2>All Posts</h2> <%= @current_user_id %>
-<% unless logged_in?%>
-  <br><br>
-  <%= link_to "Log In with Google", '/auth/google_oauth2', method: :get %>
-<br>
-<% end %>
 
-<% unless !logged_in?%>
-  <br>
-  <%= link_to "Profile", '/profile' %>
-  <br>
-  <%= link_to "Log out", '/logout', method: :delete %>
-<% end %>
+<header class="bg-dark py-5">
+  <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder">Welcome to Lionlist</h1>
+          <p class="lead fw-normal text-white-50 mb-0">A craigslist forum designed by Columbia students, for Columbia students</p>
+      </div>
+  </div>
+</header>
+<div class="page_name">All Posts</div> 
+<%= @current_user_id %>
 
-<%= form_tag posts_path, method: :get, :class => 'form' do %>
-  <%= label_tag(:category, "Category") %>
-  <%= select_tag(:category, options_for_select([["", ""], ['furniture', 'furniture'], ['sublease', 'sublease']], @category)) %>
-  <%= label_tag(:author, "Author") %>
-  <%= text_field_tag(:author, @author) %>
-  <%= label_tag(:title, "Title") %>
-  <%= text_field_tag(:title, @title) %>
-  <%= submit_tag("Search") %>
+<div class="posts_filters">
+  <%= form_tag posts_path, method: :get, :class => 'form' do %>
+    <%= label_tag(:category, "Category") %>
+    <%= select_tag(:category, options_for_select([["", ""], ['furniture', 'furniture'], ['sublease', 'sublease']], @category)) %>
+    <%= label_tag(:author, "Author") %>
+    <%= text_field_tag(:author, @author) %>
+    <%= label_tag(:title, "Title") %>
+    <%= text_field_tag(:title, @title) %>
+    <%= submit_tag("Search") %>
 <% end %>
+</div>
 
-<table class="table table-striped col-md-12" id="movies">
+<table class="table table-striped col-md-12" id="posts">
   <thead>
     <tr>
       <th>Post Title</th>
@@ -61,4 +61,7 @@
     <% end %>
   </tbody>
 </table>
-<%= link_to "Add new post", new_post_path, :class => 'btn btn-primary' %>
+
+<div class="new_post">
+  <%= link_to "Add new post", new_post_path, :class => 'btn btn-primary'%>
+</div>
