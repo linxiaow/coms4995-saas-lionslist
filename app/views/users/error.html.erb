@@ -5,7 +5,7 @@
 	  </div>
     <% end %>
     <br><br>
-  	<%= button_to "Log In with Google", '/auth/google_oauth2' %>
+  	<%= link_to "Log In with Google", '/auth/google_oauth2', method: :get %>
 	<br>
 	<%= link_to "Back to homepage", '/posts'%>
 <% end %>
