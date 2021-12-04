@@ -13,8 +13,15 @@
   <%= link_to "Log out", '/logout', method: :delete %>
 <% end %>
 
-
-<%#  Part 2: Start here... %>
+<%= form_tag posts_path, method: :get, :class => 'form' do %>
+  <%= label_tag(:category, "Category") %>
+  <%= select_tag(:category, options_for_select([["", ""], ['furniture', 'furniture'], ['sublease', 'sublease']], @category)) %>
+  <%= label_tag(:author, "Author") %>
+  <%= text_field_tag(:author, @author) %>
+  <%= label_tag(:title, "Title") %>
+  <%= text_field_tag(:title, @title) %>
+  <%= submit_tag("Search") %>
+<% end %>
 
 <table class="table table-striped col-md-12" id="movies">
   <thead>
