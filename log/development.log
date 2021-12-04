@@ -21753,3 +21753,2028 @@ Completed 200 OK in 3016ms (Views: 3014.8ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/assets/application.self-b0e39d0d19e4670b8dbcb708425ad2098a938d14c23e65b887e0d9750b52970b.css?body=1" for 127.0.0.1 at 2021-12-04 14:49:43 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 14:51:25 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3112ms (Views: 3110.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-36142063de7887d05abb4424efbfd856538e98a66d75a0effdb800bb84236d8b.css?body=1" for 127.0.0.1 at 2021-12-04 14:51:28 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 14:51:42 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2877ms (Views: 2875.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-4ecad63d3491dd7685c00da2057be965b214f0c9bcfe664006788402f8753920.css?body=1" for 127.0.0.1 at 2021-12-04 14:51:45 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 14:52:06 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2821ms (Views: 2819.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-96e07dea84d0b5f4657aa2aaf2c1730c1caf8ab947dc5b786f152d90477dc93a.css?body=1" for 127.0.0.1 at 2021-12-04 14:52:09 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 14:54:55 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3179ms (Views: 3178.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-57c4118dd9cd73f66a3990f8d151d5d6fca20e8a0f4c6bdb89b4bd5f3e95ee51.css?body=1" for 127.0.0.1 at 2021-12-04 14:54:59 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 14:55:04 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3328ms (Views: 3325.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-5a17b47a76fee80dbe2bce19fad9dacee83477ab377e96efa46d1817014c15a6.css?body=1" for 127.0.0.1 at 2021-12-04 14:55:07 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 14:55:15 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 3084ms (Views: 3082.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-27aef51642abc95985a9f742ffdcf727e7ae7289d94d971f481f818065b81de2.css?body=1" for 127.0.0.1 at 2021-12-04 14:55:18 -0500
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-04 14:55:34 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2021-12-04 14:55:39 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-04 14:55:48 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 14:56:25 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2843ms (Views: 2841.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-570b15f9db263324595466b0c2e1ece790d24daa88b9650a6f98594f389dbb4f.css?body=1" for 127.0.0.1 at 2021-12-04 14:56:28 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 14:56:51 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 3004ms (Views: 3002.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-3b29fb41d7e2f8ce7224697e202f13eb6b30d1cc7cbd2a6da071da55aade1c41.css?body=1" for 127.0.0.1 at 2021-12-04 14:56:54 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 14:58:15 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3249ms (Views: 3247.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-75e0627be904bc6c28777b3f8d1c0ffeeb368347f2b67d8f30390093f4a165e1.css?body=1" for 127.0.0.1 at 2021-12-04 14:58:18 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-04 14:59:53 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 14:59:53 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2021-12-04 15:00:36 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:05:44 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:06:08 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:06:13 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:06:22 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 3230ms (Views: 3228.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-1be085336d11fd2ab09465cb60205c16d8fc22c36a9f27cff1a5f91d69f66cca.css?body=1" for 127.0.0.1 at 2021-12-04 15:06:25 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:06:32 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3088ms (Views: 3087.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-1bed675bf0b3c6b56ace0a239c5fb39fcd6c188b2ffcfd5b5d9ce23019be537c.css?body=1" for 127.0.0.1 at 2021-12-04 15:06:36 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:06:52 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3198ms (Views: 3196.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-c7108005042bbca3cdcccc473f740142cbeb8608e54a380c0abd1ecc2352359b.css?body=1" for 127.0.0.1 at 2021-12-04 15:06:55 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:07:13 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 62.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:09:10 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:13:04 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 71ms (Views: 67.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:16:55 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:17:36 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 71ms (Views: 67.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:20:58 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 41.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:21:59 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3845ms (Views: 3843.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-80be4357a18203959c6bdecd08abfbbc6a9f9e2a796b8bee5514c55e28ac105e.css?body=1" for 127.0.0.1 at 2021-12-04 15:22:02 -0500
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:22:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (42.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 64.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:24:16 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:25:35 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3367ms (Views: 3365.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-ea0029cfbcbb224cba5c8d1eeba635d709c87d13e595a703a5bbc9b974bd749f.css?body=1" for 127.0.0.1 at 2021-12-04 15:25:39 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:25:47 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."category" = ?[0m  [["category", "furniture"]]
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2749ms (Views: 2747.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-29384e4d3b9f9a626f88857b4fd57d03160e335bee32785a0a8c4c5afec86d59.css?body=1" for 127.0.0.1 at 2021-12-04 15:25:50 -0500
+
+
+Started GET "/posts?utf8=%E2%9C%93&category=sublease&author=&title=&commit=Search" for 127.0.0.1 at 2021-12-04 15:26:02 -0500
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"sublease", "author"=>"", "title"=>"", "commit"=>"Search"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."category" = ?  [["category", "sublease"]]
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&category=&author=&title=&commit=Search" for 127.0.0.1 at 2021-12-04 15:26:08 -0500
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"", "author"=>"", "title"=>"", "commit"=>"Search"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&category=&author=&title=&commit=Search" for 127.0.0.1 at 2021-12-04 15:27:31 -0500
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"", "author"=>"", "title"=>"", "commit"=>"Search"}
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-04 15:27:51 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:34:49 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:43:34 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:44:11 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:44:18 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:44:26 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:45:22 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:45:29 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 107.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:45:34 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:45:45 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:46:03 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:46:27 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:47:47 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:47:56 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:48:02 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:48:07 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_flash.erb (2.2ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:48:13 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:48:55 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (13.4ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 101ms (Views: 94.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:49:34 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:49:40 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:50:04 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:50:51 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3068ms (Views: 3065.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:52:36 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:52:51 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3419ms (Views: 3417.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:52:55 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 56.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-e0c88882e432f1e935a53025d579ec611ffdc98cda816e619d03543ba22ca4d1.css?body=1" for 127.0.0.1 at 2021-12-04 15:52:55 -0500
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:53:15 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3046ms (Views: 3043.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-cdef9b7b7c75adb6def83091b6e0f4d6d63e7b7f70fa1c7a2a59fa1cc9b4e545.css?body=1" for 127.0.0.1 at 2021-12-04 15:53:18 -0500
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:53:24 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3122ms (Views: 3120.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-f4f6020b37ffefb48f875b27317b971f9080637bbbf40b4f58a1f852bf7ba190.css?body=1" for 127.0.0.1 at 2021-12-04 15:53:27 -0500
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:53:46 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:53:57 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:54:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 94.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:54:11 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 15:54:16 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:55:19 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3269ms (Views: 3267.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:55:43 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3246ms (Views: 3244.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-7e926f047860f9f6c795f274c44adcc59e2962536cdc904ed89c7e106eccc994.css?body=1" for 127.0.0.1 at 2021-12-04 15:55:47 -0500
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:57:12 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 15:57:27 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 16:03:46 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-04 16:05:30 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile/997" for 127.0.0.1 at 2021-12-04 16:20:45 -0500
+Processing by UsersController#show_other as HTML
+  Parameters: {"id"=>"997"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 997]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "997"]]
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 16:27:48 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2021-12-04 16:27:57 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2021-12-04 16:28:06 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2021-12-04 16:28:08 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2021-12-04 16:28:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2021-12-04 16:28:12 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 16:28:18 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-04 16:28:27 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 16:28:29 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2021-12-04 16:28:32 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/edit/profile" for 127.0.0.1 at 2021-12-04 16:28:35 -0500
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  Rendered users/edit.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2021-12-04 16:28:38 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-04 16:28:46 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (94.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 118ms (Views: 116.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-04 16:29:03 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-04 16:29:05 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:05:44 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (58.5ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 4514ms (Views: 4422.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:07:26 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3366ms (Views: 3362.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-461f7b69796ad5364dbcf14131e818ad254e0316a4aec27ff9a315e0980c22a8.css?body=1" for 127.0.0.1 at 2021-12-05 20:07:30 -0500
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:07:33 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:07:46 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2873ms (Views: 2871.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-6f3570b2b37ff8a4a9a55d9517c7f6bec8b7cb7dfb2286e9a89c3f8482d85195.css?body=1" for 127.0.0.1 at 2021-12-05 20:07:49 -0500
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:08:23 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2962ms (Views: 2959.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-7e926f047860f9f6c795f274c44adcc59e2962536cdc904ed89c7e106eccc994.css?body=1" for 127.0.0.1 at 2021-12-05 20:08:26 -0500
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:08:57 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2926ms (Views: 2924.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-7b45c3849a240d2112bfda35b92181edcce53747bed93f62f21a4abc93461286.css?body=1" for 127.0.0.1 at 2021-12-05 20:09:00 -0500
+
+
+Started POST "/post/2" for 127.0.0.1 at 2021-12-05 20:09:07 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cVzNj/zKLWJDXSm+4k11galAs4wiYqgtF/EupVAgD/gpifHcsTTfoO1JE8j4qQjihyfq5lZNDRqvpsK0gecRQg==", "comment"=>{"content"=>"hi"}, "commit"=>"Save", "id"=>"2"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (9.6ms)[0m  [1mINSERT INTO "comments" ("content", "post_id", "author_id", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "hi"], ["post_id", 2], ["author_id", "1000"], ["author", "Haoran Zhu"], ["created_at", "2021-12-06 01:09:07.721024"], ["updated_at", "2021-12-06 01:09:07.721024"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 53ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:09:07 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:09:36 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2901ms (Views: 2899.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-8b785b858a23e714de0ce817f452b4d7388f14e22e7d6f8993b12661b8e1394b.css?body=1" for 127.0.0.1 at 2021-12-05 20:09:39 -0500
+
+
+Started POST "/post/2" for 127.0.0.1 at 2021-12-05 20:09:44 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nMi0e6D6svqLx9gLgrt/k6ryYCotizhiTAB1I7OIuo/EHYgo7QRAOCXT4n2YXwLwhJU5QFmknVX0V5kyYk+kNQ==", "comment"=>{"content"=>"hi"}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("content", "post_id", "author_id", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["content", "hi"], ["post_id", 2], ["author_id", "1000"], ["author", "Haoran Zhu"], ["created_at", "2021-12-06 01:09:44.039602"], ["updated_at", "2021-12-06 01:09:44.039602"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 22ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:09:44 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 59.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:09:59 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2945ms (Views: 2943.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e3cd11d45f4d908919a4c0bfb34dea7d3696bead6116042d5c1d65c412ae593a.css?body=1" for 127.0.0.1 at 2021-12-05 20:10:02 -0500
+
+
+Started POST "/post/2" for 127.0.0.1 at 2021-12-05 20:10:07 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gm+G/FUQwwhacD2l62pttGhJZho/tzTVV7K+tojLDefaurqvGO4xyvRkB9PxjhDXRi4/cEuYkeLv5VKnWQwTXQ==", "comment"=>{"content"=>"sss"}, "commit"=>"Save", "id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "comments" ("content", "post_id", "author_id", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "sss"], ["post_id", 2], ["author_id", "1000"], ["author", "Haoran Zhu"], ["created_at", "2021-12-06 01:10:07.064027"], ["updated_at", "2021-12-06 01:10:07.064027"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 12ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:10:07 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:11:25 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 2903ms (Views: 2900.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-bd5f26b8ddfe51d67de73d4d9dbd5e17d781bc495e591a203b4c9eb7ab796dc9.css?body=1" for 127.0.0.1 at 2021-12-05 20:11:28 -0500
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:12:18 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (1.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:13:01 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:13:21 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3025ms (Views: 3022.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-ef3bce20d8aaf93bfe8ca06229f71f29ad05d9eb99e78c1f751abbf9a05ac79a.css?body=1" for 127.0.0.1 at 2021-12-05 20:13:24 -0500
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:13:33 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2795ms (Views: 2793.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-bda88c007a1dbb6c4aca0fc1b71737cf0386c13efe4de57d90e7464df33020ca.css?body=1" for 127.0.0.1 at 2021-12-05 20:13:36 -0500
+
+
+Started POST "/post/2" for 127.0.0.1 at 2021-12-05 20:13:56 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V9Mqmzz0z/OkGZlBBP2/2mA8vZ+VfHVgc1jOf35sxCEPBhbIcQo9MQoNozceGcK5Tlvk9eFT0FfLDyJur6vamw==", "comment"=>{"content"=>"ddd\r\nddd\r\nddd"}, "commit"=>"Save", "id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "comments" ("content", "post_id", "author_id", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "ddd\r\nddd\r\nddd"], ["post_id", 2], ["author_id", "1000"], ["author", "Haoran Zhu"], ["created_at", "2021-12-06 01:13:56.353121"], ["updated_at", "2021-12-06 01:13:56.353121"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 24ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:13:56 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (15.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 77ms (Views: 74.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:15:04 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (1.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 73ms (Views: 68.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:15:20 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3141ms (Views: 3137.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-d5dcc93f6a6371d952d3f5df5c488c19430d0a5b52067b2e4f69fada34c307f4.css?body=1" for 127.0.0.1 at 2021-12-05 20:15:24 -0500
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:15:40 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:17:16 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2021-12-05 20:17:41 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile/1000" for 127.0.0.1 at 2021-12-05 20:18:01 -0500
+Processing by UsersController#show_other as HTML
+  Parameters: {"id"=>"1000"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  Rendered users/show.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:18:30 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2021-12-05 20:18:38 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-05 20:18:38 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:18:38 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-05 20:18:41 -0500
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/error
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/error" for 127.0.0.1 at 2021-12-05 20:18:41 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2021-12-05 20:20:26 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=63f45df6e72a8cfed745a5284d00c388caa359ac001eadf6&code=4/0AX4XfWgKcwLe6By1AbQ9JtxPN5aRSKeiFxvl49vPPBVS7drI1EhaP6SK1i9j1vectdAErw&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.profile%20openid%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=columbia.edu&prompt=none" for 127.0.0.1 at 2021-12-05 20:20:28 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"63f45df6e72a8cfed745a5284d00c388caa359ac001eadf6", "code"=>"4/0AX4XfWgKcwLe6By1AbQ9JtxPN5aRSKeiFxvl49vPPBVS7drI1EhaP6SK1i9j1vectdAErw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email", "authuser"=>"1", "hd"=>"columbia.edu", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "hz2712@columbia.edu"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-05 20:20:29 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:20:29 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&category=&author=&title=3&commit=Search" for 127.0.0.1 at 2021-12-05 20:20:50 -0500
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"", "author"=>"", "title"=>"3", "commit"=>"Search"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."title" = ?[0m  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-05 20:24:06 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2021-12-05 20:24:08 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-05 20:24:08 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:24:08 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."title" = ?  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-05 20:24:09 -0500
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/error
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/error" for 127.0.0.1 at 2021-12-05 20:24:09 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:27:59 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."title" = ?[0m  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/error" for 127.0.0.1 at 2021-12-05 20:29:28 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/error" for 127.0.0.1 at 2021-12-05 20:29:47 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/error" for 127.0.0.1 at 2021-12-05 20:29:57 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/error" for 127.0.0.1 at 2021-12-05 20:30:29 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:30:30 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."title" = ?  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/error" for 127.0.0.1 at 2021-12-05 20:30:55 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/error" for 127.0.0.1 at 2021-12-05 20:31:25 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2933ms (Views: 2932.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-0e04123ff730d1da5d9550dd00e92ec269e17472af6669622b56af05236cdca0.css?body=1" for 127.0.0.1 at 2021-12-05 20:31:28 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:31:35 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."title" = ?[0m  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3220ms (Views: 3218.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-a8e243e7b62b8f312d3fcc4874d1cca7e7a544da8fe6b4a1c6d6705f1b650ea0.css?body=1" for 127.0.0.1 at 2021-12-05 20:31:38 -0500
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-05 20:31:40 -0500
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/error
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/error" for 127.0.0.1 at 2021-12-05 20:31:40 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 68ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:32:02 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."title" = ?  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2021-12-05 20:32:03 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=72755a457aaaf43e85f9f6513ff933db68f2aeb928f7c684&code=4/0AX4XfWit7r6r0YWqTVnlEcTHlY2uUbAAj2m0-GzHfZRKfhSO8SeGIq3FFupnkCsE-B0D5A&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.profile%20openid%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=columbia.edu&prompt=none" for 127.0.0.1 at 2021-12-05 20:32:05 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"72755a457aaaf43e85f9f6513ff933db68f2aeb928f7c684", "code"=>"4/0AX4XfWit7r6r0YWqTVnlEcTHlY2uUbAAj2m0-GzHfZRKfhSO8SeGIq3FFupnkCsE-B0D5A", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.profile openid https://www.googleapis.com/auth/userinfo.email", "authuser"=>"1", "hd"=>"columbia.edu", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "hz2712@columbia.edu"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-05 20:32:05 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:32:05 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."title" = ?  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2021-12-05 20:32:07 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-05 20:32:07 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:32:07 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."title" = ?[0m  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-05 20:32:11 -0500
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/error
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/error" for 127.0.0.1 at 2021-12-05 20:32:11 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:32:54 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."title" = ?  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2021-12-05 20:32:55 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=c4a8886dd3bead2f89beba57fc31999fc27b07dca631d7f5&code=4/0AX4XfWhsDiChimTmpQ_wtwH95peh-fjMbtQLB3isGjTz5UnQucinbG4-pZYEiIn670MS_Q&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20openid%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=columbia.edu&prompt=none" for 127.0.0.1 at 2021-12-05 20:33:19 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"c4a8886dd3bead2f89beba57fc31999fc27b07dca631d7f5", "code"=>"4/0AX4XfWhsDiChimTmpQ_wtwH95peh-fjMbtQLB3isGjTz5UnQucinbG4-pZYEiIn670MS_Q", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email openid https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"columbia.edu", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "hz2712@columbia.edu"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-05 20:33:19 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:33:19 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."title" = ?  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2021-12-05 20:33:21 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-05 20:33:21 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:33:21 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."title" = ?[0m  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-05 20:33:23 -0500
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/error
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/error" for 127.0.0.1 at 2021-12-05 20:33:23 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2021-12-05 20:33:30 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=df3ac90f3459a23d8b253fb6e3d4ca9648a964afacf0902a&code=4/0AX4XfWhVkkUQUvpqomFivCQw2Lm3ODbi46rvvc8CP85igHPWgZLruS6SMFfq_ipRHnhIWA&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=columbia.edu&prompt=none" for 127.0.0.1 at 2021-12-05 20:33:32 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"df3ac90f3459a23d8b253fb6e3d4ca9648a964afacf0902a", "code"=>"4/0AX4XfWhVkkUQUvpqomFivCQw2Lm3ODbi46rvvc8CP85igHPWgZLruS6SMFfq_ipRHnhIWA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"columbia.edu", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-05 20:33:33 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-05 20:33:33 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."title" = ?[0m  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&category=&author=&title=3&commit=Search" for 127.0.0.1 at 2021-12-05 20:33:36 -0500
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"", "author"=>"", "title"=>"3", "commit"=>"Search"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."title" = ?  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&category=&author=&title=3&commit=Search" for 127.0.0.1 at 2021-12-05 20:33:38 -0500
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"", "author"=>"", "title"=>"3", "commit"=>"Search"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."title" = ?[0m  [["title", "3"]]
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&category=&author=&title=&commit=Search" for 127.0.0.1 at 2021-12-05 20:33:41 -0500
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "category"=>"", "author"=>"", "title"=>"", "commit"=>"Search"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-05 21:16:05 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (55.0ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 1138ms (Views: 1040.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-05 21:16:06 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 00:23:36 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-06 00:23:37 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (3.6ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (32.2ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 964ms (Views: 889.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2021-12-06 00:23:53 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 36.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/edit/profile" for 127.0.0.1 at 2021-12-06 00:23:56 -0500
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  Rendered users/edit.html.erb within layouts/application (23.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:24:11 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (52.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 86ms (Views: 81.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2021-12-06 00:24:13 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:24:15 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:25:41 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:25:54 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:26:30 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:26:31 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:26:32 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:26:39 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-06 00:26:47 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-06 00:27:16 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2021-12-06 00:27:25 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:27:26 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:28:41 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (38.3ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 3595ms (Views: 3592.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-3f1779780b4e5d3b232ef41534ede9603cb6a0049bcbfff41b70de89ebda79ba.css?body=1" for 127.0.0.1 at 2021-12-06 00:28:45 -0500
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:29:14 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3527ms (Views: 3524.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-b9304bffa366ccaa8092e5ec1f4d9ccc598c2676ca51967a5906366420137687.css?body=1" for 127.0.0.1 at 2021-12-06 00:29:17 -0500
+
+
+Started POST "/post/4" for 127.0.0.1 at 2021-12-06 00:29:30 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"exKTMSSjPMwtrUgyxzpjaojvPaAuh9GqqrK9kN+FCDsjx69iaV3ODoO5ckTd3h4JpohkylqodJ0S5VGBDkIWgQ==", "comment"=>{"content"=>"11"}, "commit"=>"Save", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "comments" ("content", "post_id", "author_id", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["content", "11"], ["post_id", 4], ["author_id", "1000"], ["author", "Haoran Zhu"], ["created_at", "2021-12-06 05:29:30.614171"], ["updated_at", "2021-12-06 05:29:30.614171"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/4
+Completed 302 Found in 45ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:29:30 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:29:51 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 3229ms (Views: 3227.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-336f83b247d599a9b0cc72e3fde868a939fcb207d5721624656064c421a30993.css?body=1" for 127.0.0.1 at 2021-12-06 00:29:55 -0500
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:30:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 2985ms (Views: 2982.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-537d3095963de49fd15fc3b48706c63b4fbd89c96780486cdb49540a9611ab4d.css?body=1" for 127.0.0.1 at 2021-12-06 00:30:12 -0500
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:30:22 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 3105ms (Views: 3103.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-c7b115b19401d7e9f637143b3df4138e3eaeb140a6a90a293f6594521e6ff3cb.css?body=1" for 127.0.0.1 at 2021-12-06 00:30:25 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-06 00:30:50 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2021-12-06 00:32:09 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 00:32:10 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-06 00:32:10 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 98ms (Views: 93.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/google_oauth2" for 127.0.0.1 at 2021-12-06 00:32:13 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=09f7d221ff3654824542d6d7a004d012a0187e1f0a2b0792&code=4/0AX4XfWi_YAIZxTj7LRmG63F3co5TjI0tuHH2W0GsQZgyW7o1HBGsw37PvU9qFt1aXqnbUg&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email%20openid&authuser=1&hd=columbia.edu&prompt=none" for 127.0.0.1 at 2021-12-06 00:32:16 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"09f7d221ff3654824542d6d7a004d012a0187e1f0a2b0792", "code"=>"4/0AX4XfWi_YAIZxTj7LRmG63F3co5TjI0tuHH2W0GsQZgyW7o1HBGsw37PvU9qFt1aXqnbUg", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email openid", "authuser"=>"1", "hd"=>"columbia.edu", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-06 00:32:17 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-06 00:32:17 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 78ms (Views: 75.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-06 00:32:24 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 66ms (Views: 63.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-06 00:32:36 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 91ms (Views: 86.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/post/1" for 127.0.0.1 at 2021-12-06 00:32:56 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oyzaa1kuPewAd5SV17Gnv+9Ok/MilL9b8eaN7U2L9i5j+eY4FNDPLq5jruPNVdrcwSnKmVa7GmxJsWH8nEzolA==", "comment"=>{"content"=>"111"}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "comments" ("content", "post_id", "author_id", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "111"], ["post_id", 1], ["author_id", "1000"], ["author", "Haoran Zhu"], ["created_at", "2021-12-06 05:32:56.108920"], ["updated_at", "2021-12-06 05:32:56.108920"]]
+  [1m[35m (4.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 37ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-06 00:32:56 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 200ms (Views: 192.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/post/1" for 127.0.0.1 at 2021-12-06 00:33:00 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3nBUKKdvkbuHD3NPL/awURcMWclDXCzuI57P8wRK/BSGpWh76pFjeSkbSTk1Es0yOWsAozdzidmbySPi1Y3irg==", "comment"=>{"content"=>"222"}, "commit"=>"Save", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "comments" ("content", "post_id", "author_id", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["content", "222"], ["post_id", 1], ["author_id", "1000"], ["author", "Haoran Zhu"], ["created_at", "2021-12-06 05:33:00.183407"], ["updated_at", "2021-12-06 05:33:00.183407"]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 17ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-06 00:33:00 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 84ms (Views: 81.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/post/1" for 127.0.0.1 at 2021-12-06 00:33:03 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DK3JSb77QcBVwBgiu56hf9UQnkDalX/IdVwiOz2aF3FUePUa8wWzAvvUIlShetwc+3fHKq662v/NC84q7F0Jyw==", "comment"=>{"content"=>"444"}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "comments" ("content", "post_id", "author_id", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "444"], ["post_id", 1], ["author_id", "1000"], ["author", "Haoran Zhu"], ["created_at", "2021-12-06 05:33:03.074438"], ["updated_at", "2021-12-06 05:33:03.074438"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 12ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-12-06 00:33:03 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_flash.erb (0.8ms)
+Completed 200 OK in 75ms (Views: 69.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2021-12-06 00:33:07 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:33:09 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-06 00:33:15 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-12-06 00:34:16 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (96.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 127ms (Views: 126.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-06 00:35:20 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-06 00:36:33 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-06 00:37:27 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 127.0.0.1 at 2021-12-06 00:37:46 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  Rendered users/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-06 00:37:49 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-12-06 00:37:50 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:37:53 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:39:04 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2021-12-06 00:39:50 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.7ms)

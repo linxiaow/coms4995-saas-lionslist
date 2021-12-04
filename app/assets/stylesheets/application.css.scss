@@ -30,12 +30,8 @@ body {
 
 div.page_name {
     text-align: center;
-    margin: 10px 0 20px 0;
+    margin: 20px 0 20px 0;
     font-size: 30px;
-}
-
-div.posts_filters {
-    margin: 0 0 20px 0;
 }
 
 .form {
@@ -44,11 +40,35 @@ div.posts_filters {
 }
 
 table#posts {
-    margin: 0 5% 0 5%;
+    margin: 0 5% 40px 5%;
     width: 90%;
 }
 
 div.new_post {
-    margin: 0 40% 0 40%;
-    width: 20%;
+    text-align: center;
+}
+
+.new_post_btn {
+    font-size: 20px;
+    margin-bottom: 100px;
+}
+
+div.comment_header {
+    font-size: 19px;
+}
+
+.comment_form {
+    margin: 0 auto 20px auto;
+}
+
+.comment_btns {
+    margin-bottom: 120px;
+}
+
+.err_btns {
+    margin-top: 50px;
+}
+
+.detail_btns {
+    margin: -20px auto 50px auto;
 }
