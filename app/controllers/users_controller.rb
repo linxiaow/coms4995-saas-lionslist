@@ -3,6 +3,11 @@ class UsersController < ApplicationController
     def show
         @user = User.find(session[:user_id])
         @posts = Post.search_author(session[:user_id])
+        @purchase_deals = Deal.search_purchase_requests(session[:user_id])
+        @selling_deals = Deal.search_selling_requests(session[:user_id])
+        @unrated_deals = Deal.search_unrated_deal(session[:user_id])
+        @involved_deals = Deal.search_involved_deal(session[:user_id])
+        @user_rating = Deal.calcualte_rating(session[:user_id])
     end
 
     def show_other

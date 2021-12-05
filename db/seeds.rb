@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-posts = [{:title => 'Test1', :content => 'AAA', :author => 'testauthor1', :author_id => '1', :category => 'furniture'},
-    	  {:title => 'Test2', :content => 'BBB', :author => 'testauthor2', :author_id => '1', :category => 'sublease'},
-    	  {:title => 'Test3', :content => 'CCC', :author => 'testauthor3', :author_id => '2', :category => 'furniture'},
+posts = [{:title => 'Test1', :content => 'AAA', :author => 'testauthor1', :author_id => '-1', :category => 'furniture'},
+    	  {:title => 'Test2', :content => 'BBB', :author => 'testauthor2', :author_id => '-1', :category => 'sublease'},
+    	  {:title => 'Test3', :content => 'CCC', :author => 'testauthor3', :author_id => '-2', :category => 'furniture'},
   	 ]
 
 posts.each do |post|

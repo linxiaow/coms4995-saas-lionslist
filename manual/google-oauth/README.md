@@ -17,7 +17,9 @@ Also add a new user table, so need to migrate the db again
 ```
 bundle exec rake db:migrate
 ```
-
+```
+bundle exec rake db:migrate:reset
+```
 ## Ask for .env file
 This file is very important for local development with Google OAuth ClientID, but is ignored in .gitignore. Ask Haoran or Linxiao for the file
 

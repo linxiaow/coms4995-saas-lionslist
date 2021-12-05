@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
   def index
     puts "index!"
-    @posts = Post.all
+    @posts = Post.all_onshelf_posts
   end
 
   def new
@@ -53,7 +53,15 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
+    # @post.destroy
+    @post.onshelf = 0
+    @post.save
+    all_requests = Deal.get_all_unsettled_requests_from_post_id(@post.id)
+    all_requests.each do |request|
+        request.status = 'declined'
+        request.save
+    end
+
     flash[:notice] = "Post '#{@post.title}' deleted."
     redirect_to posts_path
   end

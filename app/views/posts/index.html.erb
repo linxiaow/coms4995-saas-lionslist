@@ -26,6 +26,7 @@
       <th>Last Updated</th>
 
       <th>More Info</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -49,6 +50,9 @@
         
         <td>
           <%= link_to "More about #{post.title}", post_path(post) %>
+        </td>
+        <td>
+          <%= button_to "Request Deal", add_deal_path(post), :class => 'btn btn-primary', :method =>:post %>
         </td>
       </tr>
     <% end %>
