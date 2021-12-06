@@ -23778,3 +23778,2709 @@ Processing by PostsController#show as HTML
   Rendered posts/show.html.erb within layouts/application (8.6ms)
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.7ms)
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "author" varchar, "author_id" varchar, "created_at" datetime, "updated_at" datetime, "post_id" integer) [0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "author" varchar, "category" varchar, "created_at" datetime, "updated_at" datetime, "author_id" varchar) 
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "password" varchar, "uid" varchar, "provider" varchar, "phone" varchar, "address" varchar, "description" varchar) [0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20211203020315')
+  [1m[36m (1.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20211116195953')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20211116200037')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20211203020107')[0m
+  [1m[35m (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20211102091826')
+  [1m[36m (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20211117002747')[0m
+  [1m[35m (1.6ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "author" varchar, "author_id" varchar, "created_at" datetime, "updated_at" datetime, "post_id" integer) 
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "author" varchar, "category" varchar, "created_at" datetime, "updated_at" datetime, "author_id" varchar) [0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "password" varchar, "uid" varchar, "provider" varchar, "phone" varchar, "address" varchar, "description" varchar) 
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20211203020315')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20211116195953')
+  [1m[36m (1.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20211116200037')[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20211203020107')
+  [1m[36m (2.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20211102091826')[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20211117002747')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDeals (20211204165634)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/henryzhu/Documents/GitHub/coms4995-saas-lionslist/db/migrate/20211204165634_create_deals.rb:12)
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "deals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "status" varchar, "buyer_id" varchar, "buyer_name" varchar, "seller_id" varchar, "seller_name" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20211204165634"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddRatingToDeals (20211204165827)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "deals" ADD "rating" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20211204165827"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddPostFkColToDeals (20211204171436)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "deals" ADD "post_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20211204171436"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddDealedToPosts (20211204230411)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "posts" ADD "onshelf" integer DEFAULT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20211204230411"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2021-12-06 14:06:30 -0500
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:06:30 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (3.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_flash.erb (2.0ms)
+Completed 200 OK in 4554ms (Views: 4483.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:06:35 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (4.5ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 39.0ms | ActiveRecord: 4.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "posts" ("title", "content", "author", "author_id", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Test1"], ["content", "AAA"], ["author", "testauthor1"], ["author_id", "-1"], ["category", "furniture"], ["created_at", "2021-12-06 19:07:03.919997"], ["updated_at", "2021-12-06 19:07:03.919997"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("title", "content", "author", "author_id", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["title", "Test2"], ["content", "BBB"], ["author", "testauthor2"], ["author_id", "-1"], ["category", "sublease"], ["created_at", "2021-12-06 19:07:03.925973"], ["updated_at", "2021-12-06 19:07:03.925973"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "content", "author", "author_id", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Test3"], ["content", "CCC"], ["author", "testauthor3"], ["author_id", "-2"], ["category", "furniture"], ["created_at", "2021-12-06 19:07:03.930852"], ["updated_at", "2021-12-06 19:07:03.930852"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("id", "username", "email", "password") VALUES (?, ?, ?, ?)  [["id", 997], ["username", "testauthor1"], ["email", "testauthor1@columbia.edu"], ["password", "MyDummyPassword1"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("id", "username", "email", "password") VALUES (?, ?, ?, ?)[0m  [["id", 998], ["username", "testauthor2"], ["email", "testauthor2@columbia.edu"], ["password", "MyDummyPassword2"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("id", "username", "email", "password") VALUES (?, ?, ?, ?)  [["id", 999], ["username", "testauthor3"], ["email", "testauthor3@columbia.edu"], ["password", "MyDummyPassword3"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:07:15 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (43.4ms)
+  Rendered layouts/_flash.erb (1.0ms)
+Completed 200 OK in 645ms (Views: 596.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:07:39 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3543ms (Views: 3541.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-92d59c35ce25e4cacdb7617275cdfe6f49b806c7dfac94fe38acafa56522603e.css?body=1" for ::1 at 2021-12-06 14:07:42 -0500
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:09:22 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 272ms (Views: 270.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:09:48 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 15ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/users_controller.rb:4:in `show'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (34.1ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (32.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (103.5ms)
+
+
+Started GET "/logout" for ::1 at 2021-12-06 14:09:52 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-06 14:09:52 -0500
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:09:52 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 66.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2021-12-06 14:09:53 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=b5f2435e9a2a15a6a48f7db6dd90546673be597f42bc33ad&code=4/0AX4XfWi7S3lM_-dXCg4xUCXCWAmIbo0IBUxnUsr8KzVHKkaMzOJcsBif_DXQFj69iInspg&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=columbia.edu&prompt=none" for ::1 at 2021-12-06 14:09:55 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"b5f2435e9a2a15a6a48f7db6dd90546673be597f42bc33ad", "code"=>"4/0AX4XfWi7S3lM_-dXCg4xUCXCWAmIbo0IBUxnUsr8KzVHKkaMzOJcsBif_DXQFj69iInspg", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"columbia.edu", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "hz2712@columbia.edu"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "username", "password") VALUES (?, ?, ?)  [["email", "hz2712@columbia.edu"], ["username", "Haoran Zhu"], ["password", "c3d578a70ebd908ab6815cce62f856cd"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 40ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-06 14:09:55 -0500
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:09:55 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:09:58 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35m (0.5ms)[0m  SELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 70ms (Views: 52.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:09:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.6ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (83.3ms)
+
+
+Started GET "/js/scripts.js" for ::1 at 2021-12-06 14:09:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:11:25 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3150ms (Views: 3148.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-784a1622bb11e97158046367f4268020000beb68562a1e133448bd2f1d1ddbc5.css?body=1" for ::1 at 2021-12-06 14:11:28 -0500
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:11:57 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for ::1 at 2021-12-06 14:12:16 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-06 14:12:16 -0500
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:12:16 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:12:19 -0500
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/error
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/error" for ::1 at 2021-12-06 14:12:19 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:12:26 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&sort_by=created+date&commit=Sort" for ::1 at 2021-12-06 14:12:30 -0500
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "sort_by"=>"created date", "commit"=>"Sort"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)  ORDER BY created_at DESC
+  Rendered posts/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2021-12-06 14:12:35 -0500
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:12:40 -0500
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/error
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/error" for ::1 at 2021-12-06 14:12:40 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (1.2ms)
+Completed 200 OK in 50ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/error" for ::1 at 2021-12-06 14:13:07 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:13:09 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/3" for ::1 at 2021-12-06 14:13:12 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (57.7ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 96ms (Views: 92.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2021-12-06 14:13:42 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_flash.erb (4.9ms)
+Completed 200 OK in 75ms (Views: 71.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:13:44 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.8ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2021-12-06 14:13:48 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=af7c14053be88ca2623264ff951bbe36949aa06bdb40894f&code=4/0AX4XfWgLN7PB3vJIhRRYxcy2k3L-N2o0qcio3lTkD7CVjDPkkc2cixv-77EIK5npbgCkAQ&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=columbia.edu&prompt=none" for ::1 at 2021-12-06 14:13:50 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"af7c14053be88ca2623264ff951bbe36949aa06bdb40894f", "code"=>"4/0AX4XfWgLN7PB3vJIhRRYxcy2k3L-N2o0qcio3lTkD7CVjDPkkc2cixv-77EIK5npbgCkAQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"columbia.edu", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "hz2712@columbia.edu"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-12-06 14:13:50 -0500
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:13:50 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 61.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:13:54 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:14:48 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.8ms)
+Completed 200 OK in 69ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:15:25 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_flash.erb (1.5ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:15:50 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:15:53 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:15:55 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2021-12-06 14:16:01 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LzuPmrh7abPCcsHj0JbJinKVGBapsTnQ+AYRLbG7wQd37rPJ9YWbcWxm+5XKcrTpXPJBfN2enOdAUf08YHzfvQ==", "post"=>{"title"=>"qqq", "category"=>"furniture", "content"=>"qqq"}, "commit"=>"Save Changes"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "qqq"], ["content", "qqq"], ["category", "furniture"], ["created_at", "2021-12-06 19:16:01.417290"], ["updated_at", "2021-12-06 19:16:01.417290"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "posts" SET "author_id" = ?, "author" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["author_id", "1000"], ["author", "Haoran Zhu"], ["updated_at", "2021-12-06 19:16:01.422764"], ["id", 4]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 14ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:16:01 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/4" for ::1 at 2021-12-06 14:16:04 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/4/edit" for ::1 at 2021-12-06 14:16:07 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 152ms (Views: 150.7ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/posts/4" for ::1 at 2021-12-06 14:16:11 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQCO9eC1AIbcsGl/hgPhj5ezL0AUa2C28zXp6Tev4GMB1bKmrUvyRHKkUwmc55zsudR2KmBExYFLYgX45mj+2Q==", "post"=>{"title"=>"qqq", "category"=>"furniture", "content"=>"qqqg"}, "commit"=>"Update Post Info", "id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "posts" SET "content" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["content", "qqqg"], ["updated_at", "2021-12-06 19:16:11.852005"], ["id", 4]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/4
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/4" for ::1 at 2021-12-06 14:16:11 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/4/edit" for ::1 at 2021-12-06 14:16:24 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile/1000" for ::1 at 2021-12-06 14:16:26 -0500
+Processing by UsersController#show_other as HTML
+  Parameters: {"id"=>"1000"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36m (1.9ms)[0m  [1mSELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.3ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)[0m
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 23.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/profile/css/styles.css" for ::1 at 2021-12-06 14:16:27 -0500
+
+ActionController::RoutingError (No route matches [GET] "/profile/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.7ms)
+
+
+Started GET "/profile/js/scripts.js" for ::1 at 2021-12-06 14:16:27 -0500
+
+ActionController::RoutingError (No route matches [GET] "/profile/js/scripts.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.2ms)
+
+
+Started GET "/edit/profile" for ::1 at 2021-12-06 14:16:34 -0500
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  Rendered users/edit.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile/js/scripts.js" for ::1 at 2021-12-06 14:16:36 -0500
+
+ActionController::RoutingError (No route matches [GET] "/profile/js/scripts.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.6ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:16:39 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:16:42 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:16:48 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:16:50 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')
+  Rendered users/show.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:16:50 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.6ms)
+
+
+Started GET "/js/scripts.js" for ::1 at 2021-12-06 14:16:50 -0500
+
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.6ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:18:10 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35m (0.2ms)[0m  SELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 37.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:18:10 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.0ms)
+
+
+Started GET "/js/scripts.js" for ::1 at 2021-12-06 14:18:10 -0500
+
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.6ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:18:26 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36m (0.5ms)[0m  [1mSELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')
+  Rendered users/show.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 45.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:18:26 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.6ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (45.1ms)
+
+
+Started GET "/js/scripts.js" for ::1 at 2021-12-06 14:18:27 -0500
+
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.8ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:18:41 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:18:43 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.1ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.1ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:19:08 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)[0m
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.5ms)[0m  SELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.3ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)[0m
+  [1m[35mDeal Load (0.9ms)[0m  SELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')
+  Rendered users/show.html.erb within layouts/application (19.8ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 98ms (Views: 91.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:19:08 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.8ms)
+
+
+Started GET "/js/scripts.js" for ::1 at 2021-12-06 14:19:08 -0500
+
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.9ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:19:47 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35m (0.2ms)[0m  SELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 76ms (Views: 70.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:19:47 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.9ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:20:05 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')
+  Rendered users/show.html.erb within layouts/application (17.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 51.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:20:05 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.9ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:20:18 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35m (0.2ms)[0m  SELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.4ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 39.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:20:18 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.8ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (105.8ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:20:59 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  [1m[36mDeal Load (0.3ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.3ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)[0m
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')
+  Rendered users/show.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3500ms (Views: 3495.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.self-fb21144a7250cfc1cfbe180cd5719da0f6c686924b4b5742c865f836ed23943c.css?body=1" for ::1 at 2021-12-06 14:21:03 -0500
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:21:03 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.2ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:21:13 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35m (0.2ms)[0m  SELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3614ms (Views: 3610.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-4dc04e18255571a2f3dd72dbf33178caae003dc2831e6aaa85b22b2bc95addd3.css?body=1" for ::1 at 2021-12-06 14:21:17 -0500
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:21:17 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.3ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:21:24 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:21:27 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/3" for ::1 at 2021-12-06 14:21:30 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile/-2" for ::1 at 2021-12-06 14:21:32 -0500
+Processing by UsersController#show_other as HTML
+  Parameters: {"id"=>"-2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", -2]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=-2):
+  app/controllers/users_controller.rb:17:in `show_other'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.5ms)
+
+
+Started GET "/profile/-2" for ::1 at 2021-12-06 14:21:35 -0500
+Processing by UsersController#show_other as HTML
+  Parameters: {"id"=>"-2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", -2]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=-2):
+  app/controllers/users_controller.rb:17:in `show_other'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.9ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:22:15 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/4" for ::1 at 2021-12-06 14:22:18 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/4/edit" for ::1 at 2021-12-06 14:22:20 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/4/edit" for ::1 at 2021-12-06 14:22:40 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:22:41 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:22:45 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35m (0.2ms)[0m  SELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:22:45 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.4ms)
+
+
+Started GET "/edit/profile" for ::1 at 2021-12-06 14:22:46 -0500
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  Rendered users/edit.html.erb within layouts/application (104.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 124ms (Views: 123.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:22:52 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.6ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:24:49 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:24:50 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:25:08 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:25:17 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:25:19 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/4" for ::1 at 2021-12-06 14:25:21 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4/edit" for ::1 at 2021-12-06 14:25:23 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/4/edit" for ::1 at 2021-12-06 14:25:59 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:26:00 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:26:02 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:26:04 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:26:31 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:26:45 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35m (0.3ms)[0m  SELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 27.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:26:45 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.8ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.8ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.3ms)
+
+
+Started GET "/edit/profile" for ::1 at 2021-12-06 14:26:47 -0500
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  Rendered users/edit.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:26:52 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35m (0.2ms)[0m  SELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:26:53 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.5ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:26:54 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:26:55 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:26:58 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/4" for ::1 at 2021-12-06 14:27:01 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4/edit" for ::1 at 2021-12-06 14:27:03 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:27:39 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:27:40 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:27:48 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:27:49 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (63.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 85ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:27:50 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:27:56 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:28:06 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:28:06 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:28:07 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:28:08 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)[0m
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')
+  Rendered users/show.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:28:08 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.4ms)
+
+
+Started GET "/edit/profile" for ::1 at 2021-12-06 14:28:09 -0500
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  Rendered users/edit.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:28:20 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/4" for ::1 at 2021-12-06 14:28:22 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/4/edit" for ::1 at 2021-12-06 14:28:24 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:28:30 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:28:40 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:28:45 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:29:08 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:29:16 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4" for ::1 at 2021-12-06 14:29:18 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/4/edit" for ::1 at 2021-12-06 14:29:19 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/edit.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/post/4" for ::1 at 2021-12-06 14:29:24 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EyQOvv9avq9Fk0sxNca3cnooJM4yPRM2Va+Xk0Eqp55L8TLtsqRMbeuHcUcvIsoRVE99pEYStgHt+HuCkO25JA==", "comment"=>{"content"=>"xxxx"}, "commit"=>"Save", "id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "comments" ("content", "post_id", "author_id", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "xxxx"], ["post_id", 4], ["author_id", "1000"], ["author", "Haoran Zhu"], ["created_at", "2021-12-06 19:29:24.557683"], ["updated_at", "2021-12-06 19:29:24.557683"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/4
+Completed 302 Found in 24ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/4" for ::1 at 2021-12-06 14:29:24 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:29:32 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:30:42 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:30:59 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:31:16 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/3" for ::1 at 2021-12-06 14:31:18 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/3" for ::1 at 2021-12-06 14:31:31 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:31:34 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:31:36 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 139ms (Views: 138.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:31:38 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:31:41 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35m (0.7ms)[0m  SELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:31:41 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.9ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:31:56 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/3" for ::1 at 2021-12-06 14:31:58 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:32:02 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35m (0.5ms)[0m  SELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.1ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)
+  [1m[36mDeal Load (0.3ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 21.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:32:02 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.0ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:32:32 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36m (0.3ms)[0m  [1mSELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)[0m
+  [1m[35mDeal Load (0.3ms)[0m  SELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')
+  Rendered users/show.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 85ms (Views: 76.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:32:32 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.1ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:32:49 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 108ms (Views: 106.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/3" for ::1 at 2021-12-06 14:32:51 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:33:18 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:33:19 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35m (1.7ms)[0m  SELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1000"]]
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 47.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:33:19 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.3ms)
+
+
+Started DELETE "/posts/4" for ::1 at 2021-12-06 14:33:25 -0500
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+rzeBDpnGeodm99UYxTbaTF7gVIzF3S/cOgOruUpevGiaeJXd5nrKLOP5SJ58KYKHxzYOEc40YjIv+K/NO5kSw==", "id"=>"4"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "onshelf" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["onshelf", 0], ["updated_at", "2021-12-06 19:33:25.664320"], ["id", 4]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (post_id = 4 and status = 'unsettled')
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 10ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:33:25 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:33:27 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:33:50 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:34:32 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:34:47 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:35:16 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:35:38 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:35:46 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:35:52 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:36:03 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 97.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:36:49 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (52.5ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 145ms (Views: 136.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:37:19 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:37:31 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:37:42 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:38:01 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:38:28 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3448ms (Views: 3447.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-c5d42c3d555db2401aecb7066f8e18edf38ebfe0d19483d95cbb0fcf1d337c0c.css?body=1" for ::1 at 2021-12-06 14:38:32 -0500
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:38:36 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/posts" for ::1 at 2021-12-06 14:38:40 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/posts"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.7ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:38:55 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/posts" for ::1 at 2021-12-06 14:38:59 -0500
+
+ActionController::RoutingError (No route matches [PUT] "/posts"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:39:13 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:39:14 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2021-12-06 14:39:15 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yC7vKgMR5RZsU1eaR6CU9D3MaYEnhXZ8srhvif0JL7uQ+9N5Tu8X1MJHbexdROmXE6sw61Oq00sK74OYLM4xAQ==", "post"=>{"title"=>"1", "category"=>"furniture", "content"=>"1"}, "commit"=>"Create your post"}
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "1"], ["content", "1"], ["category", "furniture"], ["created_at", "2021-12-06 19:39:15.840521"], ["updated_at", "2021-12-06 19:39:15.840521"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "posts" SET "author_id" = ?, "author" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["author_id", "1000"], ["author", "Haoran Zhu"], ["updated_at", "2021-12-06 19:39:15.845690"], ["id", 5]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 17ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:39:15 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:39:18 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2021-12-06 14:39:20 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R5dmLy++nkpvum9bUUpNgFXzP34Afch17I1LMUDjVU4fQlp8YkBsiMGuVS1LrjDje5RmFHRSbUJU2qcgkSRL9A==", "post"=>{"title"=>"2", "category"=>"furniture", "content"=>"2"}, "commit"=>"Create your post"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1000]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2"], ["content", "2"], ["category", "furniture"], ["created_at", "2021-12-06 19:39:20.195667"], ["updated_at", "2021-12-06 19:39:20.195667"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  UPDATE "posts" SET "author_id" = ?, "author" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["author_id", "1000"], ["author", "Haoran Zhu"], ["updated_at", "2021-12-06 19:39:20.201015"], ["id", 6]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 17ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:39:20 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:39:33 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-06 14:39:34 -0500
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1000]]
+  [1m[36m (0.6ms)[0m  [1mSELECT AVG("deals"."rating") FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled' and rating != -1)[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", "1000"]]
+  [1m[36mDeal Load (0.3ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'unsettled')[0m
+  [1m[35mDeal Load (0.2ms)[0m  SELECT "deals".* FROM "deals" WHERE (seller_id = 1000 and status = 'unsettled')
+  [1m[36mDeal Load (0.2ms)[0m  [1mSELECT "deals".* FROM "deals" WHERE (buyer_id = 1000 and status = 'accepted' and rating = -1)[0m
+  [1m[35mDeal Load (0.1ms)[0m  SELECT "deals".* FROM "deals" WHERE ((buyer_id = 1000 or seller_id = 1000) and status != 'unsettled')
+  Rendered users/show.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/css/styles.css" for ::1 at 2021-12-06 14:39:34 -0500
+
+ActionController::RoutingError (No route matches [GET] "/css/styles.css"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/henryzhu/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.4ms)
+
+
+Started GET "/logout" for ::1 at 2021-12-06 14:39:35 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-06 14:39:35 -0500
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:39:35 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  Rendered posts/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-06 14:39:39 -0500
+Processing by PostsController#new as HTML
+Redirected to http://localhost:3000/error
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/error" for ::1 at 2021-12-06 14:39:39 -0500
+Processing by UsersController#error as HTML
+  Rendered users/error.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:39:41 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2021-12-06 14:39:45 -0500
+
+
+Started GET "/auth/google_oauth2/callback?state=f4900e0ba54c615b93b4941ca7dd6550d95a8765ec7cc30b&code=4/0AX4XfWiBSzBC1WbhnAq2G8Y4jFIpyRgRc9_EKUQ8dvAKhSzjtex0zajmj8Jmx12NzPs03w&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=columbia.edu&prompt=none" for ::1 at 2021-12-06 14:39:47 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"f4900e0ba54c615b93b4941ca7dd6550d95a8765ec7cc30b", "code"=>"4/0AX4XfWiBSzBC1WbhnAq2G8Y4jFIpyRgRc9_EKUQ8dvAKhSzjtex0zajmj8Jmx12NzPs03w", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"columbia.edu", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "hz2712@columbia.edu"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-12-06 14:39:47 -0500
+
+
+Started GET "/posts" for ::1 at 2021-12-06 14:39:47 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (onshelf = 1)
+  Rendered posts/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 114ms (Views: 113.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/3" for ::1 at 2021-12-06 14:39:50 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mComment Load (0.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/5" for ::1 at 2021-12-06 14:39:51 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  Rendered posts/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.2ms)

@@ -1,14 +1,12 @@
 <div class="login-box">
-<h2 style="color: black;">Edit Existing Post</h2>
+<h2 style="color: black;">Edit Your Post</h2>
 <%= form_tag post_path(@post), :method => :put do %>
   <%= label :post, :title, 'Title', :class => 'edit-label' %>
   <%= text_field :post, 'title', :class => 'form-control' %>
-  <br>
   <%= label :post, :category, 'Category', :class => 'edit-label'  %>
   <%= select :post, :category, ['furniture','sublease'], {}, {:class => 'form-control form-control-lg'} %>
-  <br>
   <%= label :post, :content, 'Content', :class => 'edit-label' %>
-  <%= text_field :post, 'content', :class => 'form-control' %>
+  <%= text_area :post, 'content', :class => 'form-control' %>
   <br/>
   <%= submit_tag 'Update Post Info', :class => 'button-80' %>
   <div style="float: right;">

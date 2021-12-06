@@ -167,3 +167,69 @@
     position: absolute;
     display: block;
   }
+
+
+body {
+    font-size: 17px;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-brand {
+    font-size: 28px;
+}
+
+div.page_name {
+    text-align: center;
+    margin: 20px 0 20px 0;
+    font-size: 30px;
+}
+
+.form {
+    margin: auto;
+    text-align: center;
+}
+
+div.filter {
+  margin-bottom: 10px;
+}
+
+table#posts {
+    margin: 0 5% 40px 5%;
+    width: 90%;
+}
+
+div.new_post {
+    text-align: center;
+}
+
+.new_post_btn {
+    font-size: 20px;
+    margin-bottom: 120px;
+}
+
+div.comment_header {
+    font-size: 19px;
+}
+
+.comment_form {
+    margin: 0 auto 20px auto;
+}
+
+.comment_btns {
+    margin-bottom: 120px;
+}
+
+.err_btns {
+    margin-top: 50px;
+}
+
+.detail_btns {
+    margin: -20px auto 50px auto;
+}
+
+div.deals_table {
+  margin-bottom: 120px;
+}

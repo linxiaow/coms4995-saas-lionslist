@@ -11,13 +11,7 @@
 <div class="page_name">All Posts</div> 
 <%= @current_user_id %>
 
-
-<%= form_tag posts_path, method: :get, :class => 'form' do %>
-  <%= label_tag(:sort_by, "Sort By") %>
-  <%= select_tag(:sort_by, options_for_select([['most recent', 'created date'], ['title', 'title'], ['category', 'category'], ['author', 'author']], @sort_by)) %>
-  <%= submit_tag("Sort") %>
-<% end %>
-<div class="posts_filters">
+<div class="filter">
   <%= form_tag posts_path, method: :get, :class => 'form' do %>
     <%= label_tag(:category, "Category") %>
     <%= select_tag(:category, options_for_select([["", ""], ['furniture', 'furniture'], ['sublease', 'sublease']], @category)) %>
@@ -29,36 +23,38 @@
 <% end %>
 </div>
 
-<section class="py-5">
+<div class="sort">
+  <%= form_tag posts_path, method: :get, :class => 'form' do %>
+    <%= label_tag(:sort_by, "Sort By") %>
+    <%= select_tag(:sort_by, options_for_select([['most recent', 'created date'], ['title', 'title'], ['category', 'category'], ['author', 'author']], @sort_by)) %>
+    <%= submit_tag("Sort") %>
+<% end %>
+</div>
+
+<section class="py-2">
   <div class="container px-4 px-lg-5 mt-5">
     <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
       <% @posts.each do |post| %>
         <div class="col mb-5">
           <div class="card h-100">
             <!-- Product image-->
-            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+            <img class="card-img-top" src="https://st.depositphotos.com/1605004/3032/v/600/depositphotos_30323235-stock-illustration-great-deal-stamp.jpg" alt="..." />
             <!-- Product details-->
-            <div class="card-body p-4">
+            <div class="card-body p-1">
                 <div class="text-center">
                     <!-- Post title-->
-                    <h5 class="fw-bolder"><%= post.title %></h5>
-                    <!-- Post reviews-->
-                    <div class="d-flex justify-content-center small text-warning mb-2">
-                        <div class="bi-star-fill"></div>
-                        <div class="bi-star-fill"></div>
-                        <div class="bi-star-fill"></div>
-                        <div class="bi-star-fill"></div>
-                        <div class="bi-star-fill"></div>
-                    </div>
-                    <!-- Post author-->
+                    <h5 class="fw-bolder" style="margin-bottom: 0;"><%= post.title %></h5>
                     <%= post.author %>
                 </div>
             </div>
             <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <%= link_to "More about #{post.title}", post_path(post), :class => 'detail_btn btn btn-outline-info' %>
+            <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
+                <div class="text-center" style="margin-bottom: 5px;">
+                  <%= link_to "More about #{post.title}", post_path(post), :class => 'detail_btn btn btn-outline-info btn-sm' %>
                 </div>
+                <div class="text-center">
+                <%= button_to "Request Deal", add_deal_path(post), :class => 'btn btn-outline-success btn-sm', :method =>:post %>
+              </div>
             </div>
           </div>                    
         </div>
