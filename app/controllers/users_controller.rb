@@ -4,18 +4,16 @@ class UsersController < ApplicationController
         @user = User.find(session[:user_id])
         @current_user_id = @user.id
         @posts = Post.search_author(session[:user_id])
-        # @purchase_deals = Deal.search_purchase_requests(session[:user_id])
-        # @selling_deals = Deal.search_selling_requests(session[:user_id])
-        # @unrated_deals = Deal.search_unrated_deal(session[:user_id])
-        # @involved_deals = Deal.search_involved_deal(session[:user_id])
-        # @user_rating = Deal.calcualte_rating(session[:user_id])
-
-        @purchase_deals = []
-        @selling_deals = []
-        @unrated_deals = []
-        @involved_deals = []
-        @user_rating = 3.33
-        redirect_to profile_path
+        puts @posts
+        @purchase_deals = Deal.search_purchase_requests(session[:user_id])
+        puts @purchase_deals
+        @selling_deals = Deal.search_selling_requests(session[:user_id])
+        puts @selling_deals
+        @unrated_deals = Deal.search_unrated_deal(session[:user_id])
+        puts @unrated_deals
+        @involved_deals = Deal.search_involved_deal(session[:user_id])
+        @user_rating = Deal.calcualte_rating(session[:user_id])
+        render "show"
     end
 
     def show_other
