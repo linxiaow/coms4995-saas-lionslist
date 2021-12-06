@@ -1,3 +1,4 @@
+<!--  app/views/users/show.html.erb -->
 <h1><%=@user.username%>'s Profile</h1>
 
 Name: <%= @user.username %>
@@ -17,8 +18,10 @@ Self Introduction: <%= @user.description %>
 <br><br>
 <%= link_to "Back to homepage", '/posts'%>
 <br>
-<%= link_to "Update your profile", edit_profile_path %>
-<br>
+<% if @user.id.to_s == @current_user_id.to_s %>
+  <%= link_to "Update your profile", edit_profile_path %>
+  <br>
+<% end %>
 <%= link_to "Log out", '/logout', method: :delete %>
 <br><br>
 
@@ -120,7 +123,6 @@ Self Introduction: <%= @user.description %>
   <thead>
     <tr>
       <th>Post Title</th>
-      <th>Post Id</th>
       <th>Status</th>
       <th>Buyer Name</th>
       <th>Request At</th>
@@ -133,9 +135,6 @@ Self Introduction: <%= @user.description %>
       <tr>
         <td>
           <%= deal.title %>
-        </td>
-        <td>
-          <%= deal.post_id %>
         </td>
         <td>
           <%= deal.status %>

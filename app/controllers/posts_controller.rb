@@ -12,6 +12,38 @@ class PostsController < ApplicationController
   def index
     puts "index!"
     @posts = Post.all_onshelf_posts
+
+    if session[:sort_by] != nil
+      @sort_by = session[:sort_by]
+    else
+      @sort_by = ""
+    end
+    if params[:category] != nil
+      session[:category] = params[:category]
+    end
+    if params[:author] != nil
+      session[:author] = params[:author]
+    end
+    if params[:title] != nil
+      session[:title] = params[:title]
+    end
+    if session[:category] != nil
+      @category = session[:category]
+    else
+      @category = ""
+    end
+    if session[:author] != nil
+      @author = session[:author]
+    else
+      @author = ""
+    end
+    if session[:title] != nil
+      @title = session[:title]
+    else
+      @title = ""
+    end
+    @posts = Post.search_filter(@posts, @category, @author, @title)
+
     session[:sort_by] = params[:sort_by]
     if params[:sort_by] == 'title'
       @posts.order!('title')
@@ -21,12 +53,6 @@ class PostsController < ApplicationController
       @posts.order!('author')
     elsif params[:sort_by] == 'created date'
       @posts.order!('created_at DESC')
-    end
-
-    if session[:sort_by] != nil
-      @sort_by = session[:sort_by]
-    else
-      @sort_by = ""
     end
   end
 
