@@ -57,7 +57,7 @@ class Deal < ActiveRecord::Base
     def self.calcualte_rating user_id
         involved_deals = where(
             [
-                "(buyer_id = :user_id or seller_id = :user_id) and status != :status and rating != :rating",
+                "seller_id = :user_id and status != :status and rating != :rating",
                 {
                     user_id: user_id,
                     status: "unsettled",
