@@ -1,0 +1,107 @@
+<!--  app/views/users/show.html.erb -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header - set the background image for the header in the line below-->
+        <header class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
+            <div class="text-center my-5">
+                <h1 class="text-white fs-3 fw-bolder"><%=@user.username%>'s Profile</h1>
+            </div>
+        </header>
+        <div style="width: 90%; padding-left: 5%">
+        <br>
+        <div class="container px-6 px-lg-5">
+          <h2>Personal Information</h2><br>
+          <p class="lead">Rating: <%= @user_rating %></p>
+          <p class="lead">Email: <%= @user.email %></p>
+          <p class="lead">Phone Number: <%= @user.phone %></p>
+          <p class="lead">Address: <%= @user.address %></p>
+          <p class="lead">Self Introduction: </p>
+          <p class="mb-0"><%= @user.description %></p>
+
+          <br>
+          
+          <%= link_to "Back to homepage", '/posts', :class => 'button-80'%>
+          <% if @user.id.to_s == @current_user_id.to_s %>
+          <%= link_to "Update your profile", edit_profile_path , :class => 'button-80'%>
+          <% end %>
+          <%= link_to "Log out", '/logout', method: :delete , :class => 'button-80'%>
+        </div>
+
+<br><br></div><br>
+        <!-- Image element - set the background image for the header in the line below-->
+        <div class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
+            <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
+            <div style="height: 10rem"></div>
+        </div>
+
+        <div style="width: 90%; padding-left: 5%">
+<br><br>
+        <div class="deals_table container px-6 px-lg-5">
+        <h3 class="profile-title">Posts</h3>
+        <table class="table table-hover" id="movies">
+          <thead>
+            <tr>
+              <th scope="col">Post Title</th>
+              <th scope="col">Category</th>
+              <th scope="col">Author</th>     
+              <th scope="col">Created Date</th>
+              <th scope="col">Last Updated</th>
+        
+              <th>More Info</th>
+            </tr>
+          </thead>
+          <tbody style="float:center;">
+            <% @posts.each do |post| %>
+              <tr>
+                <td style="font-weight: bold;">
+                  <%= post.title %>
+                </td>
+                <td>
+                  <%= post.category %>
+                </td>
+                <td>
+                  <%= post.author %>
+                </td>
+                <td>
+                  <%= post.created_at %>
+                </td>
+                <td>
+                  <%= post.updated_at %>
+                </td>
+                
+                <td>
+                  <%= link_to "More about #{post.title}", post_path(post) %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table><br>
+        </div>
+      </div>
+</body>
+</html>
+

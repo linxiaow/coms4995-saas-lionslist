@@ -22,7 +22,7 @@ class UsersController < ApplicationController
         @unrated_deals = Deal.search_unrated_deal(session[:user_id])
         @involved_deals = Deal.search_involved_deal(session[:user_id])
         @user_rating = Deal.calcualte_rating(session[:user_id])
-        render "show"
+        render "show_other"
     end
 
     def edit
