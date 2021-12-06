@@ -56,7 +56,8 @@ class DealsController < ApplicationController
     def rate
         # Make a rating
         deal = Deal.find(params[:id])
-        rating = params[:deal][:rating]
+        # rating = params[:deal][:rating]
+        rating = params[:rating]
         deal.rating = rating.to_i
         deal.save
         flash[:notice] = "Deal '#{deal.title}' is rated."
