@@ -1,17 +1,15 @@
 <!--  This file is app/views/posts/index.html.erb -->
-<h2>All Posts</h2> <%= @current_user_id %>
-<% unless logged_in?%>
-  <br><br>
-  <%= link_to "Log In with Google", '/auth/google_oauth2', method: :get %>
-<br>
-<% end %>
 
-<% unless !logged_in?%>
-  <br>
-  <%= link_to "Profile", '/profile' %>
-  <br>
-  <%= link_to "Log out", '/logout', method: :delete %>
-<% end %>
+<header class="bg-dark py-5">
+  <div class="container px-4 px-lg-5 my-5">
+      <div class="text-center text-white">
+          <h1 class="display-4 fw-bolder">Welcome to Lionlist</h1>
+          <p class="lead fw-normal text-white-50 mb-0">A craigslist forum designed by Columbia students, for Columbia students</p>
+      </div>
+  </div>
+</header>
+<div class="page_name">All Posts</div> 
+<%= @current_user_id %>
 
 
 <%= form_tag posts_path, method: :get, :class => 'form' do %>
@@ -19,58 +17,55 @@
   <%= select_tag(:sort_by, options_for_select([['most recent', 'created date'], ['title', 'title'], ['category', 'category'], ['author', 'author']], @sort_by)) %>
   <%= submit_tag("Sort") %>
 <% end %>
-
-<%#  Part 2: Start here... %>
-<%= form_tag posts_path, method: :get, :class => 'form' do %>
-  <%= label_tag(:category, "Category") %>
-  <%= select_tag(:category, options_for_select([["", ""], ['furniture', 'furniture'], ['sublease', 'sublease']], @category)) %>
-  <%= label_tag(:author, "Author") %>
-  <%= text_field_tag(:author, @author) %>
-  <%= label_tag(:title, "Title") %>
-  <%= text_field_tag(:title, @title) %>
-  <%= submit_tag("Search") %>
+<div class="posts_filters">
+  <%= form_tag posts_path, method: :get, :class => 'form' do %>
+    <%= label_tag(:category, "Category") %>
+    <%= select_tag(:category, options_for_select([["", ""], ['furniture', 'furniture'], ['sublease', 'sublease']], @category)) %>
+    <%= label_tag(:author, "Author") %>
+    <%= text_field_tag(:author, @author) %>
+    <%= label_tag(:title, "Title") %>
+    <%= text_field_tag(:title, @title) %>
+    <%= submit_tag("Search") %>
 <% end %>
+</div>
 
-<table class="table table-striped col-md-12" id="movies">
-  <thead>
-    <tr>
-      <th>Post Title</th>
-      <th>Category</th>
-      <th>Author</th>     
-      <th>Created Date</th>
-      <th>Last Updated</th>
-
-      <th>More Info</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td>
-          <%= post.title %>
-        </td>
-        <td>
-          <%= post.category %>
-        </td>
-        <td>
-          <%= post.author %>
-        </td>
-        <td>
-          <%= post.created_at %>
-        </td>
-        <td>
-          <%= post.updated_at %>
-        </td>
-        
-        <td>
-          <%= link_to "More about #{post.title}", post_path(post) %>
-        </td>
-        <td>
-          <%= button_to "Request Deal", add_deal_path(post), :class => 'btn btn-primary', :method =>:post %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<%= link_to "Add new post", new_post_path, :class => 'btn btn-primary' %>
+<section class="py-5">
+  <div class="container px-4 px-lg-5 mt-5">
+    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+      <% @posts.each do |post| %>
+        <div class="col mb-5">
+          <div class="card h-100">
+            <!-- Product image-->
+            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+            <!-- Product details-->
+            <div class="card-body p-4">
+                <div class="text-center">
+                    <!-- Post title-->
+                    <h5 class="fw-bolder"><%= post.title %></h5>
+                    <!-- Post reviews-->
+                    <div class="d-flex justify-content-center small text-warning mb-2">
+                        <div class="bi-star-fill"></div>
+                        <div class="bi-star-fill"></div>
+                        <div class="bi-star-fill"></div>
+                        <div class="bi-star-fill"></div>
+                        <div class="bi-star-fill"></div>
+                    </div>
+                    <!-- Post author-->
+                    <%= post.author %>
+                </div>
+            </div>
+            <!-- Product actions-->
+            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                <div class="text-center">
+                  <%= link_to "More about #{post.title}", post_path(post), :class => 'detail_btn btn btn-outline-info' %>
+                </div>
+            </div>
+          </div>                    
+        </div>
+      <% end %> 
+    </div>
+  </div>
+</section>
+<div class="new_post">
+  <%= link_to "Add new post", new_post_path, :class => 'new_post_btn btn btn-outline-info'%>
+</div>

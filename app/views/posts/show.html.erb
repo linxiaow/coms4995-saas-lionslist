@@ -1,57 +1,45 @@
-<!--  app/views/posts/show.html.erb -->
-<h2>Title: <em><%= @post.title %></em></h2>
+<!-- Product section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-4"><img class="card-img-top mb-5 mb-md-0" src="https://dummyimage.com/400x500/dee2e6/6c757d.jpg" alt="..." /></div>
+            <div class="col-md-6">
+                <div class="small mb-1"><%= @post.category %></div>
+                <h1 class="display-5 fw-bolder"><%= @post.title %></h1>
+                <div class="fs-4 mb-5">
+                    <span>posted by <%= link_to "#{@post.author}", other_profile_path(@userid) %></span>
+                </div>
+                <p class="lead"><%= @post.content %></p>
+            </div>
+        </div>
+    </div>
+</section>
 
-<ul id="details">
-  <li>
-    Category:
-    <%= @post.category %>
-  </li>
-  <li>
-    Created on:
-    <%= @post.created_at %>
-  </li>
-  <li>
-    Last Updated:
-    <%= @post.updated_at %>
-  </li>
-  <li>
-    Author:
-    <%= link_to "#{@post.author}", other_profile_path(@userid) %>
-  </li>
-</ul>
-
-<h3>Content:</h3>
-<p id="content">
-  <%= @post.content %>
-</p>
-
-<div class="row">
+<div class="detail_btns container px-6 px-lg-5">
   <% if @post.author_id == @current_user_id.to_s %>
-    <%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-primary col-2' %>
-    <%= link_to 'Delete', post_path(@post), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', :class => 'btn btn-danger col-2' %>
+    <%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-outline-info col-2' %>
+    <%= link_to 'Delete', post_path(@post), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', :class => 'btn btn-outline-danger col-2' %>
   <% end %>
-  <%= link_to 'Back to post list', posts_path, :class => 'btn btn-primary col-2' %>
+  <%= link_to 'Back to Homepage', posts_path, :class => 'btn btn-outline-info col-2'%>
 </div>
 
-<h3>Leave your comments:</h3>
-<%= form_tag add_comment_path, :class => 'form' do %>
-  <%= label :comment, :content, 'Content', :class => 'col-form-label' %>
-  <%= text_field :comment, 'content', :class => 'form-control' %>
-  <br/>
-  <%= submit_tag 'Save', :class => 'btn btn-primary' %>
-  <%= link_to 'Cancel', show_post_path, :class => 'btn btn-secondary' %>
-<% end %>
+<div class="container px-6 px-lg-5">
+  <% @post.comments.each do |comment| %>
+        <p><%= link_to "#{comment.author}", other_profile_path(comment.author_id) %> at <%= comment.created_at %>:</p>
+        <p><%= comment.content %></p>
+        <hr style="text-align:left;margin-left:0">
+  <% end %>
+</div>
 
-<% @post.comments.each do |comment| %>
-  <ul>
-    <li>
-      <%= link_to "#{comment.author}", other_profile_path(comment.author_id) %> said
-    </li>
-    <li>
-      <%= comment.content %>
-    </li>
-    <li>
-      At <%= comment.created_at %>
-    </li>
-  </ul>
+<div class="comment_header container px-6 px-lg-5">Leave your comments:</div>
+<%= form_tag add_comment_path, :class => 'form' do %>
+  <br/>
+  <div class="comment_form container px-6 px-lg-5">
+    <%= text_area :comment, 'content', :class => 'form-control' %>
+  </div>
+
+  <div class="comment_btns">
+    <%= submit_tag 'Save', :class => 'btn btn-primary' %>
+    <%= link_to 'Cancel', show_post_path, :class => 'btn btn-secondary' %>
+  </div>
 <% end %>

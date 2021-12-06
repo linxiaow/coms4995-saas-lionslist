@@ -1,24 +1,64 @@
-<%# Our "base" layout should be a valid HTML document. %>
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Lionlist</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <%= stylesheet_link_tag 'application', 'media' => 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <%# These classes come from the Bootstrap CSS framework. %>
-    <nav class="navbar navbar-expand-lg bg-primary text-white mb-3">
-      <h1 class="title">Lionlist</h1>
-    </nav>
-    <div class="container">
-      <%# Render "flash" messages in our application. This loads _flash.erb %>
-      <%= render 'layouts/flash' %>
-      <main id="main">
-        <%= yield %>
-      </main>
-    </div>
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Lionlist. Spend Less. Smile More.</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="https://admissions.ucr.edu/sites/g/files/rcwecm2006/files/styles/form_preview/public/2020-07/ucr-education-logo-columbia-university.png?itok=_g5CD1iJ" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://startbootstrap.github.io/startbootstrap-shop-homepage/css/styles.css" rel="stylesheet"/>
+        <%= stylesheet_link_tag 'application', 'media' => 'all' %>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-6 px-lg-5">
+                <%= link_to 'Lionlist', posts_path, :class => 'navbar-brand' %>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item">
+                          <%= link_to 'Home', posts_path, :class => 'nav-link active' %>
+                        </li>
+
+                        <% unless logged_in?%>
+                          <li class="nav-item">
+                            <%= link_to "Log In or Sign Up", '/auth/google_oauth2', method: :get, :class => 'nav-link' %>
+                          </li>
+                        <% end %>
+
+                        <% unless !logged_in?%>
+                          <li class="nav-item">
+                            <%= link_to "Profile", '/profile', :class => 'nav-link' %>
+                          </li>
+                          <li class="nav-item">
+                            <%= link_to "Log out", logout_path, method: :delete, :class => 'nav-link' %>
+                          </li>
+                        <% end %>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div>
+          <%= render 'layouts/flash' %>
+          <main id="main">
+            <%= yield %>
+          </main>
+        </div>
+
+
+        <!-- Footer-->
+        <footer class="py-4 bg-dark fixed-bottom">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Lionlist 2021</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
