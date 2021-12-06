@@ -2,12 +2,10 @@ class UsersController < ApplicationController
     skip_before_action :require_login, except: [:show, :show_other, :edit, :update]
     def show
         @user = User.find(session[:user_id])
-        puts "hit"
         @current_user_id = @user.id
-        puts @current_user_id
         @posts = Post.search_author(session[:user_id])
-        puts @posts
         @purchase_deals = Deal.search_purchase_requests(session[:user_id])
+        puts "hit"
         puts @purchase_deals
         @selling_deals = Deal.search_selling_requests(session[:user_id])
         puts @selling_deals
