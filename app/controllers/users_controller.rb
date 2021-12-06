@@ -27,11 +27,11 @@ class UsersController < ApplicationController
         @user = User.find(other_id)
         @current_user_id = session[:user_id]
         @posts = Post.search_author(other_id)
-        @purchase_deals = Deal.search_purchase_requests(session[:user_id])
-        @selling_deals = Deal.search_selling_requests(session[:user_id])
-        @unrated_deals = Deal.search_unrated_deal(session[:user_id])
-        @involved_deals = Deal.search_involved_deal(session[:user_id])
-        @user_rating = Deal.calcualte_rating(session[:user_id])
+        @purchase_deals = Deal.search_purchase_requests(session[:user_id].to_s)
+        @selling_deals = Deal.search_selling_requests(session[:user_id].to_s)
+        @unrated_deals = Deal.search_unrated_deal(session[:user_id].to_s)
+        @involved_deals = Deal.search_involved_deal(session[:user_id].to_s)
+        @user_rating = Deal.calcualte_rating(session[:user_id].to_s)
         render "show_other"
     end
 
