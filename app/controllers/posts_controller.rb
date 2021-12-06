@@ -11,7 +11,49 @@ class PostsController < ApplicationController
 
   def index
     puts "index!"
-    @posts = Post.all
+    @posts = Post.all_onshelf_posts
+
+    if session[:sort_by] != nil
+      @sort_by = session[:sort_by]
+    else
+      @sort_by = ""
+    end
+    if params[:category] != nil
+      session[:category] = params[:category]
+    end
+    if params[:author] != nil
+      session[:author] = params[:author]
+    end
+    if params[:title] != nil
+      session[:title] = params[:title]
+    end
+    if session[:category] != nil
+      @category = session[:category]
+    else
+      @category = ""
+    end
+    if session[:author] != nil
+      @author = session[:author]
+    else
+      @author = ""
+    end
+    if session[:title] != nil
+      @title = session[:title]
+    else
+      @title = ""
+    end
+    @posts = Post.search_filter(@posts, @category, @author, @title)
+
+    session[:sort_by] = params[:sort_by]
+    if params[:sort_by] == 'title'
+      @posts.order!('title')
+    elsif params[:sort_by] == 'category'
+      @posts.order!('category')
+    elsif params[:sort_by] == 'author'
+      @posts.order!('author')
+    elsif params[:sort_by] == 'created date'
+      @posts.order!('created_at DESC')
+    end
   end
 
   def new
@@ -53,7 +95,15 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
+    # @post.destroy
+    @post.onshelf = 0
+    @post.save
+    all_requests = Deal.get_all_unsettled_requests_from_post_id(@post.id)
+    all_requests.each do |request|
+        request.status = 'declined'
+        request.save
+    end
+
     flash[:notice] = "Post '#{@post.title}' deleted."
     redirect_to posts_path
   end

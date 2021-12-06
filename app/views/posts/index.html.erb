@@ -14,7 +14,22 @@
 <% end %>
 
 
+<%= form_tag posts_path, method: :get, :class => 'form' do %>
+  <%= label_tag(:sort_by, "Sort By") %>
+  <%= select_tag(:sort_by, options_for_select([['most recent', 'created date'], ['title', 'title'], ['category', 'category'], ['author', 'author']], @sort_by)) %>
+  <%= submit_tag("Sort") %>
+<% end %>
+
 <%#  Part 2: Start here... %>
+<%= form_tag posts_path, method: :get, :class => 'form' do %>
+  <%= label_tag(:category, "Category") %>
+  <%= select_tag(:category, options_for_select([["", ""], ['furniture', 'furniture'], ['sublease', 'sublease']], @category)) %>
+  <%= label_tag(:author, "Author") %>
+  <%= text_field_tag(:author, @author) %>
+  <%= label_tag(:title, "Title") %>
+  <%= text_field_tag(:title, @title) %>
+  <%= submit_tag("Search") %>
+<% end %>
 
 <table class="table table-striped col-md-12" id="movies">
   <thead>
@@ -26,6 +41,7 @@
       <th>Last Updated</th>
 
       <th>More Info</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -49,6 +65,9 @@
         
         <td>
           <%= link_to "More about #{post.title}", post_path(post) %>
+        </td>
+        <td>
+          <%= button_to "Request Deal", add_deal_path(post), :class => 'btn btn-primary', :method =>:post %>
         </td>
       </tr>
     <% end %>

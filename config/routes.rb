@@ -6,7 +6,10 @@ Rottenpotatoes::Application.routes.draw do
   root :to => redirect('/posts')
   post 'posts/new' => 'posts#create'
   post 'posts/:id/edit' => 'posts#update'
-  get 'posts/:id' => 'posts#show'
+  post 'posts/:id/deals/new' => 'deals#create', as: 'add_deal'
+  post '/deals/:id' => 'deals#update', as: 'accept_deal'
+  post '/deals/:id/rate' => 'deals#rate', as: 'rate_deal'
+  get 'posts/:id' => 'posts#show', as: 'show_post'
   get '/auth/:provider/callback' => 'sessions#omniauth'
   get 'auth/failure', to: redirect('/')
   get '/profile', to: 'users#show', as: 'profile'
@@ -15,5 +18,8 @@ Rottenpotatoes::Application.routes.draw do
   get '/edit/profile', to: 'users#edit', as: 'edit_profile'
   get '/error', to: 'users#error', as: 'error'
   delete '/logout', to: 'sessions#destroy'
-  delete '/posts/:id' => 'posts#destroy'
+  delete '/posts/:id' => 'posts#destroy', as: 'delete_post'
+  delete '/deals/:id' => 'deals#destroy', as: 'cancel_deal'
+  
+  post 'post/:id' => 'comments#create', as: 'add_comment'
 end

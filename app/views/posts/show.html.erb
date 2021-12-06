@@ -32,3 +32,26 @@
   <% end %>
   <%= link_to 'Back to post list', posts_path, :class => 'btn btn-primary col-2' %>
 </div>
+
+<h3>Leave your comments:</h3>
+<%= form_tag add_comment_path, :class => 'form' do %>
+  <%= label :comment, :content, 'Content', :class => 'col-form-label' %>
+  <%= text_field :comment, 'content', :class => 'form-control' %>
+  <br/>
+  <%= submit_tag 'Save', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', show_post_path, :class => 'btn btn-secondary' %>
+<% end %>
+
+<% @post.comments.each do |comment| %>
+  <ul>
+    <li>
+      <%= link_to "#{comment.author}", other_profile_path(comment.author_id) %> said
+    </li>
+    <li>
+      <%= comment.content %>
+    </li>
+    <li>
+      At <%= comment.created_at %>
+    </li>
+  </ul>
+<% end %>
