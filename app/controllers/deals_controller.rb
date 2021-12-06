@@ -1,5 +1,5 @@
 class DealsController < ApplicationController
-    skip_before_action :require_login, except: [:create, :settle]
+    skip_before_action :require_login, except: [:create, :destroy, :update, :rate]
 
     def create
         # deals can only be created by buyer
