@@ -164,6 +164,9 @@ GEM
     omniauth-oauth2 (1.7.2)
       oauth2 (~> 1.4)
       omniauth (>= 1.9, < 3)
+    omniauth-rails_csrf_protection (1.0.0)
+      actionpack (>= 4.2)
+      omniauth (~> 2.0)
     pg (1.2.3)
     pry (0.14.1)
       coderay (~> 1.1)
@@ -275,6 +278,7 @@ DEPENDENCIES
   launchy
   omniauth
   omniauth-google-oauth2
+  omniauth-rails_csrf_protection
   pg
   pry
   rails (= 4.2.10)
