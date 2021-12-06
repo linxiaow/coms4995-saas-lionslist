@@ -5,14 +5,20 @@ class UsersController < ApplicationController
         @current_user_id = @user.id
         @posts = Post.search_author(session[:user_id])
         @purchase_deals = Deal.search_purchase_requests(session[:user_id])
-        puts "hit"
+        puts "hit1"
         puts @purchase_deals
         @selling_deals = Deal.search_selling_requests(session[:user_id])
+        puts "hit2"
         puts @selling_deals
         @unrated_deals = Deal.search_unrated_deal(session[:user_id])
+        puts "hit3"
         puts @unrated_deals
         @involved_deals = Deal.search_involved_deal(session[:user_id])
+        puts "hit4"
+        puts @involved_deals
         @user_rating = Deal.calcualte_rating(session[:user_id])
+        puts "hit5"
+        puts @involved_deals
         render "show"
     end
 
