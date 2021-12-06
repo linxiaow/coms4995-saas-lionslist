@@ -14,7 +14,9 @@
  *= require_self
  */
 
-  
+  body {
+      font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  }
 
   .login-box {
     position: absolute;
@@ -36,39 +38,116 @@
     text-align: center;
   }
   
-  /* .login-box .user-box {
+  .edit-label {
+      font-size: 20px;
+  }
+
+  .form-control {
+      font-size: 20px;
+  }
+
+  .button-80 {
+    background: #fff;
+    backface-visibility: hidden;
+    border-radius: .375rem;
+    border-style: solid;
+    border-width: .125rem;
+    box-sizing: border-box;
+    color: #212121;
+    cursor: pointer;
+    display: inline-block;
+    font: sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: -.01em;
+    line-height: 1.3;
+    padding: .875rem 1.125rem;
     position: relative;
+    text-align: left;
+    text-decoration: none;
+    transform: translateZ(0) scale(1);
+    transition: transform .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
   }
   
-  .login-box .user-box input {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    background: transparent;
+  .button-80:not(:disabled):hover {
+    transform: scale(1.05);
   }
-  .login-box .user-box label {
-    position: absolute;
-    top:0;
-    left: 0;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #fff;
+  
+  .button-80:not(:disabled):hover:active {
+    transform: scale(1.05) translateY(.125rem);
+  }
+  
+  .button-80:focus {
+    outline: 0 solid transparent;
+  }
+  
+  .button-80:focus:before {
+    content: "";
+    left: calc(-1*.375rem);
     pointer-events: none;
-    transition: .5s;
+    position: absolute;
+    top: calc(-1*.375rem);
+    transition: border-radius;
+    user-select: none;
   }
   
-  .login-box .user-box input:focus ~ label,
-  .login-box .user-box input:valid ~ label {
-    top: -20px;
-    left: 0;
-    color: rgb(177, 176, 176);
-    font-size: 12px;
-  } */
+  .button-80:focus:not(:focus-visible) {
+    outline: 0 solid transparent;
+  }
+  
+  .button-80:focus:not(:focus-visible):before {
+    border-width: 0;
+  }
+  
+  .button-80:not(:disabled):active {
+    transform: translateY(.125rem);
+  }
+
+  .row justify-content-center {
+      width: 100%;
+  }
+
+  .profile-title {
+      font-size: 22px;
+      font-weight: bold;
+
+  }
+
+/* CSS */
+.button-1 {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #F082AC;
+}
   
   .profile-button {
     position: relative;
@@ -84,92 +163,7 @@
     letter-spacing: 4px
   }
   
-  /* .login-box a:hover {
-    background: #696969;
-    color: rgb(177, 176, 176);
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgb(177, 176, 176),
-                0 0 25px rgb(177, 176, 176),
-                0 0 50px rgb(177, 176, 176),
-                0 0 100px rgb(177, 176, 176);
-  } */
-  
   .login-box a span {
     position: absolute;
     display: block;
   }
-  
-  /* .login-box a span:nth-child(1) {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, rgb(177, 176, 176));
-    animation: btn-anim1 1s linear infinite;
-  }
-  
-  @keyframes btn-anim1 {
-    0% {
-      left: -100%;
-    }
-    50%,100% {
-      left: 100%;
-    }
-  } */
-  
-  /* .login-box a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, rgb(177, 176, 176)9);
-    animation: btn-anim2 1s linear infinite;
-    animation-delay: .25s
-  }
-  
-  @keyframes btn-anim2 {
-    0% {
-      top: -100%;
-    }
-    50%,100% {
-      top: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(3) {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, rgb(177, 176, 176));
-    animation: btn-anim3 1s linear infinite;
-    animation-delay: .5s
-  } */
-  
-  /* @keyframes btn-anim3 {
-    0% {
-      right: -100%;
-    }
-    50%,100% {
-      right: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent,rgb(177, 176, 176));
-    animation: btn-anim4 1s linear infinite;
-    animation-delay: .75s
-  }
-  
-  @keyframes btn-anim4 {
-    0% {
-      bottom: -100%;
-    }
-    50%,100% {
-      bottom: 100%;
-    }
-  } */

@@ -8,9 +8,9 @@
   <%= label :user, :description, 'Self Introduction', :class => 'col-form-label' %>
   <%= text_field :user, 'description', :class => 'form-control' %>
   <br/>
-  <%= submit_tag 'Update Personal Profile', :class => 'btn btn-secondary' %>
+  <%= submit_tag 'Update Personal Profile', :class => 'button-80' %>
   <div style="float: right;">
-  <%= link_to 'Cancel', profile_path, :class => 'btn btn-secondary' %>
+  <%= link_to 'Cancel', profile_path, :class => 'button-80' %>
   </div>
 <% end %>
 </div>
@@ -70,16 +70,4 @@
     </div>
   </form>
 </div>
-
-<%= form_tag update_profile_path, :method => :put do %>
-  <%= label :user, :phone, 'Phone Number', :class => 'col-form-label' %>
-  <%= text_field :user, 'phone', :class => 'form-control' %>
-  <%= label :user, :address, 'Address', :class => 'col-form-label' %>
-  <%= text_field :user, 'address', :class => 'form-control' %>
-  <%= label :user, :description, 'Self Introduction', :class => 'col-form-label' %>
-  <%= text_field :user, 'description', :class => 'form-control' %>
-  <br/>
-  <%= submit_tag 'Update Personal Profile', :class => 'btn btn-primary' %>
-  <%= link_to 'Cancel', profile_path, :class => 'btn btn-secondary' %>
-<% end %>
 -->
