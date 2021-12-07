@@ -1,6 +1,13 @@
 # coms4995-saas-lionslist
 COMS4995 Software As a Service project to design a platform to share information of second hand furniture and sublease
 
+# New features in the latest iteration
+
+- Add user rating system, which allows buyers to rate particular sellers
+- Add comment system, which allows users to comment under posts
+- Add "make-a-deal" system, which allows buyers to make/cancel deal requests and allows sellers to approve/decline buyer's request
+- UI polishing for all pages
+
 # Run
 
 ## Run locally
