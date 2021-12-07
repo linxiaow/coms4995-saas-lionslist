@@ -5,6 +5,7 @@ COMS4995 Software As a Service project to design a platform to share information
 
 - Add user rating system, which allows buyers to rate particular sellers
 - Add comment system, which allows users to comment under posts
+- Add filtering and sorting to all existing posts
 - Add "make-a-deal" system, which allows buyers to make/cancel deal requests and allows sellers to approve/decline buyer's request
 - UI polishing for all pages
 
