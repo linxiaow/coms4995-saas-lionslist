@@ -55,8 +55,10 @@ RSpec.describe SessionsController, type: :request do
 
 
   describe 'index' do
-
     it 'renders the index template' do
+      login_with_oauth
+      get "/auth/google_oauth2/callback"
+      request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
       get '/posts'
       expect(response).to render_template('index')
     end

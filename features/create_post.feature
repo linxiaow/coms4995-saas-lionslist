@@ -27,7 +27,7 @@ Scenario: create a post on Lionlist
   When I fill in "Title" with "test_post"
   And I select "sublease" from "Category"
   And I fill in "Content" with "test_content"
-  And I press "Save Changes"
+  And I press "Create your post"
   Then I should be on the Lionlist home page
   And I should see "test_post was successfully created."
   And I should see "Example User"

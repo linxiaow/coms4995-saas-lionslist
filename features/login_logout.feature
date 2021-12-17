@@ -21,8 +21,8 @@ Background: posts in database
 
 Scenario: homepage when user not logged in
   Given I am on the Lionlist home page
-  Then I should see "Log In with Google"
-  And I should not see "Prifile"
+  Then I should see "Log In or Sign Up"
+  And I should not see "Profile"
   And I should not see "Log out"
 
 Scenario: homepage when user logged in
@@ -30,7 +30,7 @@ Scenario: homepage when user logged in
   Then I should be on the Lionlist home page
   And I should see "Profile"
   And I should see "Log out"
-  And I should not see "Log In with Google"
+  And I should not see "Log In or Sign Up"
 
 Scenario: homepage after logout
   Given I am logged in with provider "google_oauth2"
@@ -38,6 +38,6 @@ Scenario: homepage after logout
   And I follow "Log out"
   Then I should be on the Lionlist home page
   And I should see "You have logged out!"
-  Then I should see "Log In with Google"
-  And I should not see "Prifile"
+  Then I should see "Log In or Sign Up"
+  And I should not see "Profile"
   And I should not see "Log out"
