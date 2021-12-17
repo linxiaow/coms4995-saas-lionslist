@@ -36,6 +36,6 @@ Scenario: navigate to details page and view details of a post
 
 Scenario: navigate back to Lionlist home page from details page
   Given I am on the details page for "post1"
-  When  I follow "Back to post list"
+  When  I follow "Back to Homepage"
   Then  I should be on the Lionlist home page
   And   I should see "post1"

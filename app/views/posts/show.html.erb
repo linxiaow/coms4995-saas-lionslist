@@ -35,7 +35,7 @@
 <%= form_tag add_comment_path, :class => 'form' do %>
   <br/>
   <div class="comment_form container px-6 px-lg-5">
-    <%= text_area :comment, 'content', :class => 'form-control' %>
+    <%= text_area :comment, 'content', :class => 'form-control', :id => 'comment-content-box' %>
   </div>
 
   <div class="comment_btns">
