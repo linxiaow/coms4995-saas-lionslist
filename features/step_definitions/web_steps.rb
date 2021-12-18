@@ -53,6 +53,10 @@ When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
 end
 
+When /^(?:|I )press the first "([^"]*)"$/ do |button|
+  click_button(button, :match => :first)
+end
+
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
 end
@@ -77,6 +81,15 @@ end
 # TODO: Add support for checkbox, select or option
 # based on naming conventions.
 #
+
+When /^a buyer requests the deal$/ do
+  # find_button('Request Deal')[1].click
+  # page.all('button', text: 'Request Deal')[1].click
+  # find(:xpath, './/button[@text="Request Deal"]').click
+  # find('button').click
+  click_button("Request Deal", :match => :first)
+end
+
 When /^(?:|I )fill in the following:$/ do |fields|
   fields.rows_hash.each do |name, value|
     When %{I fill in "#{name}" with "#{value}"}
@@ -103,11 +116,40 @@ When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
   attach_file(field, File.expand_path(path))
 end
 
+
 Then /^(?:|I )should see "([^"]*)"$/ do |text|
   if page.respond_to? :should
     page.should have_content(text)
   else
     assert page.has_content?(text)
+  end
+end
+
+
+Then /^(?:|I )select "([^"]*)" from the first "([^"]*)"$/ do |selection, scope|
+  find(selector_for(scope), :match => :first).find(:option, selection).select_option
+  # if page.respond_to? :should
+  #   page.find(selector_for(scope)).should have_content(text)
+  # else
+  #   assert page.find(selector_for(scope)).has_content?(text)
+  # end
+end
+
+
+Then /^(?:|I )should see "([^"]*)" inside "([^"]*)"$/ do |text, scope|
+  if page.respond_to? :should
+    page.find(selector_for(scope)).should have_content(text)
+  else
+    assert page.find(selector_for(scope)).has_content?(text)
+  end
+end
+
+
+Then /^(?:|I )should see "([^"]*)" button$/ do |button|
+  if page.respond_to? :should
+    page.should have_button(button)
+  else
+    assert page.have_button?(button)
   end
 end
 
@@ -118,6 +160,15 @@ Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
     page.should have_xpath('//*', :text => regexp)
   else
     assert page.has_xpath?('//*', :text => regexp)
+  end
+end
+
+Then /^(?:|I )should not see "([^"]*)" inside "([^"]*)"$/ do |text, scope|
+
+  if page.respond_to? :should
+    page.find(selector_for(scope)).should have_no_content(text)
+  else
+    assert page.find(selector_for(scope)).has_no_content?(text)
   end
 end
 
