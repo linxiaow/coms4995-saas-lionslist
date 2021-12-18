@@ -15,7 +15,21 @@ module HtmlSelectorsHelpers
 
     when "the page"
       "html > body"
+    
+    when "purchase request from himself"
+      "#your_request"
+  
+    when "purchase made to him"
+      "#request_to_you"
 
+    when "past involved deals"
+      "#past_involved"
+
+    when "unrated purchase"
+      "#unrated"
+
+    when "rating score"
+      "#running_rating"
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
