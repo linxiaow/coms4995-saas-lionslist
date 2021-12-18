@@ -1,4 +1,4 @@
-<div class="login-box">
+<!-- <div class="login-box">
 <h2 style="color: black;"><%=@user.username%>'s Profile</h2>
 <%= form_tag update_profile_path, :method => :put do %>
   <%= label :user, :phone, 'Phone Number', :class => 'col-form-label' %>
@@ -15,59 +15,32 @@
 <% end %>
 </div>
 
+ -->
 
 
 
 
 
+<h4 class="page-title"><%=@user.username%>'s Profile</h4>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<br><br>
-  <form>
-    <div class="user-box">
-      <input type="text" name="" required="">
-      <label>Phone Number</label>
+<div class="form-container">
+  <%= form_tag update_profile_path, :method => :put do%>
+    <div class="mb-3">
+      <%= label :user, :phone, 'Phone Number', :class => 'col-form-label' %>
+      <%= text_field :user, 'phone', :class => 'form-control', :placeholder => 'Enter your phone number here', :required => true %>
     </div>
-    <div class="user-box">
-      <input type="password" name="" required="">
-      <label>Address</label>
+    <div class="mb-3">
+      <%= label :user, :address, 'Address', :class => 'col-form-label' %>
+      <%= text_field :user, 'address', :class => 'form-control', :placeholder => 'Enter your address here', :required => true %>
     </div>
-    <div class="user-box">
-      <input type="text" name="" required="">
-      <label>Self Introduction</label>
+    <div class="mb-3">
+      <%= label :user, :description, 'Bio', :class => 'col-form-label' %>
+      <%= text_area :user, 'description', :class => 'form-control', :placeholder => 'Enter a short bio about yourself here'%>
     </div>
-    <a href="#">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Update
-    </a>
+    <br/>
+    <%= submit_tag 'Update Personal Profile', :class => 'btn btn-outline-info' %>
     <div style="float: right;">
-    <a href="#">
-      <span></span>
-      <span></span>
-      Cancel
-    </a>
+    <%= link_to 'Cancel', profile_path, :class => 'btn btn-outline-secondary' %>
     </div>
-  </form>
+  <% end %>
 </div>
--->
