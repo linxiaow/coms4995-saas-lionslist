@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '>= 2.6.6', '< 2.7.0'
-gem 'rails', '4.2.10'
+gem 'rails', '5.2.1'
 
 # for Heroku deployment 
 group :development, :test do

@@ -28,6 +28,12 @@
         <!-- Header - set the background image for the header in the line below-->
         <header class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
             <div class="text-center my-5">
+                <% if @user.avatar.attached? %>
+                  <%= image_tag @user.avatar, :class => "img-fluid rounded-circle mb-4", :style => "width: 150px" %>
+                <% end %>
+                <% if !@user.avatar.attached? %>
+                  <img class="img-fluid rounded-circle mb-4" src="https://media.istockphoto.com/vectors/default-profile-picture-avatar-photo-placeholder-vector-illustration-vector-id1223671392?k=20&m=1223671392&s=612x612&w=0&h=lGpj2vWAI3WUT1JeJWm1PRoHT3V15_1pdcTn2szdwQ0=" alt="..." style="width: 150px" />
+                <% end %>
                 <h1 class="text-white fs-3 fw-bolder"><%=@user.username%>'s Profile</h1>
             </div>
         </header>

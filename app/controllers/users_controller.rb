@@ -32,6 +32,7 @@ class UsersController < ApplicationController
     def update
         @user = User.find(session[:user_id])
         @user.update_attributes!(user_params)
+        # @user.avatar.attach(params[:avatar])
         flash[:notice] = "#{@user.username}'s personal profile was successfully updated."
         redirect_to profile_path
     end
@@ -41,6 +42,6 @@ class UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:username, :email, :password, :phone, :address, :description)
+        params.require(:user).permit(:username, :email, :password, :phone, :address, :description, :avatar)
     end
 end

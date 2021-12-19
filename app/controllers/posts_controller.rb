@@ -46,12 +46,18 @@ class PostsController < ApplicationController
     session[:sort_by] = params[:sort_by]
     if params[:sort_by] == 'title'
       @posts.order!('title')
+      @sort_by = 'title'
     elsif params[:sort_by] == 'category'
       @posts.order!('category')
+      @sort_by = 'category'
     elsif params[:sort_by] == 'author'
       @posts.order!('author')
+      @sort_by = 'author'
     elsif params[:sort_by] == 'created date'
       @posts.order!('created_at DESC')
+      @sort_by = 'created date'
+    else
+      @sort_by = ''
     end
   end
 
@@ -62,8 +68,13 @@ class PostsController < ApplicationController
   def create
     @user = User.find(session[:user_id])
     @post = Post.create!(post_params)
+    @post.cover.attach(params[:post][:cover])
     @post.author_id = session[:user_id]
     @post.author = @user.username
+    if params["post"].key?("images")
+      @post.images.attach(params[:post][:images])
+    end
+    
     @post.save
     flash[:notice] = "#{@post.title} was successfully created."
     redirect_to posts_path
@@ -87,6 +98,9 @@ class PostsController < ApplicationController
   def update
     @post = Post.find params[:id]
     @post.update_attributes!(post_params)
+    if params["post"].key?("images")
+      @post.images.attach(params[:post][:images])
+    end
     flash[:notice] = "#{@post.title} was successfully updated."
     redirect_to post_path(@post)
   end
@@ -110,6 +124,6 @@ class PostsController < ApplicationController
   # Making "internal" methods private is not required, but is a common practice.
   # This helps make clear which methods respond to requests, and which ones do not.
   def post_params
-    params.require(:post).permit(:title, :author, :content, :category)
+    params.require(:post).permit(:title, :author, :content, :category, :images, :cover)
   end
 end

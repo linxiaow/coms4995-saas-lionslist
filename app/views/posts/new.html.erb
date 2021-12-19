@@ -1,4 +1,4 @@
-<div class="login-box">
+<!-- <div class="login-box">
 <h2 style="color: black;">Create New Post</h2>
 <%= form_tag posts_path, :method => :post do %>
   <%= label :post, :title, 'Title', :class => 'col-form-label' %>
@@ -13,4 +13,37 @@
   <%= link_to 'Cancel', posts_path, :class => 'button-80' %>
   </div>
 <% end %>
+</div>
+ -->
+
+<h4 class="page-title">Create New Post</h4>
+
+<div class="form-container">
+  <%= form_tag posts_path, :method => :post, multipart: true do %>
+    <div class="mb-3">
+      <%= label :post, :title, 'Title', :class => 'col-form-label' %>
+      <%= text_field :post, 'title', :class => 'form-control', :placeholder => 'Enter your post title here', :required => true %>
+    </div>
+    <div class="mb-3">
+      <%= label :post, :category, 'Category', :class => 'col-form-label'  %>
+      <%= select :post, :category, ['furniture','sublease'], {}, {:class => 'form-select form-select-lg', :required => true} %>
+    </div>
+    <div class="mb-3">
+      <%= label :post, :content, 'Content', :class => 'col-form-label' %>
+      <%= text_area :post, 'content', :class => 'form-control', :placeholder => 'Enter your post content here', :required => true %>
+    </div>
+    <div class="mb-3">
+      <%= label :post, :cover, 'Cover Photo', :class => 'col-form-label' %>
+      <%= file_field :post, 'cover', :class => 'form-control', accept: 'image/png,image/jpg,image/jpeg' %>
+    </div>
+    <div class="mb-3">
+      <%= label :post, :images, 'Pictures', :class => 'col-form-label' %>
+      <%= file_field :post, 'images', :class => 'form-control', accept: 'image/png,image/jpg,image/jpeg', multiple: true %>
+    </div>
+    <br/>
+    <%= submit_tag 'Create your post', :class => 'btn btn-outline-info' %>
+    <div style="float: right;">
+    <%= link_to 'Cancel', posts_path, :class => 'btn btn-outline-secondary' %>
+    </div>
+  <% end %>
 </div>

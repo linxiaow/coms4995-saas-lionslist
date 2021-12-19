@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+    has_one_attached :avatar
+    
     def self.from_omniauth(auth)
         User.find_or_create_by(email: auth['info']['email']) do |u|
             u.username = auth['info']['name']
