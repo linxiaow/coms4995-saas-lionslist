@@ -29,6 +29,12 @@
         <!-- Header - set the background image for the header in the line below-->
         <header class="py-5 bg-image-full" style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1600x900')">
             <div class="text-center my-5">
+                <% if @user.avatar.attached? %>
+                  <%= image_tag @user.avatar, :class => "img-fluid rounded-circle mb-4", :style => "width: 150px" %>
+                <% end %>
+                <% if !@user.avatar.attached? %>
+                  <img class="img-fluid rounded-circle mb-4" src="https://dummyimage.com/150x150/6c757d/dee2e6.jpg" alt="..." />
+                <% end %>
                 <h1 class="text-white fs-3 fw-bolder"><%=@user.username%>'s Profile</h1>
             </div>
         </header>
@@ -42,7 +48,6 @@
           <p class="lead">Address: <%= @user.address %></p>
           <p class="lead">Self Introduction: </p>
           <p class="mb-0"><%= @user.description %></p>
-
           <br>
           
           <%= link_to "Back to homepage", '/posts', :class => 'btn btn-outline-dark'%>

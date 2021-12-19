@@ -24,7 +24,7 @@
 <h4 class="page-title"><%=@user.username%>'s Profile</h4>
 
 <div class="form-container">
-  <%= form_tag update_profile_path, :method => :put do%>
+  <%= form_tag update_profile_path, :method => :put, multipart: true do%>
     <div class="mb-3">
       <%= label :user, :phone, 'Phone Number', :class => 'col-form-label' %>
       <%= text_field :user, 'phone', :class => 'form-control', :placeholder => 'Enter your phone number here', :required => true %>
@@ -37,6 +37,8 @@
       <%= label :user, :description, 'Bio', :class => 'col-form-label' %>
       <%= text_area :user, 'description', :class => 'form-control', :placeholder => 'Enter a short bio about yourself here'%>
     </div>
+      <%= label :user, :avatar, 'Profile Image', :class => 'col-form-label' %>
+      <%= file_field :user, 'avatar', :class => 'form-control', accept: 'image/png,image/jpg,image/jpeg' %>
     <br/>
     <%= submit_tag 'Update Personal Profile', :class => 'btn btn-outline-info' %>
     <div style="float: right;">
