@@ -14,6 +14,9 @@ class Post < ActiveRecord::Base
 		dependent: :destroy # if a post is destroyed, also destroy all of its comments
 	)
 
+	has_one_attached :cover
+	has_many_attached :images
+
 	def self.search_filter(posts, category, author, title)
 		filter_hash = {:category => category, :author => author, :title => title}
 		if category.nil? || category.empty?

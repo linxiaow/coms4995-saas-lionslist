@@ -37,8 +37,10 @@
       <%= label :user, :description, 'Bio', :class => 'col-form-label' %>
       <%= text_area :user, 'description', :class => 'form-control', :placeholder => 'Enter a short bio about yourself here'%>
     </div>
+    <div class="mb-3">
       <%= label :user, :avatar, 'Profile Image', :class => 'col-form-label' %>
       <%= file_field :user, 'avatar', :class => 'form-control', accept: 'image/png,image/jpg,image/jpeg' %>
+    </div>
     <br/>
     <%= submit_tag 'Update Personal Profile', :class => 'btn btn-outline-info' %>
     <div style="float: right;">

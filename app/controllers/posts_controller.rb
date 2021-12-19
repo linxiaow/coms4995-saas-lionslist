@@ -69,8 +69,13 @@ class PostsController < ApplicationController
   def create
     @user = User.find(session[:user_id])
     @post = Post.create!(post_params)
+    @post.cover.attach(params[:post][:cover])
     @post.author_id = session[:user_id]
     @post.author = @user.username
+    if params["post"].key?("images")
+      @post.images.attach(params[:post][:images])
+    end
+    
     @post.save
     flash[:notice] = "#{@post.title} was successfully created."
     redirect_to posts_path
@@ -95,6 +100,9 @@ class PostsController < ApplicationController
   def update
     @post = Post.find params[:id]
     @post.update_attributes!(post_params)
+    if params["post"].key?("images")
+      @post.images.attach(params[:post][:images])
+    end
     flash[:notice] = "#{@post.title} was successfully updated."
     redirect_to post_path(@post)
   end
@@ -118,6 +126,6 @@ class PostsController < ApplicationController
   # Making "internal" methods private is not required, but is a common practice.
   # This helps make clear which methods respond to requests, and which ones do not.
   def post_params
-    params.require(:post).permit(:title, :author, :content, :category)
+    params.require(:post).permit(:title, :author, :content, :category, :images, :cover)
   end
 end
