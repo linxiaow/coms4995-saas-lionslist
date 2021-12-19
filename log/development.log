@@ -40899,3 +40899,685 @@ Processing by ActiveStorage::DiskController#show as JPEG
 Completed 200 OK in 12ms (ActiveRecord: 0.0ms)
 
 
+Started GET "/posts/4" for ::1 at 2021-12-19 17:59:53 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (32.7ms)
+  Rendered layouts/_flash.erb (4.9ms)
+Completed 200 OK in 135ms (Views: 128.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--681b8b46f538da98b38469ebc59a9bc641fbf3d3/monet_winter.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22monet_winter.jpeg%22%3B+filename%2A%3DUTF-8%27%27monet_winter.jpeg" for ::1 at 2021-12-19 17:59:54 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"monet_winter.jpeg\"; filename*=UTF-8''monet_winter.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--681b8b46f538da98b38469ebc59a9bc641fbf3d3", "filename"=>"monet_winter"}
+[36m  Disk Storage (12.9ms) [0m[34mDownloaded file from key: k8u2LdT48GyLb1xWpWeJ8occ[0m
+Completed 200 OK in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58/lady_hamilton.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_hamilton.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_hamilton.jpeg" for ::1 at 2021-12-19 17:59:54 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_hamilton.jpeg\"; filename*=UTF-8''lady_hamilton.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58", "filename"=>"lady_hamilton"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--e3f0095d8cc58a81366df998d19b33d052d1ea01/mother_children.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mother_children.jpeg%22%3B+filename%2A%3DUTF-8%27%27mother_children.jpeg" for ::1 at 2021-12-19 17:59:54 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDI6MjQuNDIyWiIsInB1ciI6ImJsb2Jfa2V5In19--94212317c8d6622d00aba97c92126015405d70da/logo_1.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22logo_1.png%22%3B+filename%2A%3DUTF-8%27%27logo_1.png" for ::1 at 2021-12-19 17:59:54 -0500
+[36m  Disk Storage (2.3ms) [0m[34mDownloaded file from key: LHtv4uTapZcNkzp6KiUA6cVK[0m
+Completed 200 OK in 12ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"mother_children.jpeg\"; filename*=UTF-8''mother_children.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--e3f0095d8cc58a81366df998d19b33d052d1ea01", "filename"=>"mother_children"}
+[36m  Disk Storage (1.2ms) [0m[34mDownloaded file from key: LTsSoxMg5fGLJbFeU9xPiRXR[0m
+Completed 200 OK in 7ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"logo_1.png\"; filename*=UTF-8''logo_1.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDI6MjQuNDIyWiIsInB1ciI6ImJsb2Jfa2V5In19--94212317c8d6622d00aba97c92126015405d70da", "filename"=>"logo_1"}
+[36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: qz3q2CG49LZARmZarWzvaN3Q[0m
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-19 17:59:59 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (3.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (81.2ms)
+  Rendered layouts/_flash.erb (0.8ms)
+Completed 200 OK in 158ms (Views: 145.4ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDI6MjQuNDIyWiIsInB1ciI6ImJsb2Jfa2V5In19--94212317c8d6622d00aba97c92126015405d70da/logo_1.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22logo_1.png%22%3B+filename%2A%3DUTF-8%27%27logo_1.png" for ::1 at 2021-12-19 17:59:59 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--681b8b46f538da98b38469ebc59a9bc641fbf3d3/monet_winter.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22monet_winter.jpeg%22%3B+filename%2A%3DUTF-8%27%27monet_winter.jpeg" for ::1 at 2021-12-19 17:59:59 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--e3f0095d8cc58a81366df998d19b33d052d1ea01/mother_children.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mother_children.jpeg%22%3B+filename%2A%3DUTF-8%27%27mother_children.jpeg" for ::1 at 2021-12-19 17:59:59 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58/lady_hamilton.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_hamilton.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_hamilton.jpeg" for ::1 at 2021-12-19 17:59:59 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_hamilton.jpeg\"; filename*=UTF-8''lady_hamilton.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58", "filename"=>"lady_hamilton"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"mother_children.jpeg\"; filename*=UTF-8''mother_children.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--e3f0095d8cc58a81366df998d19b33d052d1ea01", "filename"=>"mother_children"}
+[36m  Disk Storage (2.1ms) [0m[34mDownloaded file from key: LTsSoxMg5fGLJbFeU9xPiRXR[0m
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (27.4ms) [0m[34mDownloaded file from key: LHtv4uTapZcNkzp6KiUA6cVK[0m
+Completed 200 OK in 29ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"logo_1.png\"; filename*=UTF-8''logo_1.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDI6MjQuNDIyWiIsInB1ciI6ImJsb2Jfa2V5In19--94212317c8d6622d00aba97c92126015405d70da", "filename"=>"logo_1"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"monet_winter.jpeg\"; filename*=UTF-8''monet_winter.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--681b8b46f538da98b38469ebc59a9bc641fbf3d3", "filename"=>"monet_winter"}
+[36m  Disk Storage (1.9ms) [0m[34mDownloaded file from key: k8u2LdT48GyLb1xWpWeJ8occ[0m
+Completed 200 OK in 6ms (ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (8.1ms) [0m[34mDownloaded file from key: qz3q2CG49LZARmZarWzvaN3Q[0m
+Completed 200 OK in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-19 18:00:02 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 125ms (Views: 122.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2021-12-19 18:00:12 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UpASOo7tgRw8YtlxsyBY4ROS0NrbT08GAwjtLCoypGEKRS5pwxNz3pJ24wepxCWCPfWJsK9g6jG7XwE9+/W62w==", "post"=>{"title"=>"2", "category"=>"furniture", "content"=>"2"}, "commit"=>"Create your post"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2"], ["content", "2"], ["category", "furniture"], ["created_at", "2021-12-19 23:00:13.143785"], ["updated_at", "2021-12-19 23:00:13.143785"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Update (1.5ms)[0m  [1m[33mUPDATE "posts" SET "author" = ?, "updated_at" = ?, "author_id" = ? WHERE "posts"."id" = ?[0m  [["author", "Haoran Zhu"], ["updated_at", "2021-12-19 23:00:13.157819"], ["author_id", "1"], ["id", 5]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 275ms (ActiveRecord: 15.4ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-19 18:00:13 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (81.0ms)
+  Rendered layouts/_flash.erb (1.6ms)
+Completed 200 OK in 168ms (Views: 152.6ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDI6MjQuNDIyWiIsInB1ciI6ImJsb2Jfa2V5In19--94212317c8d6622d00aba97c92126015405d70da/logo_1.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22logo_1.png%22%3B+filename%2A%3DUTF-8%27%27logo_1.png" for ::1 at 2021-12-19 18:00:13 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"logo_1.png\"; filename*=UTF-8''logo_1.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDI6MjQuNDIyWiIsInB1ciI6ImJsb2Jfa2V5In19--94212317c8d6622d00aba97c92126015405d70da", "filename"=>"logo_1"}
+[36m  Disk Storage (1.4ms) [0m[34mDownloaded file from key: qz3q2CG49LZARmZarWzvaN3Q[0m
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--e3f0095d8cc58a81366df998d19b33d052d1ea01/mother_children.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mother_children.jpeg%22%3B+filename%2A%3DUTF-8%27%27mother_children.jpeg" for ::1 at 2021-12-19 18:00:13 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58/lady_hamilton.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_hamilton.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_hamilton.jpeg" for ::1 at 2021-12-19 18:00:13 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--681b8b46f538da98b38469ebc59a9bc641fbf3d3/monet_winter.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22monet_winter.jpeg%22%3B+filename%2A%3DUTF-8%27%27monet_winter.jpeg" for ::1 at 2021-12-19 18:00:13 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_hamilton.jpeg\"; filename*=UTF-8''lady_hamilton.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58", "filename"=>"lady_hamilton"}
+[36m  Disk Storage (29.2ms) [0m[34mDownloaded file from key: LHtv4uTapZcNkzp6KiUA6cVK[0m
+Completed 200 OK in 34ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"monet_winter.jpeg\"; filename*=UTF-8''monet_winter.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--681b8b46f538da98b38469ebc59a9bc641fbf3d3", "filename"=>"monet_winter"}
+[36m  Disk Storage (20.8ms) [0m[34mDownloaded file from key: k8u2LdT48GyLb1xWpWeJ8occ[0m
+Completed 200 OK in 24ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"mother_children.jpeg\"; filename*=UTF-8''mother_children.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--e3f0095d8cc58a81366df998d19b33d052d1ea01", "filename"=>"mother_children"}
+[36m  Disk Storage (1.5ms) [0m[34mDownloaded file from key: LTsSoxMg5fGLJbFeU9xPiRXR[0m
+Completed 200 OK in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/5" for ::1 at 2021-12-19 18:00:15 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  Rendered posts/show.html.erb within layouts/application (22.0ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 71ms (Views: 61.3ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/posts/5/edit" for ::1 at 2021-12-19 18:00:17 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_flash.erb (1.2ms)
+Completed 200 OK in 61ms (Views: 54.4ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/posts/5" for ::1 at 2021-12-19 18:00:24 -0500
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"//ws8MNN9BBgZKmZ242XD4sIubZr34fXHqyiCThJUUGnKRCjjrMG0s5wk+/BaepspW/g3B/wIuCm+04Y6Y5P+w==", "post"=>{"title"=>"2", "category"=>"furniture", "content"=>"2", "cover"=>#<ActionDispatch::Http::UploadedFile:0x00007f824fcaeb20 @tempfile=#<Tempfile:/var/folders/xg/_10xfz_55vg05wwfq654mppc0000gn/T/RackMultipart20211219-12337-nifzf5.jpeg>, @original_filename="lady_meux.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[cover]\"; filename=\"lady_meux.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update post info", "id"=>"5"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+[36m  Disk Storage (4.4ms) [0m[32mUploaded file to key: LnXMXGa2hKjiQrpjnPppm2NH (checksum: gb3Jwz/IwS0m0dKuhI0rfw==)[0m
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "LnXMXGa2hKjiQrpjnPppm2NH"], ["filename", "lady_meux.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 246318], ["checksum", "gb3Jwz/IwS0m0dKuhI0rfw=="], ["created_at", "2021-12-19 23:00:24.056623"]]
+  [1m[36mActiveStorage::Attachment Create (1.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "cover"], ["record_type", "Post"], ["record_id", 5], ["blob_id", 5], ["created_at", "2021-12-19 23:00:24.059830"]]
+  [1m[36mPost Update (0.9ms)[0m  [1m[33mUPDATE "posts" SET "updated_at" = ? WHERE "posts"."id" = ?[0m  [["updated_at", "2021-12-19 23:00:24.080963"], ["id", 5]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: e70901be-b4f7-4f46-abb1-e3c5f2439642) to Async(default) with arguments: #<GlobalID:0x00007f824fccdc50 @uri=#<URI::GID gid://rottenpotatoes/ActiveStorage::Blob/5>>
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 68ms (ActiveRecord: 7.2ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e70901be-b4f7-4f46-abb1-e3c5f2439642] Performing ActiveStorage::AnalyzeJob (Job ID: e70901be-b4f7-4f46-abb1-e3c5f2439642) from Async(default) with arguments: #<GlobalID:0x00007f824fcfc640 @uri=#<URI::GID gid://rottenpotatoes/ActiveStorage::Blob/5>>
+Started GET "/posts/5" for ::1 at 2021-12-19 18:00:24 -0500
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e70901be-b4f7-4f46-abb1-e3c5f2439642] [36m  Disk Storage (1.6ms) [0m[34mDownloaded file from key: LnXMXGa2hKjiQrpjnPppm2NH[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e70901be-b4f7-4f46-abb1-e3c5f2439642] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e70901be-b4f7-4f46-abb1-e3c5f2439642]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e70901be-b4f7-4f46-abb1-e3c5f2439642]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e70901be-b4f7-4f46-abb1-e3c5f2439642]   [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e70901be-b4f7-4f46-abb1-e3c5f2439642] Performed ActiveStorage::AnalyzeJob (Job ID: e70901be-b4f7-4f46-abb1-e3c5f2439642) from Async(default) in 13.52ms
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  Rendered posts/show.html.erb within layouts/application (27.4ms)
+  Rendered layouts/_flash.erb (0.8ms)
+Completed 200 OK in 82ms (Views: 69.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f06d007539e2d842c395881453c31f9446313111/lady_meux.jpeg" for ::1 at 2021-12-19 18:00:24 -0500
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f06d007539e2d842c395881453c31f9446313111", "filename"=>"lady_meux"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[36m  Disk Storage (1.1ms) [0m[34mGenerated URL for file at key: LnXMXGa2hKjiQrpjnPppm2NH (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc/lady_meux.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_meux.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_meux.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc/lady_meux.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_meux.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_meux.jpeg
+Completed 302 Found in 13ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc/lady_meux.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_meux.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_meux.jpeg" for ::1 at 2021-12-19 18:00:24 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_meux.jpeg\"; filename*=UTF-8''lady_meux.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc", "filename"=>"lady_meux"}
+[36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: LnXMXGa2hKjiQrpjnPppm2NH[0m
+Completed 200 OK in 36ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-19 18:01:49 -0500
+Started GET "/posts" for ::1 at 2021-12-19 18:01:49 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (296.9ms)
+  Rendered layouts/_flash.erb (0.8ms)
+Completed 200 OK in 343ms (Views: 331.3ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--e3f0095d8cc58a81366df998d19b33d052d1ea01/mother_children.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mother_children.jpeg%22%3B+filename%2A%3DUTF-8%27%27mother_children.jpeg" for ::1 at 2021-12-19 18:01:49 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--681b8b46f538da98b38469ebc59a9bc641fbf3d3/monet_winter.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22monet_winter.jpeg%22%3B+filename%2A%3DUTF-8%27%27monet_winter.jpeg" for ::1 at 2021-12-19 18:01:49 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDI6MjQuNDIyWiIsInB1ciI6ImJsb2Jfa2V5In19--94212317c8d6622d00aba97c92126015405d70da/logo_1.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22logo_1.png%22%3B+filename%2A%3DUTF-8%27%27logo_1.png" for ::1 at 2021-12-19 18:01:49 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58/lady_hamilton.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_hamilton.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_hamilton.jpeg" for ::1 at 2021-12-19 18:01:49 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc/lady_meux.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_meux.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_meux.jpeg" for ::1 at 2021-12-19 18:01:49 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"monet_winter.jpeg\"; filename*=UTF-8''monet_winter.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--681b8b46f538da98b38469ebc59a9bc641fbf3d3", "filename"=>"monet_winter"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"mother_children.jpeg\"; filename*=UTF-8''mother_children.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--e3f0095d8cc58a81366df998d19b33d052d1ea01", "filename"=>"mother_children"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_hamilton.jpeg\"; filename*=UTF-8''lady_hamilton.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58", "filename"=>"lady_hamilton"}
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"logo_1.png\"; filename*=UTF-8''logo_1.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDI6MjQuNDIyWiIsInB1ciI6ImJsb2Jfa2V5In19--94212317c8d6622d00aba97c92126015405d70da", "filename"=>"logo_1"}
+[36m  Disk Storage (4.8ms) [0m[34mDownloaded file from key: k8u2LdT48GyLb1xWpWeJ8occ[0m
+Completed 200 OK in 6ms (ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (3.2ms) [0m[34mDownloaded file from key: qz3q2CG49LZARmZarWzvaN3Q[0m
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_meux.jpeg\"; filename*=UTF-8''lady_meux.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc", "filename"=>"lady_meux"}
+[36m  Disk Storage (1.5ms) [0m[34mDownloaded file from key: LnXMXGa2hKjiQrpjnPppm2NH[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (26.1ms) [0m[34mDownloaded file from key: LTsSoxMg5fGLJbFeU9xPiRXR[0m
+[36m  Disk Storage (29.8ms) [0m[34mDownloaded file from key: LHtv4uTapZcNkzp6KiUA6cVK[0m
+Completed 200 OK in 47ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 47ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-19 18:01:59 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("deals"."rating") FROM "deals" WHERE (seller_id = '1' and status != 'unsettled' and rating != -1)[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1"]]
+  [1m[36mDeal Load (0.3ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.3ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (seller_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'accepted' and rating = -1)[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE ((buyer_id = '1' or seller_id = '1') and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (17.6ms)
+  Rendered layouts/_flash.erb (0.8ms)
+Completed 200 OK in 79ms (Views: 68.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-19 18:02:07 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (87.5ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 111ms (Views: 103.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDI6MjQuNDIyWiIsInB1ciI6ImJsb2Jfa2V5In19--94212317c8d6622d00aba97c92126015405d70da/logo_1.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22logo_1.png%22%3B+filename%2A%3DUTF-8%27%27logo_1.png" for ::1 at 2021-12-19 18:02:08 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--681b8b46f538da98b38469ebc59a9bc641fbf3d3/monet_winter.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22monet_winter.jpeg%22%3B+filename%2A%3DUTF-8%27%27monet_winter.jpeg" for ::1 at 2021-12-19 18:02:08 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--e3f0095d8cc58a81366df998d19b33d052d1ea01/mother_children.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mother_children.jpeg%22%3B+filename%2A%3DUTF-8%27%27mother_children.jpeg" for ::1 at 2021-12-19 18:02:08 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"logo_1.png\"; filename*=UTF-8''logo_1.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDI6MjQuNDIyWiIsInB1ciI6ImJsb2Jfa2V5In19--94212317c8d6622d00aba97c92126015405d70da", "filename"=>"logo_1"}
+[36m  Disk Storage (1.0ms) [0m[34mDownloaded file from key: qz3q2CG49LZARmZarWzvaN3Q[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58/lady_hamilton.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_hamilton.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_hamilton.jpeg" for ::1 at 2021-12-19 18:02:08 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc/lady_meux.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_meux.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_meux.jpeg" for ::1 at 2021-12-19 18:02:08 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"monet_winter.jpeg\"; filename*=UTF-8''monet_winter.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--681b8b46f538da98b38469ebc59a9bc641fbf3d3", "filename"=>"monet_winter"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"mother_children.jpeg\"; filename*=UTF-8''mother_children.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--e3f0095d8cc58a81366df998d19b33d052d1ea01", "filename"=>"mother_children"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_hamilton.jpeg\"; filename*=UTF-8''lady_hamilton.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58", "filename"=>"lady_hamilton"}
+[36m  Disk Storage (10.4ms) [0m[34mDownloaded file from key: LTsSoxMg5fGLJbFeU9xPiRXR[0m
+Completed 200 OK in 12ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+[36m  Disk Storage (34.8ms) [0m[34mDownloaded file from key: k8u2LdT48GyLb1xWpWeJ8occ[0m
+[36m  Disk Storage (31.5ms) [0m[34mDownloaded file from key: LHtv4uTapZcNkzp6KiUA6cVK[0m
+Completed 200 OK in 34ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 43ms (ActiveRecord: 0.0ms)
+
+
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_meux.jpeg\"; filename*=UTF-8''lady_meux.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc", "filename"=>"lady_meux"}
+[36m  Disk Storage (6.9ms) [0m[34mDownloaded file from key: LnXMXGa2hKjiQrpjnPppm2NH[0m
+Completed 200 OK in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-19 18:02:09 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("deals"."rating") FROM "deals" WHERE (seller_id = '1' and status != 'unsettled' and rating != -1)[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1"]]
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (seller_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'accepted' and rating = -1)[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE ((buyer_id = '1' or seller_id = '1') and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 38ms (Views: 32.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-19 18:03:05 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("deals"."rating") FROM "deals" WHERE (seller_id = '1' and status != 'unsettled' and rating != -1)[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1"]]
+  [1m[36mDeal Load (0.3ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (seller_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'accepted' and rating = -1)[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE ((buyer_id = '1' or seller_id = '1') and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (15.7ms)
+  Rendered layouts/_flash.erb (0.8ms)
+Completed 200 OK in 57ms (Views: 50.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-19 18:03:07 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (39.6ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 70ms (Views: 63.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0d323ba53c92a24cfc950823971855379516296a/logo_1.png" for ::1 at 2021-12-19 18:03:07 -0500
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0d323ba53c92a24cfc950823971855379516296a", "filename"=>"logo_1"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (1.5ms) [0m[34mGenerated URL for file at key: qz3q2CG49LZARmZarWzvaN3Q (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MDcuNDMxWiIsInB1ciI6ImJsb2Jfa2V5In19--5c1725cde8c087efd7841f7a25dc1347707ae550/logo_1.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22logo_1.png%22%3B+filename%2A%3DUTF-8%27%27logo_1.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MDcuNDMxWiIsInB1ciI6ImJsb2Jfa2V5In19--5c1725cde8c087efd7841f7a25dc1347707ae550/logo_1.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22logo_1.png%22%3B+filename%2A%3DUTF-8%27%27logo_1.png
+Completed 302 Found in 29ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--681b8b46f538da98b38469ebc59a9bc641fbf3d3/monet_winter.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22monet_winter.jpeg%22%3B+filename%2A%3DUTF-8%27%27monet_winter.jpeg" for ::1 at 2021-12-19 18:03:07 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--e3f0095d8cc58a81366df998d19b33d052d1ea01/mother_children.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mother_children.jpeg%22%3B+filename%2A%3DUTF-8%27%27mother_children.jpeg" for ::1 at 2021-12-19 18:03:07 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc/lady_meux.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_meux.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_meux.jpeg" for ::1 at 2021-12-19 18:03:07 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MDcuNDMxWiIsInB1ciI6ImJsb2Jfa2V5In19--5c1725cde8c087efd7841f7a25dc1347707ae550/logo_1.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22logo_1.png%22%3B+filename%2A%3DUTF-8%27%27logo_1.png" for ::1 at 2021-12-19 18:03:07 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58/lady_hamilton.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_hamilton.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_hamilton.jpeg" for ::1 at 2021-12-19 18:03:07 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"monet_winter.jpeg\"; filename*=UTF-8''monet_winter.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--681b8b46f538da98b38469ebc59a9bc641fbf3d3", "filename"=>"monet_winter"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"mother_children.jpeg\"; filename*=UTF-8''mother_children.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6MDkuOTg5WiIsInB1ciI6ImJsb2Jfa2V5In19--e3f0095d8cc58a81366df998d19b33d052d1ea01", "filename"=>"mother_children"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_meux.jpeg\"; filename*=UTF-8''lady_meux.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc", "filename"=>"lady_meux"}
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"logo_1.png\"; filename*=UTF-8''logo_1.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MDcuNDMxWiIsInB1ciI6ImJsb2Jfa2V5In19--5c1725cde8c087efd7841f7a25dc1347707ae550", "filename"=>"logo_1"}
+[36m  Disk Storage (2.8ms) [0m[34mDownloaded file from key: k8u2LdT48GyLb1xWpWeJ8occ[0m
+Completed 200 OK in 8ms (ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (2.3ms) [0m[34mDownloaded file from key: qz3q2CG49LZARmZarWzvaN3Q[0m
+[36m  Disk Storage (8.5ms) [0m[34mDownloaded file from key: LTsSoxMg5fGLJbFeU9xPiRXR[0m
+[36m  Disk Storage (6.5ms) [0m[34mDownloaded file from key: LnXMXGa2hKjiQrpjnPppm2NH[0m
+Completed 200 OK in 6ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 14ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+Completed 200 OK in 18ms (ActiveRecord: 0.0ms)
+
+
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_hamilton.jpeg\"; filename*=UTF-8''lady_hamilton.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58", "filename"=>"lady_hamilton"}
+[36m  Disk Storage (9.4ms) [0m[34mDownloaded file from key: LHtv4uTapZcNkzp6KiUA6cVK[0m
+Completed 200 OK in 19ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/2" for ::1 at 2021-12-19 18:03:10 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/profile/-2" for ::1 at 2021-12-19 18:03:11 -0500
+Processing by UsersController#show_other as HTML
+  Parameters: {"id"=>"-2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", -2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("deals"."rating") FROM "deals" WHERE (seller_id = '1' and status != 'unsettled' and rating != -1)[0m
+  Rendering users/show_other.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", -2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "-2"]]
+  Rendered users/show_other.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 35ms (Views: 29.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/profile/css/styles.css" for ::1 at 2021-12-19 18:03:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/profile/css/styles.css"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/henryzhu/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+Started GET "/posts" for ::1 at 2021-12-19 18:03:13 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (37.0ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 55.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--17596d41543bffa78d81177a21c2a3528dad4795/monet_winter.jpeg" for ::1 at 2021-12-19 18:03:13 -0500
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--17596d41543bffa78d81177a21c2a3528dad4795", "filename"=>"monet_winter"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: k8u2LdT48GyLb1xWpWeJ8occ (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MTMuMTk1WiIsInB1ciI6ImJsb2Jfa2V5In19--ec1c36e6909934989f8b0fdcd00f697c71392f23/monet_winter.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22monet_winter.jpeg%22%3B+filename%2A%3DUTF-8%27%27monet_winter.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MTMuMTk1WiIsInB1ciI6ImJsb2Jfa2V5In19--ec1c36e6909934989f8b0fdcd00f697c71392f23/monet_winter.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22monet_winter.jpeg%22%3B+filename%2A%3DUTF-8%27%27monet_winter.jpeg
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--69401d734e9f3c0f2ea1b69c693dc5321451937b/mother_children.jpeg" for ::1 at 2021-12-19 18:03:13 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MDcuNDMxWiIsInB1ciI6ImJsb2Jfa2V5In19--5c1725cde8c087efd7841f7a25dc1347707ae550/logo_1.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22logo_1.png%22%3B+filename%2A%3DUTF-8%27%27logo_1.png" for ::1 at 2021-12-19 18:03:13 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MTMuMTk1WiIsInB1ciI6ImJsb2Jfa2V5In19--ec1c36e6909934989f8b0fdcd00f697c71392f23/monet_winter.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22monet_winter.jpeg%22%3B+filename%2A%3DUTF-8%27%27monet_winter.jpeg" for ::1 at 2021-12-19 18:03:13 -0500
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"logo_1.png\"; filename*=UTF-8''logo_1.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MDcuNDMxWiIsInB1ciI6ImJsb2Jfa2V5In19--5c1725cde8c087efd7841f7a25dc1347707ae550", "filename"=>"logo_1"}
+[36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: qz3q2CG49LZARmZarWzvaN3Q[0m
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58/lady_hamilton.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_hamilton.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_hamilton.jpeg" for ::1 at 2021-12-19 18:03:13 -0500
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--69401d734e9f3c0f2ea1b69c693dc5321451937b", "filename"=>"mother_children"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc/lady_meux.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_meux.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_meux.jpeg" for ::1 at 2021-12-19 18:03:13 -0500
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"monet_winter.jpeg\"; filename*=UTF-8''monet_winter.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MTMuMTk1WiIsInB1ciI6ImJsb2Jfa2V5In19--ec1c36e6909934989f8b0fdcd00f697c71392f23", "filename"=>"monet_winter"}
+  [1m[36mActiveStorage::Blob Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Processing by ActiveStorage::DiskController#show as JPEG
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: LTsSoxMg5fGLJbFeU9xPiRXR (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MTMuMzQwWiIsInB1ciI6ImJsb2Jfa2V5In19--32126bb9c403ad3507cd2d031034d88904c97969/mother_children.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mother_children.jpeg%22%3B+filename%2A%3DUTF-8%27%27mother_children.jpeg)[0m
+[36m  Disk Storage (0.8ms) [0m[34mDownloaded file from key: k8u2LdT48GyLb1xWpWeJ8occ[0m
+Completed 200 OK in 7ms (ActiveRecord: 0.0ms)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MTMuMzQwWiIsInB1ciI6ImJsb2Jfa2V5In19--32126bb9c403ad3507cd2d031034d88904c97969/mother_children.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mother_children.jpeg%22%3B+filename%2A%3DUTF-8%27%27mother_children.jpeg
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_hamilton.jpeg\"; filename*=UTF-8''lady_hamilton.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58", "filename"=>"lady_hamilton"}
+Completed 302 Found in 54ms (ActiveRecord: 1.6ms)
+
+
+[36m  Disk Storage (3.8ms) [0m[34mDownloaded file from key: LHtv4uTapZcNkzp6KiUA6cVK[0m
+Completed 200 OK in 15ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_meux.jpeg\"; filename*=UTF-8''lady_meux.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc", "filename"=>"lady_meux"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MTMuMzQwWiIsInB1ciI6ImJsb2Jfa2V5In19--32126bb9c403ad3507cd2d031034d88904c97969/mother_children.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mother_children.jpeg%22%3B+filename%2A%3DUTF-8%27%27mother_children.jpeg" for ::1 at 2021-12-19 18:03:13 -0500
+[36m  Disk Storage (1.9ms) [0m[34mDownloaded file from key: LnXMXGa2hKjiQrpjnPppm2NH[0m
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"mother_children.jpeg\"; filename*=UTF-8''mother_children.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MTMuMzQwWiIsInB1ciI6ImJsb2Jfa2V5In19--32126bb9c403ad3507cd2d031034d88904c97969", "filename"=>"mother_children"}
+[36m  Disk Storage (2.4ms) [0m[34mDownloaded file from key: LTsSoxMg5fGLJbFeU9xPiRXR[0m
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/5" for ::1 at 2021-12-19 18:03:15 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  Rendered posts/show.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_flash.erb (1.0ms)
+Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc/lady_meux.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_meux.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_meux.jpeg" for ::1 at 2021-12-19 18:03:15 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_meux.jpeg\"; filename*=UTF-8''lady_meux.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDU6MjQuMzY0WiIsInB1ciI6ImJsb2Jfa2V5In19--a48143bdc51a51128feee311bd88f99dadf30dfc", "filename"=>"lady_meux"}
+[36m  Disk Storage (2.6ms) [0m[34mDownloaded file from key: LnXMXGa2hKjiQrpjnPppm2NH[0m
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/4" for ::1 at 2021-12-19 18:03:20 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MTMuMTk1WiIsInB1ciI6ImJsb2Jfa2V5In19--ec1c36e6909934989f8b0fdcd00f697c71392f23/monet_winter.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22monet_winter.jpeg%22%3B+filename%2A%3DUTF-8%27%27monet_winter.jpeg" for ::1 at 2021-12-19 18:03:20 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58/lady_hamilton.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_hamilton.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_hamilton.jpeg" for ::1 at 2021-12-19 18:03:20 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MDcuNDMxWiIsInB1ciI6ImJsb2Jfa2V5In19--5c1725cde8c087efd7841f7a25dc1347707ae550/logo_1.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22logo_1.png%22%3B+filename%2A%3DUTF-8%27%27logo_1.png" for ::1 at 2021-12-19 18:03:20 -0500
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"monet_winter.jpeg\"; filename*=UTF-8''monet_winter.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MTMuMTk1WiIsInB1ciI6ImJsb2Jfa2V5In19--ec1c36e6909934989f8b0fdcd00f697c71392f23", "filename"=>"monet_winter"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MTMuMzQwWiIsInB1ciI6ImJsb2Jfa2V5In19--32126bb9c403ad3507cd2d031034d88904c97969/mother_children.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mother_children.jpeg%22%3B+filename%2A%3DUTF-8%27%27mother_children.jpeg" for ::1 at 2021-12-19 18:03:20 -0500
+[36m  Disk Storage (6.0ms) [0m[34mDownloaded file from key: k8u2LdT48GyLb1xWpWeJ8occ[0m
+Completed 200 OK in 8ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_hamilton.jpeg\"; filename*=UTF-8''lady_hamilton.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDM6NTkuNzg3WiIsInB1ciI6ImJsb2Jfa2V5In19--cd3a73b732cf5527b135534ad957fe2333498d58", "filename"=>"lady_hamilton"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"mother_children.jpeg\"; filename*=UTF-8''mother_children.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MTMuMzQwWiIsInB1ciI6ImJsb2Jfa2V5In19--32126bb9c403ad3507cd2d031034d88904c97969", "filename"=>"mother_children"}
+[36m  Disk Storage (7.1ms) [0m[34mDownloaded file from key: LHtv4uTapZcNkzp6KiUA6cVK[0m
+[36m  Disk Storage (6.8ms) [0m[34mDownloaded file from key: LTsSoxMg5fGLJbFeU9xPiRXR[0m
+Completed 200 OK in 11ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 12ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"logo_1.png\"; filename*=UTF-8''logo_1.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MDg6MDcuNDMxWiIsInB1ciI6ImJsb2Jfa2V5In19--5c1725cde8c087efd7841f7a25dc1347707ae550", "filename"=>"logo_1"}
+[36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: qz3q2CG49LZARmZarWzvaN3Q[0m
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
