@@ -26,7 +26,6 @@ Scenario: navigate to my profile page from Lionlist home page
   When  I follow "Profile"
   Then  I should be on the profile page
   And   I should see "Example User's Profile"
-  And   I should see "Name: Example User"
   And   I should see "Email: hz2712@columbia.edu"
   And   I should see "post1"
   And   I should see "post2"
@@ -43,7 +42,6 @@ Scenario: navigate to profile page from details page
   When  I follow "author2"
   Then  I should be on the profile page for "2"
   And   I should see "author2's Profile"
-  And   I should see "Name: author2"
   And   I should see "post3"
   And   I should see "Back to homepage"
   And   I should see "Log out"
