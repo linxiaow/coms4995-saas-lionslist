@@ -41581,3 +41581,632 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: `secrets.secret_token` is deprecated in favor of `secret_key_base` and will be removed in Rails 6.0. (called from <top (required)> at /Users/henryzhu/Documents/GitHub/coms4995-saas-lionslist/config/environment.rb:5)
+DEPRECATION WARNING: Using `Rails::Application` subclass to start the server is deprecated and will be removed in Rails 6.0. Please change `run Rottenpotatoes::Application` to `run Rails.application` in config.ru. (called from require at bin/rails:8)
+Started GET "/posts" for ::1 at 2021-12-19 18:15:54 -0500
+Processing by PostsController#index as HTML
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /Users/henryzhu/Documents/GitHub/coms4995-saas-lionslist/app/models/post.rb:1)
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (177.6ms)
+  Rendered layouts/_flash.erb (1.1ms)
+Completed 200 OK in 1739ms (Views: 868.3ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--69401d734e9f3c0f2ea1b69c693dc5321451937b/mother_children.jpeg" for ::1 at 2021-12-19 18:15:56 -0500
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0d323ba53c92a24cfc950823971855379516296a/logo_1.png" for ::1 at 2021-12-19 18:15:56 -0500
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b4b1a9c33272bf314dd654ea2fef4c04d6767261/lady_hamilton.jpeg" for ::1 at 2021-12-19 18:15:56 -0500
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f06d007539e2d842c395881453c31f9446313111/lady_meux.jpeg" for ::1 at 2021-12-19 18:15:56 -0500
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f06d007539e2d842c395881453c31f9446313111", "filename"=>"lady_meux"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--69401d734e9f3c0f2ea1b69c693dc5321451937b", "filename"=>"mother_children"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b4b1a9c33272bf314dd654ea2fef4c04d6767261", "filename"=>"lady_hamilton"}
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0d323ba53c92a24cfc950823971855379516296a", "filename"=>"logo_1"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--17596d41543bffa78d81177a21c2a3528dad4795/monet_winter.jpeg" for ::1 at 2021-12-19 18:15:56 -0500
+[36m  Disk Storage (47.1ms) [0m[34mGenerated URL for file at key: LHtv4uTapZcNkzp6KiUA6cVK (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuNTA1WiIsInB1ciI6ImJsb2Jfa2V5In19--d221573680519a3de81306143addff1ce1f74659/lady_hamilton.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_hamilton.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_hamilton.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuNTA1WiIsInB1ciI6ImJsb2Jfa2V5In19--d221573680519a3de81306143addff1ce1f74659/lady_hamilton.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_hamilton.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_hamilton.jpeg
+Completed 302 Found in 299ms (ActiveRecord: 0.9ms)
+
+
+[36m  Disk Storage (45.9ms) [0m[34mGenerated URL for file at key: LTsSoxMg5fGLJbFeU9xPiRXR (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuNTEyWiIsInB1ciI6ImJsb2Jfa2V5In19--057545ea9b6ba040679875fc47aa367eb4d6efc6/mother_children.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mother_children.jpeg%22%3B+filename%2A%3DUTF-8%27%27mother_children.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuNTEyWiIsInB1ciI6ImJsb2Jfa2V5In19--057545ea9b6ba040679875fc47aa367eb4d6efc6/mother_children.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mother_children.jpeg%22%3B+filename%2A%3DUTF-8%27%27mother_children.jpeg
+Completed 302 Found in 309ms (ActiveRecord: 1.0ms)
+
+
+[36m  Disk Storage (256.0ms) [0m[34mGenerated URL for file at key: qz3q2CG49LZARmZarWzvaN3Q (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuMzA3WiIsInB1ciI6ImJsb2Jfa2V5In19--1dc1b1c24b5c2bde4eb504e988ba8db6a467d4d4/logo_1.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22logo_1.png%22%3B+filename%2A%3DUTF-8%27%27logo_1.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuMzA3WiIsInB1ciI6ImJsb2Jfa2V5In19--1dc1b1c24b5c2bde4eb504e988ba8db6a467d4d4/logo_1.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22logo_1.png%22%3B+filename%2A%3DUTF-8%27%27logo_1.png
+Completed 302 Found in 313ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuNTEyWiIsInB1ciI6ImJsb2Jfa2V5In19--057545ea9b6ba040679875fc47aa367eb4d6efc6/mother_children.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22mother_children.jpeg%22%3B+filename%2A%3DUTF-8%27%27mother_children.jpeg" for ::1 at 2021-12-19 18:15:56 -0500
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuNTA1WiIsInB1ciI6ImJsb2Jfa2V5In19--d221573680519a3de81306143addff1ce1f74659/lady_hamilton.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_hamilton.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_hamilton.jpeg" for ::1 at 2021-12-19 18:15:56 -0500
+[36m  Disk Storage (302.0ms) [0m[34mGenerated URL for file at key: LnXMXGa2hKjiQrpjnPppm2NH (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuMzAyWiIsInB1ciI6ImJsb2Jfa2V5In19--6c2acb4497f7116738e65e21d5592699e6a632d0/lady_meux.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_meux.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_meux.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuMzAyWiIsInB1ciI6ImJsb2Jfa2V5In19--6c2acb4497f7116738e65e21d5592699e6a632d0/lady_meux.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_meux.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_meux.jpeg
+Completed 302 Found in 348ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuMzA3WiIsInB1ciI6ImJsb2Jfa2V5In19--1dc1b1c24b5c2bde4eb504e988ba8db6a467d4d4/logo_1.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22logo_1.png%22%3B+filename%2A%3DUTF-8%27%27logo_1.png" for ::1 at 2021-12-19 18:15:56 -0500
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--17596d41543bffa78d81177a21c2a3528dad4795", "filename"=>"monet_winter"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: k8u2LdT48GyLb1xWpWeJ8occ (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuNjI0WiIsInB1ciI6ImJsb2Jfa2V5In19--730a51816677cb4b5d0bbbd332122aa9a319ab3f/monet_winter.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22monet_winter.jpeg%22%3B+filename%2A%3DUTF-8%27%27monet_winter.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuNjI0WiIsInB1ciI6ImJsb2Jfa2V5In19--730a51816677cb4b5d0bbbd332122aa9a319ab3f/monet_winter.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22monet_winter.jpeg%22%3B+filename%2A%3DUTF-8%27%27monet_winter.jpeg
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuNjI0WiIsInB1ciI6ImJsb2Jfa2V5In19--730a51816677cb4b5d0bbbd332122aa9a319ab3f/monet_winter.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22monet_winter.jpeg%22%3B+filename%2A%3DUTF-8%27%27monet_winter.jpeg" for ::1 at 2021-12-19 18:15:56 -0500
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"mother_children.jpeg\"; filename*=UTF-8''mother_children.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNVkhOVGIzaE5aelZtUjB4S1lrWmxWVGw0VUdsU1dGSUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuNTEyWiIsInB1ciI6ImJsb2Jfa2V5In19--057545ea9b6ba040679875fc47aa367eb4d6efc6", "filename"=>"mother_children"}
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuMzAyWiIsInB1ciI6ImJsb2Jfa2V5In19--6c2acb4497f7116738e65e21d5592699e6a632d0/lady_meux.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22lady_meux.jpeg%22%3B+filename%2A%3DUTF-8%27%27lady_meux.jpeg" for ::1 at 2021-12-19 18:15:56 -0500
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_hamilton.jpeg\"; filename*=UTF-8''lady_hamilton.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNU0hSMk5IVlVZWEJhWTA1cmVuQTJTMmxWUVRaalZrc0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuNTA1WiIsInB1ciI6ImJsb2Jfa2V5In19--d221573680519a3de81306143addff1ce1f74659", "filename"=>"lady_hamilton"}
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"logo_1.png\"; filename*=UTF-8''logo_1.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDF4ZWpOeE1rTkhORGxNV2tGU2JWcGhjbGQ2ZG1GT00xRUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuMzA3WiIsInB1ciI6ImJsb2Jfa2V5In19--1dc1b1c24b5c2bde4eb504e988ba8db6a467d4d4", "filename"=>"logo_1"}
+[36m  Disk Storage (30.2ms) [0m[34mDownloaded file from key: LHtv4uTapZcNkzp6KiUA6cVK[0m
+Completed 200 OK in 34ms (ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (29.6ms) [0m[34mDownloaded file from key: qz3q2CG49LZARmZarWzvaN3Q[0m
+[36m  Disk Storage (39.7ms) [0m[34mDownloaded file from key: LTsSoxMg5fGLJbFeU9xPiRXR[0m
+Completed 200 OK in 41ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 43ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"monet_winter.jpeg\"; filename*=UTF-8''monet_winter.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFyT0hVeVRHUlVORGhIZVV4aU1YaFhjRmRsU2podlkyTUdPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuNjI0WiIsInB1ciI6ImJsb2Jfa2V5In19--730a51816677cb4b5d0bbbd332122aa9a319ab3f", "filename"=>"monet_winter"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"lady_meux.jpeg\"; filename*=UTF-8''lady_meux.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFNYmxoTldFZGhNbWhMYW1sUmNuQnFibEJ3Y0cweVRrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMjEtMTItMTlUMjM6MjA6NTYuMzAyWiIsInB1ciI6ImJsb2Jfa2V5In19--6c2acb4497f7116738e65e21d5592699e6a632d0", "filename"=>"lady_meux"}
+[36m  Disk Storage (3.2ms) [0m[34mDownloaded file from key: LnXMXGa2hKjiQrpjnPppm2NH[0m
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+[36m  Disk Storage (32.3ms) [0m[34mDownloaded file from key: k8u2LdT48GyLb1xWpWeJ8occ[0m
+Completed 200 OK in 33ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-19 18:16:00 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT AVG("deals"."rating") FROM "deals" WHERE (seller_id = '1' and status != 'unsettled' and rating != -1)[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1"]]
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (seller_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.3ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'accepted' and rating = -1)[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE ((buyer_id = '1' or seller_id = '1') and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (25.8ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 99ms (Views: 61.4ms | ActiveRecord: 3.9ms)
+
+
+DEPRECATION WARNING: `secrets.secret_token` is deprecated in favor of `secret_key_base` and will be removed in Rails 6.0. (called from <top (required)> at /Users/henryzhu/Documents/GitHub/coms4995-saas-lionslist/config/environment.rb:5)
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from load at /Users/henryzhu/.rvm/gems/ruby-2.6.6/bin/rake:25)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "author" varchar, "author_id" varchar, "created_at" datetime, "updated_at" datetime, "post_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "deals"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "deals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "status" varchar, "buyer_id" varchar, "buyer_name" varchar, "seller_id" varchar, "seller_name" varchar, "created_at" datetime, "updated_at" datetime, "rating" integer, "post_id" integer)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts"[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "author" varchar, "category" varchar, "created_at" datetime, "updated_at" datetime, "author_id" varchar, "onshelf" integer DEFAULT 1)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "password" varchar, "uid" varchar, "provider" varchar, "phone" varchar, "address" varchar, "description" varchar)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211219033022)[0m
+  [1m[35m (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211116195953),
+(20211116200037),
+(20211204165634),
+(20211204165827),
+(20211203020315),
+(20211203020107),
+(20211204230411),
+(20211204171436),
+(20211102091826),
+(20211117002747);
+
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-19 23:16:22.957660"], ["updated_at", "2021-12-19 23:16:22.957660"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_attachments"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "active_storage_blobs"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "author" varchar, "author_id" varchar, "created_at" datetime, "updated_at" datetime, "post_id" integer)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "deals"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "deals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "status" varchar, "buyer_id" varchar, "buyer_name" varchar, "seller_id" varchar, "seller_name" varchar, "created_at" datetime, "updated_at" datetime, "rating" integer, "post_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" varchar, "author" varchar, "category" varchar, "created_at" datetime, "updated_at" datetime, "author_id" varchar, "onshelf" integer DEFAULT 1)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "password" varchar, "uid" varchar, "provider" varchar, "phone" varchar, "address" varchar, "description" varchar)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20211219033022)[0m
+  [1m[35m (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20211116195953),
+(20211116200037),
+(20211204165634),
+(20211204165827),
+(20211203020315),
+(20211203020107),
+(20211204230411),
+(20211204171436),
+(20211102091826),
+(20211117002747);
+
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-12-19 23:16:23.008917"], ["updated_at", "2021-12-19 23:16:23.008917"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (2.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-12-19 23:16:23.015085"], ["key", "environment"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Second Hand Sofa"], ["content", "1 year usage, good condition"], ["author", "John Smith"], ["category", "furniture"], ["created_at", "2021-12-19 23:16:23.132149"], ["updated_at", "2021-12-19 23:16:23.132149"], ["author_id", "-1"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Apartment @ Enclave"], ["content", "Master bedroom, only 2000 a month!"], ["author", "Teddy Bear"], ["category", "sublease"], ["created_at", "2021-12-19 23:16:23.140011"], ["updated_at", "2021-12-19 23:16:23.140011"], ["author_id", "-2"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "author", "category", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "TV"], ["content", "I don't want it because it is too large. Contact me if you want it"], ["author", "Foo Bar"], ["category", "furniture"], ["created_at", "2021-12-19 23:16:23.144200"], ["updated_at", "2021-12-19 23:16:23.144200"], ["author_id", "-3"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "password") VALUES (?, ?, ?, ?)[0m  [["id", -1], ["username", "John Smith"], ["email", "testauthor1@columbia.edu"], ["password", "MyDummyPassword1"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "password") VALUES (?, ?, ?, ?)[0m  [["id", -2], ["username", "Teddy Bear"], ["email", "testauthor2@columbia.edu"], ["password", "MyDummyPassword2"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "password") VALUES (?, ?, ?, ?)[0m  [["id", -3], ["username", "Foo Bar"], ["email", "testauthor3@columbia.edu"], ["password", "MyDummyPassword3"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `secrets.secret_token` is deprecated in favor of `secret_key_base` and will be removed in Rails 6.0. (called from <top (required)> at /Users/henryzhu/Documents/GitHub/coms4995-saas-lionslist/config/environment.rb:5)
+DEPRECATION WARNING: Using `Rails::Application` subclass to start the server is deprecated and will be removed in Rails 6.0. Please change `run Rottenpotatoes::Application` to `run Rails.application` in config.ru. (called from require at bin/rails:8)
+Started GET "/posts" for ::1 at 2021-12-19 18:16:45 -0500
+Processing by PostsController#index as HTML
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /Users/henryzhu/Documents/GitHub/coms4995-saas-lionslist/app/models/post.rb:1)
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (96.3ms)
+  Rendered layouts/_flash.erb (0.9ms)
+Completed 200 OK in 1819ms (Views: 937.3ms | ActiveRecord: 7.9ms)
+
+
+DEPRECATION WARNING: `secrets.secret_token` is deprecated in favor of `secret_key_base` and will be removed in Rails 6.0. (called from <top (required)> at /Users/henryzhu/Documents/GitHub/coms4995-saas-lionslist/config/environment.rb:5)
+DEPRECATION WARNING: Using `Rails::Application` subclass to start the server is deprecated and will be removed in Rails 6.0. Please change `run Rottenpotatoes::Application` to `run Rails.application` in config.ru. (called from require at bin/rails:8)
+Started GET "/posts" for ::1 at 2021-12-19 18:21:12 -0500
+Processing by PostsController#index as HTML
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from <top (required)> at /Users/henryzhu/Documents/GitHub/coms4995-saas-lionslist/app/models/post.rb:1)
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (130.3ms)
+  Rendered layouts/_flash.erb (1.3ms)
+Completed 200 OK in 2409ms (Views: 949.8ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/posts/3" for ::1 at 2021-12-19 18:21:17 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mComment Load (2.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (67.9ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 124ms (Views: 114.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-19 18:40:24 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (41.5ms)
+  Rendered layouts/_flash.erb (1.1ms)
+Completed 200 OK in 140ms (Views: 117.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/posts/3" for ::1 at 2021-12-19 18:40:27 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mComment Load (1.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 3]]
+  Rendered posts/show.html.erb within layouts/application (23.8ms)
+  Rendered layouts/_flash.erb (2.4ms)
+Completed 200 OK in 109ms (Views: 103.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-19 18:40:30 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (21.5ms)
+  Rendered layouts/_flash.erb (1.0ms)
+Completed 200 OK in 68ms (Views: 64.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-19 18:40:31 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (18.6ms)
+  Rendered layouts/_flash.erb (1.5ms)
+Completed 200 OK in 83ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2021-12-19 18:40:36 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p3TrfmASc1yBPQ897OFPVEzasl58kcbPiGG1NK3reHz/odctLeyBni8pNUv2BTI3Yr3rNAi+Y/gwNlklfCxmxg==", "post"=>{"title"=>"q", "category"=>"sublease", "content"=>"q"}, "commit"=>"Create your post"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 34ms (ActiveRecord: 6.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/posts_controller.rb:69:in `create'
+Started GET "/logout" for ::1 at 2021-12-19 18:40:40 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-12-19 18:40:40 -0500
+Started GET "/posts" for ::1 at 2021-12-19 18:40:40 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (29.9ms)
+  Rendered layouts/_flash.erb (0.8ms)
+Completed 200 OK in 59ms (Views: 52.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2021-12-19 18:40:40 -0500
+Started GET "/auth/google_oauth2/callback?state=f9888cc93ce027f1927aff57f66a6ca5d6d9c802b42804c6&code=4/0AX4XfWitjlKS8JOG6G4v8bHLZEqo00mGkj76eAOLgEwlaGR04QkmbrlwpUriYyN-o91GTg&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile%20openid&authuser=1&hd=columbia.edu&prompt=none" for ::1 at 2021-12-19 18:40:43 -0500
+Processing by SessionsController#omniauth as HTML
+  Parameters: {"state"=>"f9888cc93ce027f1927aff57f66a6ca5d6d9c802b42804c6", "code"=>"4/0AX4XfWitjlKS8JOG6G4v8bHLZEqo00mGkj76eAOLgEwlaGR04QkmbrlwpUriYyN-o91GTg", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"1", "hd"=>"columbia.edu", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hz2712@columbia.edu"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password") VALUES (?, ?, ?)[0m  [["username", "Haoran Zhu"], ["email", "hz2712@columbia.edu"], ["password", "5e3b7426f183eb122f1ce1baeb4b11e0"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for ::1 at 2021-12-19 18:40:44 -0500
+Started GET "/posts" for ::1 at 2021-12-19 18:40:44 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (28.4ms)
+  Rendered layouts/_flash.erb (0.9ms)
+Completed 200 OK in 66ms (Views: 61.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts/2" for ::1 at 2021-12-19 18:40:47 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 2]]
+  Rendered posts/show.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 43ms (Views: 38.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-19 18:40:49 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_flash.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2021-12-19 18:40:53 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WmNYTJqvfoZvYlbeNLz+PIJRU2q8caEEea9H4KwU5ecCtmQf11GMRMF2bKguWINfrDYKAMheBDPB+KvxfdP7XQ==", "post"=>{"title"=>"1", "category"=>"furniture", "content"=>"1"}, "commit"=>"Create your post"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "1"], ["content", "1"], ["category", "furniture"], ["created_at", "2021-12-19 23:40:53.677713"], ["updated_at", "2021-12-19 23:40:53.677713"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Update (0.5ms)[0m  [1m[33mUPDATE "posts" SET "author" = ?, "updated_at" = ?, "author_id" = ? WHERE "posts"."id" = ?[0m  [["author", "Haoran Zhu"], ["updated_at", "2021-12-19 23:40:53.760875"], ["author_id", "1"], ["id", 4]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 97ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-19 18:40:53 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (3.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (66.0ms)
+  Rendered layouts/_flash.erb (2.5ms)
+Completed 200 OK in 116ms (Views: 107.7ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/posts/4" for ::1 at 2021-12-19 18:40:55 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered posts/show.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 48ms (Views: 42.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/4/edit" for ::1 at 2021-12-19 18:40:57 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_flash.erb (1.3ms)
+Completed 200 OK in 49ms (Views: 44.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-19 18:42:22 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT AVG("deals"."rating") FROM "deals" WHERE (seller_id = '1' and status != 'unsettled' and rating != -1)[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1"]]
+  [1m[36mDeal Load (0.3ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (seller_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.3ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'accepted' and rating = -1)[0m
+  [1m[36mDeal Load (0.3ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE ((buyer_id = '1' or seller_id = '1') and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (33.3ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 167ms (Views: 73.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/edit/profile" for ::1 at 2021-12-19 18:42:26 -0500
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 61ms (Views: 55.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-19 18:42:52 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT AVG("deals"."rating") FROM "deals" WHERE (seller_id = '1' and status != 'unsettled' and rating != -1)[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1"]]
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.3ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (seller_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'accepted' and rating = -1)[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE ((buyer_id = '1' or seller_id = '1') and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 49ms (Views: 44.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-19 18:47:58 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (52.5ms)
+  Rendered layouts/_flash.erb (3.4ms)
+Completed 200 OK in 124ms (Views: 107.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/posts/new" for ::1 at 2021-12-19 18:56:17 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_flash.erb (0.9ms)
+Completed 200 OK in 41ms (Views: 38.0ms)
+
+
+Started GET "/profile" for ::1 at 2021-12-19 18:56:56 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT AVG("deals"."rating") FROM "deals" WHERE (seller_id = '1' and status != 'unsettled' and rating != -1)[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", "1"]]
+  [1m[36mDeal Load (0.3ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (seller_id = '1' and status = 'unsettled')[0m
+  [1m[36mDeal Load (0.2ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE (buyer_id = '1' and status = 'accepted' and rating = -1)[0m
+  [1m[36mDeal Load (0.1ms)[0m  [1m[34mSELECT "deals".* FROM "deals" WHERE ((buyer_id = '1' or seller_id = '1') and status != 'unsettled')[0m
+  Rendered users/show.html.erb within layouts/application (28.8ms)
+  Rendered layouts/_flash.erb (2.0ms)
+Completed 200 OK in 77ms (Views: 65.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/edit/profile" for ::1 at 2021-12-19 18:56:59 -0500
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_flash.erb (1.1ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for ::1 at 2021-12-19 18:58:43 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE (onshelf = 1)[0m
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "cover"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Post"], ["name", "images"], ["LIMIT", 1]]
+  Rendered posts/index.html.erb within layouts/application (30.8ms)
+  Rendered layouts/_flash.erb (1.9ms)
+Completed 200 OK in 76ms (Views: 68.0ms | ActiveRecord: 5.0ms)
+
+
