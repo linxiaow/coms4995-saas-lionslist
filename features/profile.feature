@@ -56,7 +56,7 @@ Scenario: update user profile on profile page
   Then  I should be on the edit profile page
   When  I fill in "Phone Number" with "313123"
   And   I fill in "Address" with "3000 Broadway"
-  And   I fill in "Self Introduction" with "Hi nice to meet you"
+  And   I fill in "Bio" with "Hi nice to meet you"
   And   I press "Update Personal Profile"
   Then  I should be on the profile page
   And   I should see "Example User's personal profile was successfully updated."
