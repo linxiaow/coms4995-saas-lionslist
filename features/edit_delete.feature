@@ -35,7 +35,7 @@ Scenario: edit a post on Lionlist
 Scenario: delete a post on Lionlist
   Given I am logged in with provider "google_oauth2"
   And I am on the details page for "post2"
-  And   I follow "Offshelf"
+  And   I press "Offshelf"
   Then  I should be on the Lionlist home page
   And   I should see "Post 'post2' deleted."
   And   I should not see "More about post2"
