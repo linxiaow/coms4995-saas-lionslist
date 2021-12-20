@@ -24,6 +24,7 @@ group :test do
   gem 'cucumber-rails-training-wheels'
   gem 'factory_girl_rails'
   gem 'simplecov', :require => false
+  gem 'rails-controller-testing'
 end
 group :production do
   gem 'pg'

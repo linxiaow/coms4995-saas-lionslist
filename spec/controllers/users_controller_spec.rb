@@ -10,8 +10,8 @@ RSpec.describe SessionsController, type: :request do
         login_with_oauth
         get "/auth/google_oauth2/callback"
         request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
-        put "/profile", {:user =>
-        {:phone => "123456"}
+        put "/profile", params: {user:
+        {phone: "123456"}
         }
         expect(response).to redirect_to profile_path
         expect(flash[:notice]).to match(/'s personal profile was successfully updated./)
