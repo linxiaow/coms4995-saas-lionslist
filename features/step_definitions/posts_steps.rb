@@ -21,3 +21,9 @@ end
 Given /^I am logged in with provider "([^"]*)"$/ do |provider|
   visit "/auth/#{provider.downcase}/callback"
 end
+
+Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
+  p1 = page.body.index(e1)
+  p2 = page.body.index(e2)
+  expect(p1).to be < p2
+end

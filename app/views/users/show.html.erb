@@ -36,7 +36,7 @@
         <br>
         <div class="container px-6 px-lg-5">
           <h2>Personal Information</h2><br>
-          <p class="lead">Rating: <span style="font-weight: bold;"><%= @user_rating %></span> / 5.0</p>
+          <p class="lead" id='running_rating'>Rating: <span style="font-weight: bold;"><%= @user_rating %></span> / 5.0</p>
           <p class="lead">Email: <%= @user.email %></p>
           <p class="lead">Phone Number: <%= @user.phone %></p>
           <p class="lead">Address: <%= @user.address %></p>
@@ -116,7 +116,7 @@
         <% if @purchase_deals.length() == 0 %>
         <p>None</p>
         <% else %> 
-        <table class="table table-striped col-md-12" id="movies">
+        <table class="table table-striped col-md-12" id="your_request">
           <thead>
             <tr>
               <th>Post Title</th>
@@ -163,7 +163,7 @@
         <% if @selling_deals.length() == 0 %>
         <p>None</p>
         <% else %> 
-        <table class="table table-striped col-md-12" id="movies">
+        <table class="table table-striped col-md-12" id="request_to_you">
           <thead>
             <tr>
               <th>Post Title</th>
@@ -210,7 +210,7 @@
         <% if @unrated_deals.length() == 0 %>
         <p>None</p>
         <% else %> 
-        <table class="table table-striped col-md-12" id="movies">
+        <table class="table table-striped col-md-12" id="unrated">
           <thead>
             <tr>
               <th>Post Title</th>
@@ -257,7 +257,7 @@
         <% if @involved_deals.length() == 0 %>
         <p>None</p>
         <% else %> 
-        <table class="table table-striped col-md-12" id="movies">
+        <table class="table table-striped col-md-12" id="past_involved">
           <thead>
             <tr>
               <th>Post Title</th>

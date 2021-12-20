@@ -10,7 +10,6 @@ class PostsController < ApplicationController
   end
 
   def index
-    puts "index!"
     @posts = Post.all_onshelf_posts
 
     if session[:sort_by] != nil
@@ -78,7 +77,6 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find params[:id]
-    puts "edit!"
   end
   
   # def show_same_director
