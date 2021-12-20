@@ -46,12 +46,18 @@ class PostsController < ApplicationController
     session[:sort_by] = params[:sort_by]
     if params[:sort_by] == 'title'
       @posts.order!('title')
+      @sort_by = 'title'
     elsif params[:sort_by] == 'category'
       @posts.order!('category')
+      @sort_by = 'category'
     elsif params[:sort_by] == 'author'
       @posts.order!('author')
+      @sort_by = 'author'
     elsif params[:sort_by] == 'created date'
       @posts.order!('created_at DESC')
+      @sort_by = 'created date'
+    else
+      @sort_by = ''
     end
   end
 

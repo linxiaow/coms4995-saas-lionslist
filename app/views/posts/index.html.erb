@@ -13,22 +13,36 @@
 
 <div class="filter">
   <%= form_tag posts_path, method: :get, :class => 'form' do %>
-    <%= label_tag(:category, "Category") %>
-    <%= select_tag(:category, options_for_select([["", ""], ['furniture', 'furniture'], ['sublease', 'sublease']], @category)) %>
-    <%= label_tag(:author, "Author") %>
-    <%= text_field_tag(:author, @author) %>
-    <%= label_tag(:title, "Title") %>
-    <%= text_field_tag(:title, @title) %>
-    <%= submit_tag("Search") %>
-<% end %>
-</div>
-
-<div class="sort">
-  <%= form_tag posts_path, method: :get, :class => 'form' do %>
-    <%= label_tag(:sort_by, "Sort By") %>
-    <%= select_tag(:sort_by, options_for_select([['most recent', 'created date'], ['title', 'title'], ['category', 'category'], ['author', 'author']], @sort_by)) %>
-    <%= submit_tag("Sort") %>
-<% end %>
+    <div class="row g-5">
+      <div class="col-sm">
+        <div class="form-floating">
+          <%= text_field_tag(:author, @author, :class => "form-control", :id => "authorFilter", :placeholder => "Author") %>
+          <%= label_tag(:author, "Author", :for => "authorFilter") %>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="form-floating">
+          <%= select_tag(:category, options_for_select([["", ""], ['furniture', 'furniture'], ['sublease', 'sublease']], selected: @category || nil), :id => "categoryFilter", :class => "form-select") %> 
+          <%= label_tag(:category, "Category", :for => "categoryFilter") %>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="form-floating">
+          <%= select_tag(:sort_by, options_for_select([['', ''], ['most recent', 'created date'], ['title', 'title'], ['category', 'category'], ['author', 'author']], selected: @sort_by || nil), :id => "sortFilter", :class => "form-select") %> 
+          <%= label_tag(:sort_by, "Sort By", :for => "sortFilter") %>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="form-floating">
+          <%= text_field_tag(:title, @title, :class => "form-control", :id => "titleFilter", :placeholder => "Title") %>
+          <%= label_tag(:title, "Title", :for => "titleFilter") %>
+        </div>
+      </div>
+      <div class="col-md">
+          <%= submit_tag "Search", :class => 'filter-btn btn btn-outline-success' %>
+      </div>
+    </div>
+  <% end %>
 </div>
 
 <section class="py-2">
