@@ -1,17 +1,51 @@
 # coms4995-saas-lionslist
-COMS4995 Software As a Service project to design a platform to share information of second hand furniture and sublease
+COMS4995 Software As a Service project to design a platform to share information of second hand furniture and sublease for Columbia-affliated people only. You can buy and sell second-hand furnitures and post and get leasing information in this platform
 
 # Presentation Link
 
 https://www.youtube.com/watch?v=ixqjoyeqgJw
 
-# New features in the latest iteration
+# New Features
+- UI polishing
+- Completed rspec tests (coverage up to 97%+)
+- Completed user story (coverage to 98%+)
 
-- Add user rating system, which allows buyers to rate particular sellers
-- Add comment system, which allows users to comment under posts
-- Add filtering and sorting to all existing posts
-- Add "make-a-deal" system, which allows buyers to make/cancel deal requests and allows sellers to approve/decline buyer's request
-- UI polishing for all pages
+# Feature Summary
+## Google Oauth
+In order to make sure the security and authenticity of users who use our app:
+- Only columbia-related personnel can login with Google OAuth
+
+## Post
+A post is an advertisement posted by the sellers. The sellers can 
+- create post
+- update the post if they want to
+- delete (off-shelf) the goods
+
+## Comment
+- Users can leave comments under a post
+
+## Profile
+- Users can see their own profile
+- Users can update their own profile
+- Users can see other people’s profile
+
+## Deal
+A deal is created when a buyer requests to purchase. In a deal
+- Buyers can create deal requests
+- Sellers can confirm one of the requests. If there are several requests to the same good, confirmation of one deal will automatically decline others
+- Sellers can also off-shelf the goods without confirming any of the deals. In this case, all the deals will be declined
+
+
+## Rate
+Rating is for buyers to give feedback to the sellers
+- After a deal is confirmed, buyers can rate the deals under “Unrated purchases”
+- Once the rating is confirmed, the rating will be reflected to sellers’ profile pages
+
+
+## Search
+- User can filter posts by category/title/author
+- User can sort posts by category/title/author/create date
+
 
 # Run
 
