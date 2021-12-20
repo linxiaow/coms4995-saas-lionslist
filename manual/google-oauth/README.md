@@ -10,6 +10,12 @@ Add necessary gems to your gem file. You’ll need to add three gems — `gem 'o
 bundle install --without production
 ```
 
+If it says there is an error with "mimemagic", run
+
+```
+brew install shared-mime-info
+```
+
 ## Migrate db again
 
 Also add a new user table, so need to migrate the db again
