@@ -12,8 +12,8 @@ RSpec.describe SessionsController, type: :request do
     end
 
     it "post with valid parameters" do
-      post "/posts/new", {:post => {:title => "Post Title #1",
-                    :category => "furniture", :content => "I posted something."}}
+      post "/posts/new", params: {post: {title: "Post Title #1",
+                    category: "furniture", content: "I posted something."}}
       expect(response).to redirect_to posts_path
 
       expect(flash[:notice]).to match(/Post Title #1 was successfully created./)
@@ -28,8 +28,8 @@ RSpec.describe SessionsController, type: :request do
       request.env["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
       post = Post.create(:title => "Post Title #2",
                     :category => "furniture", :content => "I posted some other things.")
-      post "/posts/#{post.id}/edit", {:id => post.id, :post =>
-        {:content => "content changed to some other things."}
+      post "/posts/#{post.id}/edit", params: {id: post.id, post:
+        {content: "content changed to some other things."}
       }
       expect(response).to redirect_to post_path(post)
       expect(flash[:notice]).to match(/Post Title #2 was successfully updated./)

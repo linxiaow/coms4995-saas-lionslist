@@ -151,7 +151,7 @@ RSpec.describe SessionsController, type: :request do
             :status => 'accepted', :rating => '-1',
             :post_id => post.id)
         deal.save
-        post "/deals/#{deal.id}/rate", {:rating => '4'}
+        post "/deals/#{deal.id}/rate", params: {rating: '4'}
 
         expect(Deal.find_by(:buyer_id => '123').rating).to eq(4)
 

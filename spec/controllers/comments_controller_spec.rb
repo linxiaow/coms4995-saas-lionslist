@@ -20,7 +20,7 @@ RSpec.describe SessionsController, type: :request do
         :category => "furniture", :content => "I posted something.")
       post.author_id = 1
       post.save
-      post "/post/#{post.id}", {:comment => {:content => "This is a comment."}}
+      post "/post/#{post.id}", params: {comment: {content: "This is a comment."}}
       expect(response).to redirect_to show_post_path
 
       expect(flash[:notice]).to match(/Your comment was successfully created./)
