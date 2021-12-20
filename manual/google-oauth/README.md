@@ -26,6 +26,12 @@ bundle exec rake db:migrate
 ```
 bundle exec rake db:migrate:reset
 ```
+
+if there is a problem saying that you need 
+```
+bin/rails db:environment:set RAILS_ENV=development
+```
+run it 
 ## Ask for .env file
 This file is very important for local development with Google OAuth ClientID, but is ignored in .gitignore. Ask Haoran or Linxiao for the file
 

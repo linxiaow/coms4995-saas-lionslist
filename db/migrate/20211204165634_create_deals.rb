@@ -1,4 +1,4 @@
-class CreateDeals < ActiveRecord::Migration
+class CreateDeals < ActiveRecord::Migration[5.2]
   def change
     create_table :deals do |t|
       # look at situation to see if we need to use foreign key
