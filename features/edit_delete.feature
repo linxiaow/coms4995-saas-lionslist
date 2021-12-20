@@ -26,7 +26,7 @@ Scenario: edit a post on Lionlist
   And   I follow "Edit"
   Then  I should be on the edit page for "post1"
   When  I fill in "Title" with "edited_post"
-  And   I press "Update Post Info"
+  And   I press "Update post info"
   Then  I should be on the details page for "edited_post"
   And   I should see "edited_post was successfully updated."
   And   I should see "edited_post"

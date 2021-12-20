@@ -25,28 +25,28 @@ Background: posts in database
 
 Scenario: sort posts by title
   When I select "title" from "sort_by"
-  And I press "Sort"
+  And I press "Search"
   Then I should see "post1" before "post2"
   Then I should see "post2" before "post3"
   Then I should see "post3" before "post4"
 
 Scenario: sort posts by category
   When I select "category" from "sort_by"
-  And I press "Sort"
+  And I press "Search"
   Then I should see "post1" before "post2"
   Then I should see "post2" before "post3"
   Then I should see "post3" before "post4"
 
 Scenario: sort posts by author
   When I select "author" from "sort_by"
-  And I press "Sort"
+  And I press "Search"
   Then I should see "post1" before "post2"
   Then I should see "post2" before "post3"
   Then I should see "post3" before "post4"
 
 Scenario: sort posts by author
   When I select "most recent" from "sort_by"
-  And I press "Sort"
+  And I press "Search"
   Then I should see "post4" before "post3"
   Then I should see "post3" before "post2"
   Then I should see "post2" before "post1"
